@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Елизавета Винокурова](https://up.htmlacademy.ru/adaptive/13/user/123355).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Ожерельев] (https://htmlacademy.ru/profile/id29002).
 
 ---
 
