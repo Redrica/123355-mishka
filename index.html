@@ -57,17 +57,32 @@
     <p>Выберите размер</p>
     <form class="order__form" method="post" action="#">
       <input class="order__var" id="size-s" type="radio" name="item-size" value="s" checked>
-      <label class="button" for="size-s">S</label>
+      <label class="order__var-display" for="size-s">S</label>
       <input class="order__var" id="size-m" type="radio" name="item-size" value="m">
-      <label class="button" for="size-m">M</label>
+      <label class="order__var-display" for="size-m">M</label>
       <input class="order__var" id="size-l" type="radio" name="item-size" value="l">
-      <label class="button" for="size-l">L</label>
+      <label class="order__var-display" for="size-l">L</label>
       <input class="order__submit" type="submit" value="Добавить">
     </form>
-
-
   </div>
+</section>
 
+<section class="about">
+  <h2 class="about__title">Коротко о нас:</h2>
+  <ul class="about__list">
+    <!-- Предполагаю, что пункты могут "раскрываться" и туда добавится небольшое пояснение. -->
+    <li class="about__item about__item--eco">
+      <details>
+        <summary>Экологически чистые материалы</summary>
+        <p>Тут можно написать немножко про то, какое всё хорошее.</p>
+      </details>
+    </li>
+    <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
+    <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
+    <li class="about__item about__item--knit">Связано вручную с умилением</li>
+    <li class="about__item about__item--support">Поддержка отечественного производителя</li>
+    <li class="about__item about__item--gift">Поставляется в подарочной упаковке</li>
+  </ul>
 </section>
 </body>
 </html>
