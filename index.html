@@ -1,10 +1,73 @@
-<<!doctype html>
+<!doctype html>
 <html lang=ru>
 <head>
   <meta charset="UTF-8">
   <title>Мишка</title>
 </head>
 <body>
+<!-- стили пока условные, для собственного понимания, где, что и для чего -->
+<!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
+<header class="page-header">
+  <a class="page-header__logo">
+    <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Вязание на заказ</a></li>
+        <li><a href="#">Поиск по сайту</a></li>
+        <li><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+    <a href="#">Предметы интерьера</a>
+    <a href="#">Детские игрушки</a>
+  </div>
+</header>
 
+<section class="week-goods">
+  <!-- Не знаю, насколько это верное решение, но мне кажется, что заголовок тут именно "Товар недели", а надпись про корзинки наверх перенести уже другими средствами.-->
+  <h2>Товар недели</h2>
+  <b>Вязанные корзинки</b>
+  <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+  <table>
+    <tr>
+      <td>Цвет:</td>
+      <td>&laquo;Тиффани&raquo;/серый</td>
+    </tr>
+    <tr>
+      <td>Диаметр:</td>
+      <td>25 cм</td>
+    </tr>
+    <tr>
+      <td>Высота</td>
+      <td>15 см</td>
+    </tr>
+  </table>
+  <img src="http://placehold.it/260x315">
+  <b>Цена: 990 руб.</b>
+  <a href="#">Заказать</a>
+  <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
+  <div class="order">
+    <b>Добавить в корзину</b>
+    <p>Выберите размер</p>
+    <form class="order__form" method="post" action="#">
+      <input class="order__var" id="size-s" type="radio" name="item-size" value="s" checked>
+      <label class="button" for="size-s">S</label>
+      <input class="order__var" id="size-m" type="radio" name="item-size" value="m">
+      <label class="button" for="size-m">M</label>
+      <input class="order__var" id="size-l" type="radio" name="item-size" value="l">
+      <label class="button" for="size-l">L</label>
+      <input class="order__submit" type="submit" value="Добавить">
+    </form>
+
+
+  </div>
+
+</section>
 </body>
 </html>
