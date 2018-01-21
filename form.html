@@ -15,17 +15,17 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li>
-          <a href="#">Каталог товаров</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
         </li>
-        <li>
-          <a href="#">Вязание на заказ</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Вязание на заказ</a>
         </li>
-        <li>
-          <a href="#">Поиск по сайту</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
         </li>
-        <li>
-          <a href="#">Корзина: пока пуста</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </div>
@@ -41,61 +41,61 @@
       <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы
         уточнить детали.</p>
-      <form class="order__form full-form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">Тип</legend>
-          <input class="full-form__var" id="accessory" type="radio" name="type-of-goods" value="accessory" checked>
-          <label class="full-form__description" for="accessory">Аксессуар для интерьера</label>
-          <input class="full-form__var" id="toy" type="radio" name="type-of-goods" value="toy">
-          <label class="full-form__description" for="toy">Детская игрушка</label>
+      <form class="order__form form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__set">
+          <legend class="form__legend">Тип</legend>
+          <input class="form__radio-input" id="accessory" type="radio" name="type-of-goods" value="accessory" checked>
+          <label class="form__description" for="accessory">Аксессуар для интерьера</label>
+          <input class="form__radio-input" id="toy" type="radio" name="type-of-goods" value="toy">
+          <label class="form__description" for="toy">Детская игрушка</label>
         </fieldset>
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">Цвет</legend>
-          <input class="full-form__option" id="white" type="checkbox" name="white" checked>
-          <label class="full-form__description" for="white">Белый</label>
-          <input class="full-form__option" id="grey" type="checkbox" name="grey" checked>
-          <label class="full-form__description" for="grey">Серый</label>
-          <input class="full-form__option" id="tiffani" type="checkbox" name="tiffani">
-          <label class="full-form__description" for="tiffani">&laquoТиффани&raquo</label>
-          <input class="full-form__option" id="black" type="checkbox" name="black">
-          <label class="full-form__description" for="black">Черный</label>
-          <input class="full-form__option" id="pink" type="checkbox" name="pink">
-          <label class="full-form__description" for="pink">Розовый</label>
-          <input class="full-form__option" id="orange" type="checkbox" name="orange">
-          <label class="full-form__description" for="orange">Оранжевый</label>
+        <fieldset class="form__set">
+          <legend class="form__legend">Цвет</legend>
+          <input class="form__option" id="white" type="checkbox" name="white" checked>
+          <label class="form__description" for="white">Белый</label>
+          <input class="form__option" id="grey" type="checkbox" name="grey" checked>
+          <label class="form__description" for="grey">Серый</label>
+          <input class="form__option" id="tiffani" type="checkbox" name="tiffani">
+          <label class="form__description" for="tiffani">&laquoТиффани&raquo</label>
+          <input class="form__option" id="black" type="checkbox" name="black">
+          <label class="form__description" for="black">Черный</label>
+          <input class="form__option" id="pink" type="checkbox" name="pink">
+          <label class="form__description" for="pink">Розовый</label>
+          <input class="form__option" id="orange" type="checkbox" name="orange">
+          <label class="form__description" for="orange">Оранжевый</label>
         </fieldset>
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">фио</legend>
-          <input class="full-form__option" id="first-name" type="text" name="first-name" required autofocus
+        <fieldset class="form__set">
+          <legend class="form__legend">фио</legend>
+          <input class="form__field" id="first-name" type="text" name="first-name" required autofocus
                  autocomplete="on"
                  placeholder="Введите ваше имя*">
-          <label class="full-form__description" for="first-name">Имя:</label>
-          <input class="full-form__option" id="last-name" type="text" name="last-name" required autocomplete="on"
+          <label class="form__description" for="first-name">Имя:</label>
+          <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on"
                  placeholder="Укажите фамилию*">
-          <label class="full-form__description" for="last-name">Имя:</label>
-          <input class="full-form__option" id="patronymic" type="text" name="patronymic" autocomplete="on"
+          <label class="form__description" for="last-name">Имя:</label>
+          <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on"
                  placeholder="Отчество, если желаете">
-          <label class="full-form__description" for="patronymic">Имя:</label>
+          <label class="form__description" for="patronymic">Имя:</label>
         </fieldset>
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">
-            <label class="full-form__description" for="phone-number">тел</label>
+        <fieldset class="form__set">
+          <legend class="form__legend">
+            <label class="form__description" for="phone-number">тел</label>
           </legend>
-          <input class="full-form__option" id="phone-number" type="tel" name="phone-number" required autocomplete="on"
+          <input class="form__field" id="phone-number" type="tel" name="phone-number" required autocomplete="on"
                  placeholder="+7 XXX XX XX*">
         </fieldset>
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">
-            <label class="full-form__description" for="email">e-mail</label>
+        <fieldset class="form__set">
+          <legend class="form__legend">
+            <label class="form__description" for="email">e-mail</label>
           </legend>
-          <input class="full-form__option" id="email" type="email" name="email" required autocomplete="on"
+          <input class="form__field" id="email" type="email" name="email" required autocomplete="on"
                  placeholder="Ваш Email*">
         </fieldset>
-        <fieldset class="full-form__set">
-          <legend class="full-form__legend">
-            <label class="full-form__description" for="addition">доп</label>
+        <fieldset class="form__set">
+          <legend class="form__legend">
+            <label class="form__description" for="addition">доп</label>
           </legend>
-          <textarea class="full-form__option" id="addition" name="addition"
+          <textarea class="form__field" id="addition" name="addition"
                     rows="7">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
         <strong class="order__form--note">*Поля обязательны для заполнения</strong>

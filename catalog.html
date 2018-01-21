@@ -15,17 +15,17 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li>
-          <a href="#">Каталог товаров</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
         </li>
-        <li>
-          <a href="#">Вязание на заказ</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Вязание на заказ</a>
         </li>
-        <li>
-          <a href="#">Поиск по сайту</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
         </li>
-        <li>
-          <a href="#">Корзина: пока пуста</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </div>
@@ -65,6 +65,19 @@
           <b class="goods__price">1 500 руб.</b>
           <a class="goods__cart" href="#">Купить</a>
         </div>
+      </div>
+      <div class="buy">
+        <b>Добавить в корзину</b>
+        <p>Выберите размер</p>
+        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
+          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+          <label class="buy__radio-display" for="size-s">S</label>
+          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
+          <label class="buy__radio-display" for="size-m">M</label>
+          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
+          <label class="buy__radio-display" for="size-l">L</label>
+          <input class="buy__submit" type="submit" value="Добавить">
+        </form>
       </div>
     </div>
   </section>

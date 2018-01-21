@@ -15,17 +15,17 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li>
-          <a href="#">Каталог товаров</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
         </li>
-        <li>
-          <a href="#">Вязание на заказ</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Вязание на заказ</a>
         </li>
-        <li>
-          <a href="#">Поиск по сайту</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
         </li>
-        <li>
-          <a href="#">Корзина: пока пуста</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </div>
@@ -67,12 +67,12 @@
         <b>Добавить в корзину</b>
         <p>Выберите размер</p>
         <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="buy__var" id="size-s" type="radio" name="item-size" value="s" checked>
-          <label class="buy__var-display" for="size-s">S</label>
-          <input class="buy__var" id="size-m" type="radio" name="item-size" value="m">
-          <label class="buy__var-display" for="size-m">M</label>
-          <input class="buy__var" id="size-l" type="radio" name="item-size" value="l">
-          <label class="buy__var-display" for="size-l">L</label>
+          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+          <label class="buy__radio-display" for="size-s">S</label>
+          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
+          <label class="buy__radio-display" for="size-m">M</label>
+          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
+          <label class="buy__radio-display" for="size-l">L</label>
           <input class="buy__submit" type="submit" value="Добавить">
         </form>
       </div>
@@ -83,8 +83,6 @@
     <div class="about__wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
-        <!-- Предполагаю, что пункты могут "раскрываться" и туда добавится небольшое пояснение (details/summary),
-         но пока нет полного макета :( -->
         <li class="about__item about__item--eco">Экологически чистые материалы</li>
         <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
         <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
@@ -107,9 +105,9 @@
           <cite class="reviews__author-name">Анастасия Красильникова</cite>
           <a class="reviews__author-link" href="https://www.instagram.com/misssssiskras">misssssiskras</a>
         </blockquote>
-        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next" type="button">Следующий отзыв</button>
       </div>
+      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__next" type="button">Следующий отзыв</button>
       <a class="reviews__write" href="#">Написать</a>
     </div>
   </section>
