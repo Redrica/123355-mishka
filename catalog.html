@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang=ru>
+<head>
+  <meta charset="UTF-8">
+  <title>Мишка</title>
+</head>
+<body>
+<!-- классы пока не везде и условные, для собственного понимания, где, что и для чего -->
+<!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
+<header class="page-header">
+  <a class="page-header__logo" href="index.html">
+    <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-header__wrapper">
+    <h1 class="page-header__title">Каталог товаров</h1>
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="goods">
+    <div class="goods__wrapper">
+      <div class="goods__item">
+        <img class="goods__picture" src="http://placehold.it/260x315" width="260" height="195" alt="Зайчик-попрыгайчик">
+        <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+        <p class="goods__description">Рост 30 см, вес 200 г</p>
+        <div class="goods__buy">
+          <b class="goods__price">1 200 руб.</b>
+          <a class="goods__cart" href="#">Купить</a>
+        </div>
+      </div>
+      <div class="goods__item">
+        <img class="goods__picture" src="http://placehold.it/260x315" width="260" height="195" alt="Корзинка для белья">
+        <h3 class="goods__title">Корзинка для белья</h3>
+        <p class="goods__description">Диаметр 15 см, высота 10 см</p>
+        <div class="goods__buy">
+          <b class="goods__price">690 руб.</b>
+          <a class="goods__cart" href="#">Купить</a>
+        </div>
+      </div>
+      <div class="goods__item">
+        <img class="goods__picture" src="http://placehold.it/260x315" width="260" height="195"
+             alt="Большая корзинка для игрушек">
+        <h3 class="goods__title">Большая корзинка для игрушек</h3>
+        <p class="goods__description">Диаметр 30 см, высота 30 см</p>
+        <div class="goods__buy">
+          <b class="goods__price">1 500 руб.</b>
+          <a class="goods__cart" href="#">Купить</a>
+        </div>
+      </div>
+      <div class="buy">
+        <b>Добавить в корзину</b>
+        <p>Выберите размер</p>
+        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
+          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+          <label class="buy__radio-display" for="size-s">S</label>
+          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
+          <label class="buy__radio-display" for="size-m">M</label>
+          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
+          <label class="buy__radio-display" for="size-l">L</label>
+          <input class="buy__submit" type="submit" value="Добавить">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="promo__wrapper">
+      <h2 class="promo__title">Процесс производства</h2>
+      <video class="promo__video" width="260" height="150" controls poster="#">
+        <source src="#" type="video/mp4">
+        <source src="#" type="video/ogg">
+        <source src="#" type="video/webm">
+      </video>
+      <p class="video__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
+      <a class="promo__write" href="form.html">Напишите нам</a>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <div class="page-footer__social social">
+      <b class="social__title">Давайте дружить!</b>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/">Мы в
+            Инстаграме</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы на Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+        </li>
+      </ul>
+    </div>
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+  </div>
+</footer>
+</body>
+</html>
