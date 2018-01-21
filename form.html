@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang=ru>
+<head>
+  <meta charset="UTF-8">
+  <title>Мишка</title>
+</head>
+<body>
+<!-- классы пока не везде и условные, для собственного понимания, где, что и для чего -->
+<!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
+<header class="page-header">
+  <a class="page-header__logo" href="index.html">
+    <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list">
+        <li>
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li>
+          <a href="#">Вязание на заказ</a>
+        </li>
+        <li>
+          <a href="#">Поиск по сайту</a>
+        </li>
+        <li>
+          <a href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-header__wrapper">
+    <h1 class="page-header__title">Вязание на заказ</h1>
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="order">
+    <div class="order-wrapper">
+      <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы
+        уточнить детали.</p>
+      <form class="order__form full-form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">Тип</legend>
+          <input class="full-form__var" id="accessory" type="radio" name="type-of-goods" value="accessory" checked>
+          <label class="full-form__description" for="accessory">Аксессуар для интерьера</label>
+          <input class="full-form__var" id="toy" type="radio" name="type-of-goods" value="toy">
+          <label class="full-form__description" for="toy">Детская игрушка</label>
+        </fieldset>
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">Цвет</legend>
+          <input class="full-form__option" id="white" type="checkbox" name="white" checked>
+          <label class="full-form__description" for="white">Белый</label>
+          <input class="full-form__option" id="grey" type="checkbox" name="grey" checked>
+          <label class="full-form__description" for="grey">Серый</label>
+          <input class="full-form__option" id="tiffani" type="checkbox" name="tiffani">
+          <label class="full-form__description" for="tiffani">&laquoТиффани&raquo</label>
+          <input class="full-form__option" id="black" type="checkbox" name="black">
+          <label class="full-form__description" for="black">Черный</label>
+          <input class="full-form__option" id="pink" type="checkbox" name="pink">
+          <label class="full-form__description" for="pink">Розовый</label>
+          <input class="full-form__option" id="orange" type="checkbox" name="orange">
+          <label class="full-form__description" for="orange">Оранжевый</label>
+        </fieldset>
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">фио</legend>
+          <input class="full-form__option" id="first-name" type="text" name="first-name" required autofocus
+                 autocomplete="on"
+                 placeholder="Введите ваше имя*">
+          <label class="full-form__description" for="first-name">Имя:</label>
+          <input class="full-form__option" id="last-name" type="text" name="last-name" required autocomplete="on"
+                 placeholder="Укажите фамилию*">
+          <label class="full-form__description" for="last-name">Имя:</label>
+          <input class="full-form__option" id="patronymic" type="text" name="patronymic" autocomplete="on"
+                 placeholder="Отчество, если желаете">
+          <label class="full-form__description" for="patronymic">Имя:</label>
+        </fieldset>
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">
+            <label class="full-form__description" for="phone-number">тел</label>
+          </legend>
+          <input class="full-form__option" id="phone-number" type="tel" name="phone-number" required autocomplete="on"
+                 placeholder="+7 XXX XX XX*">
+        </fieldset>
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">
+            <label class="full-form__description" for="email">e-mail</label>
+          </legend>
+          <input class="full-form__option" id="email" type="email" name="email" required autocomplete="on"
+                 placeholder="Ваш Email*">
+        </fieldset>
+        <fieldset class="full-form__set">
+          <legend class="full-form__legend">
+            <label class="full-form__description" for="addition">доп</label>
+          </legend>
+          <textarea class="full-form__option" id="addition" type="text" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea>
+        </fieldset>
+        <strong class="order__form--note">*Поля обязательны для заполнения</strong>
+        <input class="order__submit" type="submit" value="Отправить заказ">
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <div class="page-footer__social social">
+      <b class="social__title">Давайте дружить!</b>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/">Мы в
+            Инстаграме</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы на Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+        </li>
+      </ul>
+    </div>
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+  </div>
+</footer>
+</body>
+</html>
