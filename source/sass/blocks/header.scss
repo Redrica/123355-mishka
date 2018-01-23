@@ -1,0 +1,55 @@
+@import "variables.scss";
+
+.page-header {
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-end;
+  min-height: 570px;
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-height: 78px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__logo {
+  display: block;
+  width: 86px;
+}
+
+.page-header__title {
+  font-family: "Open Sans";
+  margin: 70px 30px 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-header__link {
+  display: block;
+  width: auto;
+  min-height: 103px;
+  margin: 0;
+  padding: 0 30px;
+  font-size: 19px;
+  line-height: 24px;
+  text-decoration: none;
+  text-align: left;
+  vertical-align: middle;
+  color: $black;
+}
+
+.page-header__link--interior {
+  margin-top: 120px;
+  background: $turq-I url("../../img/icon-interior.svg") no-repeat right 35px center;
+}
+
+.page-header__link--toy {
+  background: $turq-T url("../../img/icon-toy.svg") no-repeat right 27px center;
+}

@@ -3,66 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css" rel="stylesheet">
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
   <title>Мишка</title>
 </head>
 <body>
 <!-- классы пока не везде и условные, для собственного понимания, где, что и для чего -->
 <!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
 <header class="page-header">
-  <a class="page-header__logo" href="#">
-    <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог товаров</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Вязание на заказ</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Поиск по сайту</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
-        </li>
-      </ul>
+  <div class="page-header__wrapper wrapper">
+    <div class="page-header__top">
+      <a class="page-header__logo" href="#">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+      </a>
     </div>
-  </nav>
-  <div>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
-    <a href="#">Предметы интерьера</a>
-    <a href="#">Детские игрушки</a>
+    <a class="page-header__link page-header__link--interior" href="#">Предметы интерьера</a>
+    <a class="page-header__link page-header__link--toy" href="#">Детские игрушки</a>
+
   </div>
 </header>
 
 <main class="page-main">
   <section class="week-goods">
-    <div class="week-goods__wrapper">
+    <div class="week-goods__wrapper wrapper">
       <!-- Не знаю, насколько это верное решение, но мне кажется, что заголовок тут именно "Товар недели", а надпись про корзинки наверх перенести уже другими средствами.-->
-      <h2>Товар недели</h2>
-      <b>Вязанные корзинки</b>
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <table>
+      <h2 class="week-goods__title">Товар недели</h2>
+      <b class="week-goods__item">Вязанные корзинки</b>
+      <p class="week-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+        размерах.</p>
+      <table class="week-goods__properties">
         <tr>
-          <td>Цвет:</td>
-          <td>&laquo;Тиффани&raquo;/серый</td>
+          <td class="week-goods__col-1">Цвет:</td>
+          <td class="week-goods__col-2">&laquo;Тиффани&raquo;/серый</td>
         </tr>
         <tr>
-          <td>Диаметр:</td>
-          <td>25 cм</td>
+          <td class="week-goods__col-1">Диаметр:</td>
+          <td class="week-goods__col-2">25 cм</td>
         </tr>
         <tr>
-          <td>Высота</td>
-          <td>15 см</td>
+          <td class="week-goods__col-1">Высота</td>
+          <td class="week-goods__col-1">15 см</td>
         </tr>
       </table>
-      <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязанные корзинки"
+      <img class="week-goods__image" src="http://placehold.it/260x315" width="260" height="315" alt="Вязанные корзинки"
            title="Вы уже хотите такую, правда?">
-      <b>Цена: 990 руб.</b>
-      <a href="#">Заказать</a>
+      <b class="week-goods__price">Цена: 990 руб.</b>
+      <a class="week-goods__button button" href="#">Заказать</a>
       <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
       <div class="buy">
         <b>Добавить в корзину</b>
@@ -81,7 +86,7 @@
   </section>
 
   <section class="about">
-    <div class="about__wrapper">
+    <div class="about__wrapper" wrapper>
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--eco">Экологически чистые материалы</li>
@@ -95,7 +100,7 @@
   </section>
 
   <section class="reviews">
-    <div class="reviews__wrapper slider">
+    <div class="reviews__wrapper wrapper slider">
       <h2 class="reviews__title">Отзывы</h2>
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
@@ -114,7 +119,7 @@
   </section>
 
   <section class="contacts">
-    <div class="contacts__wrapper">
+    <div class="contacts__wrapper wrapper">
       <b>Контакты</b>
       <div class="contacts__table">
         <div class="contacts__row">
@@ -138,7 +143,7 @@
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
+  <div class="page-footer__wrapper wrapper">
     <div class="page-footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">

@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+.main-nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-height: 78px;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__link {
+  display: block;
+  width: auto;
+  min-height: 78px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border-bottom: 1px solid #ececec;
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: $black;
+}
+
+.main-nav__link--search {
+  background: url("../../img/icon-search.svg") no-repeat 32px center;
+}
+
+.main-nav__link--cart {
+  background: url("../../img/icon-cart.svg") no-repeat 32px center;
+}

@@ -1,7 +1,5 @@
-body {
-  background: yellow;
-}
-
-.page-main {
-  background: #712c56;
-}
+@import "body.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/variables";
