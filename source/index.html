@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css" rel="stylesheet">
-  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
   <title>Мишка</title>
 </head>
 <body>
-<!-- классы пока не везде и условные, для собственного понимания, где, что и для чего -->
-<!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
 <header class="page-header">
   <div class="page-header__wrapper wrapper">
     <div class="page-header__top">
@@ -18,7 +15,7 @@
     </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
+      <!--<div class="main-nav__wrapper">-->
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Каталог товаров</a>
@@ -33,7 +30,7 @@
             <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-      </div>
+      <!--</div>-->
     </nav>
     <div class="page-header__body">
       <h1 class="page-header__title">Милые штуки<br> ручной<br> работы для дома</h1>
@@ -65,7 +62,7 @@
           <td class="week-goods__col-1">15 см</td>
         </tr>
       </table>
-      <img class="week-goods__image" src="http://placehold.it/260x315" width="260" height="315" alt="Вязанные корзинки"
+      <img class="week-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки"
            title="Вы уже хотите такую, правда?">
       <b class="week-goods__price">Цена: 990 руб.</b>
       <a class="week-goods__button button" href="#">Заказать</a>
@@ -87,7 +84,7 @@
   </section>
 
   <section class="about">
-    <div class="about__wrapper" wrapper>
+    <div class="about__wrapper  wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--eco">Экологически чистые материалы</li>
@@ -113,8 +110,8 @@
           <a class="reviews__author-link" href="https://www.instagram.com/misssssiskras">@misssssiskras</a>
         </blockquote>
       </div>
-      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-      <button class="reviews__next" type="button">Следующий отзыв</button>
+      <button class="reviews__switch reviews__switch--prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
       <a class="reviews__write button" href="#">Написать</a>
     </div>
   </section>
@@ -125,7 +122,8 @@
       <div class="contacts__table">
         <div class="contacts__row">
           <div class="contacts__data">e-mail:</div>
-          <div class="contacts__data"><a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+          <div class="contacts__data"><a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </div>
         </div>
         <div class="contacts__row">
           <div class="contacts__data">адрес</div>

@@ -1,3 +1,11 @@
+@import "variables.scss";
+
+.buy {
+  display: block;
+  width: auto;
+  border: 1px solid red;
+}
+
 .buy__title {
   font-size: 25px;
   line-height: 30px;
@@ -19,3 +27,4 @@
   text-transform: uppercase;
   color: $d-grey;
 }
+

@@ -33,3 +33,19 @@
   text-decoration: none;
   color: $d-grey;
 }
+
+.reviews__switch {
+  width: 129px;
+  height: 50px;
+  background-color: $wtite;
+  border: 1px solid $l-grey;
+  font-size: 0;
+}
+
+.reviews__switch--prev {
+  background: url("../../img/icon-left-arrow.svg") no-repeat center center;
+}
+
+.reviews__switch--next {
+  background: url("../../img/icon-right-arrow.svg") no-repeat center center;
+}

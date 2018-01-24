@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+.goods {
+  padding: 30px;
+}
+
+.goods__title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $black;
+}
+
+.goods__title:hover {
+  color: transparentize($black, 0.4);
+}
+//то работает, то нет. Почему – хз.
+.goods__title:active {
+  color: transparentize($black, 0.7);
+}
+////а вот тут не совсем по БЭМ о_О
+//.goods__link:active .goods__title {
+//  color: transparentize($black, 0.7);
+//}
+
+.goods__link {
+  text-decoration: none;
+}
+
+//.TEST {
+//  font-weight: bold;
+//  color: $black;
+//  text-decoration: none;
+//}
+//
+//.TEST:hover {
+//  color: transparentize($black, 0.4);
+//}
+
+//.goods__link:active {
+//  color: transparentize($black, 0.4);
+//}
+
+.goods__description {
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $d-grey;
+}
+
+.goods__price {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.goods__cart {
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  background: url("../../img/icon-cart.svg") no-repeat center center;
+}

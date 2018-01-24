@@ -1,21 +1,37 @@
 @import "variables.scss";
 
 .main-nav {
-  display: none;
-  //justify-content: center;
-  //align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: auto;
-  min-height: 78px;
-  border-bottom: 1px solid #ececec;
 }
 
+.main-nav__toggle {
+  position: absolute;
+  top: -79px;
+  right: 0;
+  width: 82px;
+  height: 78px;
+  font-size: 0;
+  background: $wtite url("../../img/icon-menu-open.svg") no-repeat center center;
+  border: none;
+  outline: none;
+}
+//Отключение МЕНЮ
 .main-nav__list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+//.main-nav__toggle:active + .main-nav__list{
+//  display: block;
+//}
+
 .main-nav__link {
+  position: relative;
   display: block;
   width: auto;
   min-height: 78px;
@@ -33,9 +49,17 @@
 }
 
 .main-nav__link--search {
-  background: url("../../img/icon-search.svg") no-repeat 32px center;
+  background: $wtite url("../../img/icon-search.svg") no-repeat 32px center;
 }
 
-.main-nav__link--cart {
-  background: url("../../img/icon-cart.svg") no-repeat 32px center;
+.main-nav__link--cart::before {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  content: "";
+  display: block;
+  background: url("../../img/icon-cart.svg") no-repeat center center;
 }
