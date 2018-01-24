@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+.reviews__title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $d-grey;
+}
+
+.reviews__author-name {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: $black;
+}
+
+.reviews__author-link {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  color: $d-grey;
+}
