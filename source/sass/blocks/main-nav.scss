@@ -2,8 +2,8 @@
 
 .main-nav {
   display: none;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   width: auto;
   min-height: 78px;
   border-bottom: 1px solid #ececec;
@@ -20,13 +20,14 @@
   width: auto;
   min-height: 78px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 75px;
   background-color: white;
   border-bottom: 1px solid #ececec;
   font-size: 17px;
-  line-height: 24px;
+  font-weight: bold;
+  line-height: 78px;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   color: $black;
 }

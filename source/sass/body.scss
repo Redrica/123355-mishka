@@ -3,6 +3,21 @@
   src: url("../fonts/opensans.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+}
+
+body {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+}
+
+//@font-face {
+//  font-family: "Open Sans";
+//  src: url("../fonts/opensans.woff") format("woff");
+//}
+
 //@font-face {
 //  font-family: 'PT Sans';
 //  src: url('ptsans.eot');
@@ -10,6 +25,6 @@
 //  url('ptsans.eot?#iefix') format('embedded-opentype'),
 //  url('ptsans.woff') format('woff');
 
-body {
-  font-family: "Open Sans", "Tahoma", sans-serif;
-}
+//body {
+//  font-family: "Open Sans", "Tahoma", sans-serif;
+//}

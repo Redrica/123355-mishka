@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+.week-goods__title {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $turq-I;
+}
+
+.week-goods__item {
+  display: block;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.week-goods__description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $d-grey;
+}
+
+.week-goods__properties {
+  font-size: 15px;
+  line-height: 20px;
+  color: $d-grey;
+}
+
+.week-goods__price {
+  font-size: 17px;
+  line-height: 24px;
+  color: $d-grey;
+}
+
+

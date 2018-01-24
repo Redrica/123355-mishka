@@ -4,13 +4,12 @@
   //display: flex;
   //flex-direction: column;
   //justify-content: flex-end;
-  min-height: 570px;
+  //min-height: 570px;
 }
 
 .page-header__top {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: auto;
   min-height: 78px;
   border-top: 1px solid #ececec;
@@ -20,33 +19,41 @@
 .page-header__logo {
   display: block;
   width: 86px;
+  margin-top: 20px;
+}
+
+.page-header__body {
+  padding-top: 70px;
+  background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
 }
 
 .page-header__title {
-  font-family: "Open Sans";
-  margin: 70px 30px 0;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 123px;
+  padding: 0;
   font-size: 27px;
   line-height: 30px;
-  font-weight: bold;
   text-align: center;
+  border: none;
 }
 
 .page-header__link {
   display: block;
   width: auto;
-  min-height: 103px;
+  //min-height: 103px;
   margin: 0;
-  padding: 0 30px;
+  padding: 24px 120px 30px 28px;
   font-size: 19px;
   line-height: 24px;
+  font-weight: bold;
   text-decoration: none;
   text-align: left;
   vertical-align: middle;
-  color: $black;
+  color: $wtite;
 }
 
 .page-header__link--interior {
-  margin-top: 120px;
   background: $turq-I url("../../img/icon-interior.svg") no-repeat right 35px center;
 }
 
