@@ -9,6 +9,16 @@
   font-weight: bold;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Open Sans", "Times New Roman", sans-serif;
 }

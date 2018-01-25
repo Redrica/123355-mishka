@@ -1,10 +1,9 @@
-@import "body.scss";
+@import "global.scss";
 @import "blocks/wrapper.scss";
 @import "blocks/header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/variables.scss";
 @import "blocks/week-goods.scss";
-@import "blocks/week-goods__wrapper.scss";
 @import "blocks/button.scss";
 @import "blocks/buy.scss";
 @import "blocks/about.scss";
@@ -16,3 +15,4 @@
 @import "blocks/promo.scss";
 @import "blocks/order.scss";
 @import "blocks/form.scss";
+@import "blocks/temporary.scss";
