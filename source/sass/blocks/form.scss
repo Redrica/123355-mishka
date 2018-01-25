@@ -1,8 +1,13 @@
 @import "variables.scss";
 
-.form {
-  //width: 100%;
-  //box-sizing: border-box;
+//.form {
+//}
+
+.form__set {
+  margin: 0;
+  padding: 20px;
+  border: none;
+  border-top: 1px solid $turquoise;
 }
 
 .form__legend {
@@ -10,7 +15,7 @@
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  color: $turq-I;
+  color: $turquoise;
 }
 
 .form__description {
@@ -23,36 +28,38 @@
 // ВНИМАНИЕ!!! Поле формы видимо не воспринимает transparentize!!!
 // Вводимый текст тоже будет с прозрачностью!!!
 .form__field {
-  //box-sizing: border-box;
-  //width: 100%;
   padding: 10px;
   font: inherit;
   font-size: 17px;
   line-height: 18px;
   font-weight: normal;
-  //color: transparentize($d-grey, 0.7);
+  border: none;
+  //color: transparentize($gray-dark, 0.7);
 }
 
 // CANIUSE!!!
 .form__field::placeholder {
-  color: transparentize($d-grey, 0.7);
+  color: transparentize($gray-dark, 0.7);
 }
 
 .form__field--addition {
-  color: transparentize($d-grey, 0.6);
+  margin-bottom: 15px;
+  color: transparentize($gray-dark, 0.6);
 }
 
 .form__field--phone {
-  background: url("../../img/icon-phone.svg") no-repeat right 5px center;
+  background: $white url("../../img/icon-phone.svg") no-repeat right 5px center;
 }
 
 .form__field--email {
-  background: url("../../img/icon-mail.svg") no-repeat right 5px center;
+  background: $white url("../../img/icon-mail.svg") no-repeat right 5px center;
 }
 
 .order__note {
+  display: block;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }

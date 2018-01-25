@@ -20,21 +20,8 @@ html {
 }
 
 body {
+  margin: 0;
+  //отличающийся от фона документа
+  background-color: #d0d0d0;
   font-family: "Open Sans", "Times New Roman", sans-serif;
 }
-
-//@font-face {
-//  font-family: "Open Sans";
-//  src: url("../fonts/opensans.woff") format("woff");
-//}
-
-//@font-face {
-//  font-family: 'PT Sans';
-//  src: url('ptsans.eot');
-//  src: local('PT Sans'), local('PTSans-Regular'),
-//  url('ptsans.eot?#iefix') format('embedded-opentype'),
-//  url('ptsans.woff') format('woff');
-
-//body {
-//  font-family: "Open Sans", "Tahoma", sans-serif;
-//}

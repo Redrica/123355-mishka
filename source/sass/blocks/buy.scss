@@ -3,6 +3,8 @@
 .buy {
   display: block;
   width: auto;
+  padding: 37px 30px 44px;
+  background-color: $white;
 }
 
 .buy__title {
@@ -16,7 +18,7 @@
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }
 
 .buy__radio-display {
@@ -24,6 +26,5 @@
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  color: $d-grey;
+  color: $gray-dark;
 }
-

@@ -2,13 +2,13 @@
 
 .promo__wrapper {
   padding: 30px;
+  background-color: $white;
 }
 
 .promo__title {
   display: block;
   margin: 0;
   padding: 25px 0 25px 90px;
-  padding-left: 90px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -20,5 +20,5 @@
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }

@@ -1,20 +1,16 @@
 @import "variables.scss";
 
-.order {
-  padding: 23px 0;
-}
-
 .order-wrapper {
-  //width: 100%;
-  //box-sizing: border-box;
-  padding: 0 30px;
+  padding: 23px 30px 55px;
+  background-color: $white;
 }
 
 .order__intro {
-  margin: 0 0 25px 0;
+  margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }

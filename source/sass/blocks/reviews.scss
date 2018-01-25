@@ -1,6 +1,15 @@
 @import "variables.scss";
 
+.reviews__wrapper {
+  padding: 30px;
+  padding-bottom: 40px;
+  background-color: $white;
+}
+
 .reviews__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -9,16 +18,23 @@
 
 .reviews__item {
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .reviews__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }
 
 .reviews__author-name {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -31,14 +47,14 @@
   line-height: 30px;
   font-weight: normal;
   text-decoration: none;
-  color: $d-grey;
+  color: $gray-dark;
 }
 
 .reviews__switch {
-  width: 129px;
+  width: 50%;
   height: 50px;
-  background-color: $wtite;
-  border: 1px solid $l-grey;
+  background-color: $white;
+  border: 1px solid $gray-lightest;
   font-size: 0;
 }
 
@@ -48,4 +64,9 @@
 
 .reviews__switch--next {
   background: url("../../img/icon-right-arrow.svg") no-repeat center center;
+  //border-left: none;
+}
+
+.reviews__write {
+  margin-top: 35px;
 }

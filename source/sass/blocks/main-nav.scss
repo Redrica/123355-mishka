@@ -14,13 +14,13 @@
   width: 82px;
   height: 76px;
   font-size: 0;
-  background: $wtite url("../../img/icon-menu-open.svg") no-repeat center center;
+  background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
   border: none;
   outline: none;
 }
 //Отключение МЕНЮ
 .main-nav__list {
-  display: none;
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -37,7 +37,7 @@
   min-height: 78px;
   margin: 0;
   padding: 0 0 0 75px;
-  background-color: white;
+  background-color: $white;
   border-bottom: 1px solid #ececec;
   font-size: 17px;
   font-weight: bold;
@@ -49,7 +49,7 @@
 }
 
 .main-nav__link--search {
-  background: $wtite url("../../img/icon-search.svg") no-repeat 32px center;
+  background: $white url("../../img/icon-search.svg") no-repeat 32px center;
 }
 
 .main-nav__link--cart::before {

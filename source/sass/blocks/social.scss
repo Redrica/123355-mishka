@@ -1,17 +1,19 @@
 @import "variables.scss";
 
+//.page-footer__social {
+//}
+
 .social__title {
   display: none;
 }
 
 .social__list {
-  //display: block;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
   vertical-align: middle;
-  background-color: $l-grey;
+  background-color: $gray-lightest;
   border-bottom: 1px solid #e5e5e5;
 }
 

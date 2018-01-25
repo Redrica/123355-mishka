@@ -2,9 +2,21 @@
 
 .goods__wrapper {
   padding: 30px;
+  background-color: $white;
+}
+
+.goods__item {
+  margin-bottom: 30px;
+  border: 1px solid $gray-lightest;
+}
+
+.goods__info {
+  padding: 23px 30px 15px;
 }
 
 .goods__title {
+  margin: 0;
+  margin-bottom: 5px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -14,10 +26,12 @@
 .goods__title:hover {
   color: transparentize($black, 0.4);
 }
+
 //то работает, то нет. Почему – хз.
 .goods__title:active {
   color: transparentize($black, 0.7);
 }
+
 ////а вот тут не совсем по БЭМ о_О
 //.goods__link:active .goods__title {
 //  color: transparentize($black, 0.7);
@@ -27,25 +41,19 @@
   text-decoration: none;
 }
 
-//.TEST {
-//  font-weight: bold;
-//  color: $black;
-//  text-decoration: none;
-//}
-//
-//.TEST:hover {
-//  color: transparentize($black, 0.4);
-//}
-
-//.goods__link:active {
-//  color: transparentize($black, 0.4);
-//}
-
 .goods__description {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 13px;
   line-height: 30px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
+}
+
+.goods__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .goods__price {
@@ -57,8 +65,10 @@
 
 .goods__cart {
   display: block;
-  width: 60px;
-  height: 60px;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
   font-size: 0;
   background: url("../../img/icon-cart.svg") no-repeat center center;
 }

@@ -14,27 +14,26 @@
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
       </a>
     </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Вязание на заказ</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1 class="page-header__title">Вязание на заказ</h1>
-
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <span class="main-nav__link">Вязание на заказ</span>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1 class="page-header__title">Вязание на заказ</h1>
   </div>
 </header>
 
@@ -70,36 +69,29 @@
         <fieldset class="form__set">
           <legend class="form__legend">фио</legend>
           <label class="form__description" for="first-name">Имя:</label>
-          <input class="form__field" id="first-name" type="text" name="first-name" required autofocus
-                 autocomplete="on"
-                 placeholder="Введите ваше имя*">
+          <input class="form__field" id="first-name" type="text" name="first-name" required autocomplete="on" placeholder="Введите ваше имя*">
           <label class="form__description" for="last-name">Фамлия:</label>
-          <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on"
-                 placeholder="Укажите фамилию*">
+          <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on" placeholder="Укажите фамилию*">
           <label class="form__description" for="patronymic">Отчество:</label>
-          <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on"
-                 placeholder="Отчество, если желаете">
+          <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="phone-number">тел</label>
           </legend>
-          <input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on"
-                 placeholder="+7 XXX XX XX*">
+          <input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="email">e-mail</label>
           </legend>
-          <input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on"
-                 placeholder="Ваш Email*">
+          <input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="addition">доп</label>
           </legend>
-          <textarea class="form__field form__field--addition" id="addition" name="addition"
-                    rows="7">Опишите все ваши пожелания к заказу</textarea>
+          <textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
         <strong class="order__note">*Поля обязательны для заполнения</strong>
         <input class="order__submit button" type="submit" value="Отправить заказ">

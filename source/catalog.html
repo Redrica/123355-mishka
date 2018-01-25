@@ -17,20 +17,20 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <!--<div class="main-nav__wrapper">-->
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Вязание на заказ</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <span class="main-nav__link">Каталог товаров</span>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
       <!--</div>-->
     </nav>
     <h1 class="page-header__title">Каталог товаров</h1>
@@ -41,36 +41,36 @@
   <section class="goods">
     <div class="goods__wrapper wrapper">
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-hare-mobile@1x.jpg"
-                                                          width="260" height="195"
-                                                          alt="Зайчик-попрыгайчик"></a>
-        <a class="goods__link" href="item-page.html"><h3 class="goods__title">Зайчик-попрыгайчик</h3></a>
-        <!--<a class="TEST" href="#">ЭТО ТЕСТОВАЯ ССЫЛКА</a>-->
-        <p class="goods__description">Рост 30 см, вес 200 г</p>
-        <div class="goods__buy">
-          <b class="goods__price">1 200 руб.</b>
-          <a class="goods__cart" href="#">Купить</a>
+        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
+        <div class="goods__info">
+          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Зайчик-попрыгайчик</h3></a>
+          <p class="goods__description">Рост 30 см, вес 200 г</p>
+          <div class="goods__buy">
+            <b class="goods__price">1 200 руб.</b>
+            <a class="goods__cart" href="#">Купить</a>
+          </div>
         </div>
       </div>
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-bowl-mobile@1x.jpg"
-                                                          width="260" height="195" alt="Корзинка для белья"></a>
-        <a class="goods__link" href="item-page.html"><h3 class="goods__title">Корзинка для белья</h3></a>
-        <p class="goods__description">Диаметр 15 см, высота 10 см</p>
-        <div class="goods__buy">
-          <b class="goods__price">690 руб.</b>
-          <a class="goods__cart" href="#">Купить</a>
+        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"></a>
+        <div class="goods__info">
+          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Корзинка для белья</h3></a>
+          <p class="goods__description">Диаметр 15 см, высота 10 см</p>
+          <div class="goods__buy">
+            <b class="goods__price">690 руб.</b>
+            <a class="goods__cart" href="#">Купить</a>
+          </div>
         </div>
       </div>
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-toys-mobile@1x.jpg"
-                                                          width="260" height="195"
-                                                          alt="Большая корзинка для игрушек"></a>
-        <a class="goods__link" href="item-page.html"><h3 class="goods__title">Большая корзинка для игрушек</h3></a>
-        <p class="goods__description">Диаметр 30 см, высота 30 см</p>
-        <div class="goods__buy">
-          <b class="goods__price">1 500 руб.</b>
-          <a class="goods__cart" href="#">Купить</a>
+        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек"></a>
+        <div class="goods__info">
+          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Большая корзинка для игрушек</h3></a>
+          <p class="goods__description">Диаметр 30 см, высота 30 см</p>
+          <div class="goods__buy">
+            <b class="goods__price">1 500 руб.</b>
+            <a class="goods__cart" href="#">Купить</a>
+          </div>
         </div>
       </div>
       <div class="buy">
@@ -97,8 +97,7 @@
         <source src="#" type="video/ogg">
         <source src="#" type="video/webm">
       </video>
-      <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-        появляются наши товары.</p>
+      <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a class="promo__write button" href="form.html">Сделать заказ</a>
     </div>
   </section>

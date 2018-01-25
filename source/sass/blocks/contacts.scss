@@ -1,28 +1,46 @@
 @import "variables.scss";
 
+.contacts__wrapper {
+  padding: 40px 30px;
+  background-color: $white;
+}
+
 .contacts__title {
-  font-size: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
 }
 
+.contacts__table {
+  display: table;
+}
+
+.contacts__row {
+  display: table-row;
+}
+
 .contacts__data {
+  display: table-cell;
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  color: $d-grey;
+  color: $gray-dark;
 }
 
 .contacts__mail {
   text-decoration: none;
-  color: $d-grey;
-  border-bottom: 1px solid $turq-I;
+  color: $gray-dark;
+  border-bottom: 1px solid $turquoise;
 }
 
 .contacts__map {
   width: 320px;
   height: 457px;
+  margin-top: 40px;
   background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
 }
 
@@ -31,4 +49,8 @@
   width: 50px;
   height: 60px;
   background: url("../../img/icon-map-pin.svg") no-repeat center center;
+}
+
+.contacts__write {
+  margin-top: 35px;
 }
