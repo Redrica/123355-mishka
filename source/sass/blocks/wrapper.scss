@@ -1,5 +1,49 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
 .wrapper {
-  width: 100%;
+  width: 320px;
   margin: 0 auto;
-  outline: 1px solid red;
+  background-color: $white;
+  //outline: 1px solid red;
+
+  @include max-width;
+  @include display-flex-column;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1250px;
+  }
+}
+
+.page-header__wrapper {
+  //flex-wrap: wrap;
+  background-color: $gray-lightest;
+}
+
+.promo-goods__wrapper {
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: $white;
+}
+
+.about__wrapper {
+  padding: 40px 30px 15px;
+  background-color: $white;
+}
+
+.reviews__wrapper {
+  padding: 30px;
+  padding-bottom: 40px;
+  background-color: $white;
+}
+
+.contacts__wrapper {
+  padding: 40px 30px;
+  background-color: $white;
+}
+
+.page-footer__wrapper {
+  background-color: $gray-lightest;
 }

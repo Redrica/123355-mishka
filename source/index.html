@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка</title>
 </head>
 <body>
@@ -43,41 +44,44 @@
 <main class="page-main">
   <section class="promo-goods">
     <div class="promo-goods__wrapper wrapper">
-      <!-- Не знаю, насколько это верное решение, но мне кажется, что заголовок тут именно "Товар недели", а надпись про корзинки наверх перенести уже другими средствами.-->
-      <b class="promo-goods__item">Вязаные корзинки</b>
-      <h2 class="promo-goods__title">Товар недели</h2>
-      <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="promo-goods__properties">
-        <tr>
-          <td class="promo-goods__col-1">Цвет:</td>
-          <td class="promo-goods__col-2">&laquo;Тиффани&raquo;/серый</td>
-        </tr>
-        <tr>
-          <td class="promo-goods__col-1">Диаметр:</td>
-          <td class="promo-goods__col-2">25 cм</td>
-        </tr>
-        <tr>
-          <td class="promo-goods__col-1">Высота</td>
-          <td class="promo-goods__col-1">15 см</td>
-        </tr>
-      </table>
-      <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
-      <b class="promo-goods__price">Цена: 990 руб.</b>
-      <a class="promo-goods__button button" href="#">Заказать</a>
-      <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
-      <div class="promo-goods__buy buy">
-        <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__size">Выберите размер</p>
-        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-          <label class="buy__radio-display" for="size-s">S</label>
-          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
-          <label class="buy__radio-display" for="size-m">M</label>
-          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
-          <label class="buy__radio-display" for="size-l">L</label>
-          <input class="buy__submit button button--turq" type="submit" value="Добавить">
-        </form>
+      <div class="promo-goods__header">
+        <h2 class="promo-goods__title">Товар недели</h2>
+        <b class="promo-goods__item">Вязаные корзинки</b>
+      </div>
+      <div class="promo-goods__content">
+        <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+          размерах.</p>
+        <table class="promo-goods__properties">
+          <tr>
+            <td class="promo-goods__col-1">Цвет:</td>
+            <td class="promo-goods__col-2">&laquo;Тиффани&raquo;/серый</td>
+          </tr>
+          <tr>
+            <td class="promo-goods__col-1">Диаметр:</td>
+            <td class="promo-goods__col-2">25 cм</td>
+          </tr>
+          <tr>
+            <td class="promo-goods__col-1">Высота</td>
+            <td class="promo-goods__col-1">15 см</td>
+          </tr>
+        </table>
+        <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
+        <b class="promo-goods__price">Цена: 990 руб.</b>
+        <a class="promo-goods__button button" href="#">Заказать</a>
+        <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
+        <div class="promo-goods__buy buy">
+          <b class="buy__title">Добавить в корзину</b>
+          <p class="buy__size">Выберите размер</p>
+          <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
+            <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+            <label class="buy__radio-display" for="size-s">S</label>
+            <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
+            <label class="buy__radio-display" for="size-m">M</label>
+            <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
+            <label class="buy__radio-display" for="size-l">L</label>
+            <input class="buy__submit button button--turq" type="submit" value="Добавить">
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -109,8 +113,10 @@
           <a class="reviews__author-link" href="https://www.instagram.com/misssssiskras">@misssssiskras</a>
         </blockquote>
       </div>
-      <button class="reviews__switch reviews__switch--prev" type="button">Предыдущий отзыв</button>
-      <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
+      <div class="reviews__transition">
+        <button class="reviews__switch reviews__switch--prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
+      </div>
       <a class="reviews__write button" href="#">Написать</a>
     </div>
   </section>

@@ -1,14 +1,14 @@
 @import "../mixins.scss";
-@import "variables.scss";
+@import "../variables.scss";
 
-.promo-goods__wrapper {
-  width: 100%;
-  max-width: 1250px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 30px;
-  background-color: $white;
+.promo-goods__header {
+  @include display-flex-column;
+  @include outline-block;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .promo-goods__title {
@@ -20,17 +20,35 @@
   text-transform: uppercase;
   color: $turquoise;
 
-  @include outline-item;
+  @media (min-width: 768px) {
+    line-height: 17px;
+  }
 }
 
 .promo-goods__item {
+  order: -1;
   display: block;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
 
-  @include outline-item;
+  @media (min-width: 768px) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+.promo-goods__content {
+  width: 875px;
+  height: 404px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  //justify-content: space-between;
+  align-content: center;
+
+  @include outline-block;
 }
 
 .promo-goods__description {
@@ -44,16 +62,25 @@
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
+
+  @include outline-item;
 }
 
 .promo-goods__image {
   display: block;
   margin-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+    flex-basis: 404px;
+    //flex-shrink: 0;
+    margin: 0;
+  }
 }
 
 .promo-goods__price {
   display: block;
-  margin-top: 22px;
+  margin: 22px auto 0;
   font-size: 17px;
   line-height: 24px;
   color: $gray-dark;
@@ -61,4 +88,9 @@
 
 .promo-goods__button {
   margin-top: 22px;
+}
+
+//для себя: не забыть про этот блок!
+.promo-goods__buy {
+  display: none;
 }

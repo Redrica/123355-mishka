@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables.scss";
 
 .button {
   font-family: "Open Sans", "Tahoma", sans-serif;
@@ -15,6 +15,10 @@
   outline: none;
   border: 2px solid $gray-dark;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 292px;
+  }
 }
 
 .button--turq {

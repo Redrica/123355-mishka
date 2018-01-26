@@ -5,3 +5,16 @@
 @mixin outline-item {
   outline: 2px dashed #58ff9a;
 }
+
+@mixin max-width {
+  max-width: 1250px;
+}
+
+@mixin display-flex {
+  display: flex;
+}
+
+@mixin display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
