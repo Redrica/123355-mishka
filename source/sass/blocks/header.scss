@@ -1,3 +1,4 @@
+@import "../mixins.scss";
 @import "variables.scss";
 
 .page-header {
@@ -19,6 +20,7 @@
   background-color: $white;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+  @include outline-block;
 }
 
 .page-header__logo {
