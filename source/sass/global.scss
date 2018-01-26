@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  //отличающийся от фона документа
+  background-color: #d0d0d0;
+  font-family: "Open Sans", "Times New Roman", sans-serif;
+}

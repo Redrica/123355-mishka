@@ -1,0 +1,54 @@
+@import "variables.scss";
+
+.promo-goods__wrapper {
+  padding: 30px;
+  background-color: $white;
+}
+
+.promo-goods__title {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+.promo-goods__item {
+  display: block;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.promo-goods__description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray-dark;
+}
+
+.promo-goods__properties {
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 20px;
+  color: $gray-dark;
+}
+
+.promo-goods__image {
+  display: block;
+  margin-top: 28px;
+}
+
+.promo-goods__price {
+  display: block;
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 24px;
+  color: $gray-dark;
+}
+
+.promo-goods__button {
+  margin-top: 22px;
+}

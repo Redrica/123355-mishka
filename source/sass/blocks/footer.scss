@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+.page-footer__wrapper {
+  background-color: $gray-lightest;
+}
+
+.page-footer__copyright {
+  display: block;
+  width: auto;
+  padding: 30px;
+  //min-height: 80px;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background: url("../../img/logo-htmlacademy.svg") no-repeat right 35px center;
+  color: $black;
+}

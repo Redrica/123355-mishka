@@ -1,0 +1,59 @@
+@import "variables.scss";
+
+.about__wrapper {
+  padding: 40px 30px 15px;
+  background-color: $white;
+}
+
+.about__title {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.about__list {
+  list-style: none;
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+}
+
+.about__item {
+  margin-bottom: 27px;
+  padding-top: 52px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $black;
+}
+
+.about__item:last-child {
+  margin-bottom: 0;
+}
+
+.about__item--eco {
+  background: url("../../img/icon-feature-flower.svg") no-repeat 20px 0;
+}
+
+.about__item--style {
+  background: url("../../img/icon-feature-money.svg") no-repeat 0 0;
+}
+
+.about__item--like {
+  background: url("../../img/icon-feature-heart.svg") no-repeat 0 0;
+}
+
+.about__item--knit {
+  background: url("../../img/icon-feature-ball.svg") no-repeat 0 0;
+}
+
+.about__item--support {
+  background: url("../../img/icon-feature-rocket.svg") no-repeat 0 0;
+}
+
+.about__item--gift {
+  background: url("../../img/icon-feature-gift.svg") no-repeat 0 0;
+}

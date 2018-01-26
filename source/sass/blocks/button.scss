@@ -1,0 +1,24 @@
+@import "variables.scss";
+
+.button {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $white;
+  outline: none;
+  border: 2px solid $gray-dark;
+  color: $gray-dark;
+}
+
+.button--turq {
+  line-height: 16px;
+  background-color: $turquoise;
+  color: $white;
+}

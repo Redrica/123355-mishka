@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+//.form {
+//}
+
+.form__set {
+  margin: 0;
+  padding: 20px;
+  border: none;
+  border-top: 1px solid $turquoise;
+}
+
+.form__legend {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+.form__description {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $black;
+}
+
+// ВНИМАНИЕ!!! Поле формы видимо не воспринимает transparentize!!!
+// Вводимый текст тоже будет с прозрачностью!!!
+.form__field {
+  padding: 10px;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  border: none;
+  //color: transparentize($gray-dark, 0.7);
+}
+
+// CANIUSE!!!
+.form__field::placeholder {
+  color: transparentize($gray-dark, 0.7);
+}
+
+.form__field--addition {
+  margin-bottom: 15px;
+  color: transparentize($gray-dark, 0.6);
+}
+
+.form__field--phone {
+  background: $white url("../../img/icon-phone.svg") no-repeat right 5px center;
+}
+
+.form__field--email {
+  background: $white url("../../img/icon-mail.svg") no-repeat right 5px center;
+}
+
+.order__note {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: $gray-dark;
+}

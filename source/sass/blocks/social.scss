@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+//.page-footer__social {
+//}
+
+.social__title {
+  display: none;
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $gray-lightest;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  display: block;
+  width: 22px;
+  height: 28px;
+  font-size: 0;
+}
+
+.social__link--instagram {
+  background: url("../../img/icon-insta.svg") no-repeat center center;
+}
+
+.social__link--facebook {
+  background: url("../../img/icon-fb.svg") no-repeat center center;
+}
+
+.social__link--twitter {
+  background: url("../../img/icon-twitter.svg") no-repeat center center;
+}

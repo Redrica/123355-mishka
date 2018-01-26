@@ -2,42 +2,44 @@
 <html lang=ru>
 <head>
   <meta charset="UTF-8">
+  <link href="css/style.css" rel="stylesheet">
   <title>Мишка</title>
 </head>
 <body>
-<!-- классы пока не везде и условные, для собственного понимания, где, что и для чего -->
-<!-- я не знаю, почему WebStorm ставит на одну строчку body и header. Это реформатирование так делает -->
+
 <header class="page-header">
-  <a class="page-header__logo" href="index.html">
-    <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог товаров</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Вязание на заказ</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Поиск по сайту</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
-        </li>
-      </ul>
+  <div class="page-header__wrapper wrapper">
+    <div class="page-header__top">
+      <a class="page-header__logo" href="index.html">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+      </a>
     </div>
-  </nav>
-  <div class="page-header__wrapper">
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <span class="main-nav__link">Вязание на заказ</span>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <h1 class="page-header__title">Вязание на заказ</h1>
   </div>
 </header>
 
 <main class="page-main">
   <section class="order">
-    <div class="order-wrapper">
+    <div class="order-wrapper wrapper">
       <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы
         уточнить детали.</p>
@@ -56,7 +58,7 @@
           <input class="form__option" id="grey" type="checkbox" name="grey" checked>
           <label class="form__description" for="grey">Серый</label>
           <input class="form__option" id="tiffani" type="checkbox" name="tiffani">
-          <label class="form__description" for="tiffani">&laquoТиффани&raquo</label>
+          <label class="form__description" for="tiffani">&laquo;Тиффани&raquo;</label>
           <input class="form__option" id="black" type="checkbox" name="black">
           <label class="form__description" for="black">Черный</label>
           <input class="form__option" id="pink" type="checkbox" name="pink">
@@ -66,47 +68,40 @@
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">фио</legend>
-          <input class="form__field" id="first-name" type="text" name="first-name" required autofocus
-                 autocomplete="on"
-                 placeholder="Введите ваше имя*">
           <label class="form__description" for="first-name">Имя:</label>
-          <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on"
-                 placeholder="Укажите фамилию*">
-          <label class="form__description" for="last-name">Имя:</label>
-          <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on"
-                 placeholder="Отчество, если желаете">
-          <label class="form__description" for="patronymic">Имя:</label>
+          <input class="form__field" id="first-name" type="text" name="first-name" required autocomplete="on" placeholder="Введите ваше имя*">
+          <label class="form__description" for="last-name">Фамлия:</label>
+          <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on" placeholder="Укажите фамилию*">
+          <label class="form__description" for="patronymic">Отчество:</label>
+          <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="phone-number">тел</label>
           </legend>
-          <input class="form__field" id="phone-number" type="tel" name="phone-number" required autocomplete="on"
-                 placeholder="+7 XXX XX XX*">
+          <input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="email">e-mail</label>
           </legend>
-          <input class="form__field" id="email" type="email" name="email" required autocomplete="on"
-                 placeholder="Ваш Email*">
+          <input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*">
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__legend">
             <label class="form__description" for="addition">доп</label>
           </legend>
-          <textarea class="form__field" id="addition" name="addition"
-                    rows="7">Опишите все ваши пожелания к заказу</textarea>
+          <textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
-        <strong class="order__form--note">*Поля обязательны для заполнения</strong>
-        <input class="order__submit" type="submit" value="Отправить заказ">
+        <strong class="order__note">*Поля обязательны для заполнения</strong>
+        <input class="order__submit button" type="submit" value="Отправить заказ">
       </form>
     </div>
   </section>
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
+  <div class="page-footer__wrapper wrapper">
     <div class="page-footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">

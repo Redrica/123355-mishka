@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+.buy {
+  display: block;
+  width: auto;
+  padding: 37px 30px 44px;
+  background-color: $white;
+}
+
+.buy__title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+}
+
+.buy__size {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $gray-dark;
+}
+
+.buy__radio-display {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $gray-dark;
+}

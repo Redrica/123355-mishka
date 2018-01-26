@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+.main-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -77px;
+  right: 0;
+  width: 82px;
+  height: 76px;
+  font-size: 0;
+  background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
+  border: none;
+  outline: none;
+}
+//Отключение МЕНЮ
+.main-nav__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//.main-nav__toggle:active + .main-nav__list{
+//  display: block;
+//}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  width: auto;
+  min-height: 78px;
+  margin: 0;
+  padding: 0 0 0 75px;
+  background-color: $white;
+  border-bottom: 1px solid #ececec;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 78px;
+  text-decoration: none;
+  text-align: left;
+  vertical-align: middle;
+  color: $black;
+}
+
+.main-nav__link--search {
+  background: $white url("../../img/icon-search.svg") no-repeat 32px center;
+}
+
+.main-nav__link--cart::before {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  content: "";
+  display: block;
+  background: url("../../img/icon-cart.svg") no-repeat center center;
+}
