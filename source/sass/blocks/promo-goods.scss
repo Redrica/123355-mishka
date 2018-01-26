@@ -1,6 +1,12 @@
+@import "../mixins.scss";
 @import "variables.scss";
 
 .promo-goods__wrapper {
+  width: 100%;
+  max-width: 1250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 30px;
   background-color: $white;
 }
@@ -13,6 +19,8 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $turquoise;
+
+  @include outline-item;
 }
 
 .promo-goods__item {
@@ -21,6 +29,8 @@
   line-height: 30px;
   font-weight: bold;
   color: $black;
+
+  @include outline-item;
 }
 
 .promo-goods__description {

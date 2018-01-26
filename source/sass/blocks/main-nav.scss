@@ -21,10 +21,14 @@
 //Отключение МЕНЮ
 .main-nav__list {
   display: block;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+//.main-nav__item {
+//}
 
 //.main-nav__toggle:active + .main-nav__list{
 //  display: block;
@@ -33,9 +37,9 @@
 .main-nav__link {
   position: relative;
   display: block;
-  width: auto;
+  width: 100%;
   min-height: 78px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 0 0 75px;
   background-color: $white;
   border-bottom: 1px solid #ececec;
@@ -43,7 +47,7 @@
   font-weight: bold;
   line-height: 78px;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   color: $black;
 }

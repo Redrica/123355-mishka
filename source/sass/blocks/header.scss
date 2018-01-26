@@ -9,6 +9,7 @@
 }
 
 .page-header__wrapper {
+  max-width: 1250px;
   background-color: $gray-lightest;
 }
 
@@ -20,6 +21,7 @@
   background-color: $white;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+
   @include outline-block;
 }
 
@@ -32,6 +34,8 @@
 .page-header__body {
   //padding-top: 70px;
   background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
+
+  @include outline-block;
 }
 
 .page-header__title {
