@@ -17,6 +17,10 @@
   background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
   border: none;
   outline: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 //Отключение МЕНЮ
@@ -52,6 +56,10 @@
   vertical-align: top;
   color: $black;
 }
+
+//.main-nav__link--search {
+//  font-size: 0;
+//}
 
 .main-nav__link--search::before {
   display: inline-block;
