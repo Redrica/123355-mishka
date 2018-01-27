@@ -88,11 +88,12 @@
   left: 50%;
   margin-left: -50vw;
   height: 457px;
-  margin-top: 57px;
+  margin-top: 40px;
   background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
 
   @media (min-width: $tablet-width) {
     background-image: url("../../img/map-tablet@1x.jpg");
+    margin-top: 57px;
   }
 }
 
@@ -104,7 +105,7 @@
 }
 
 .contacts__write {
-  margin: 35px 30px 0;
+  margin-top: 35px;
 
   @media (min-width: $tablet-width) {
     width: 230px;

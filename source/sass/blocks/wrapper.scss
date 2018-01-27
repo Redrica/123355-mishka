@@ -28,7 +28,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 50px;
+    padding: 30px 50px 50px;
   }
 }
 
@@ -37,7 +37,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 50px 50px;
+    padding: 65px 50px 50px;
   }
 }
 
@@ -67,4 +67,5 @@
 
 .page-footer__wrapper {
   background-color: $gray-lightest;
+  padding: 0 30px;
 }

@@ -1,16 +1,32 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .page-footer__copyright {
-  display: block;
-  width: auto;
-  padding: 30px;
-  //min-height: 80px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.page-footer__copyright-link {
+  display: inline-block;
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
   text-decoration: none;
-  text-align: center;
-  background: url("../../img/logo-htmlacademy.svg") no-repeat right 35px center;
   color: $black;
 }
+
+.page-footer__copyright-link::after {
+  content: url("../../img/logo-htmlacademy.svg");
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 29px;
+}
+

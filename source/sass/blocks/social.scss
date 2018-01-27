@@ -9,17 +9,24 @@
 }
 
 .social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 25px 0;
   list-style: none;
   text-align: center;
-  vertical-align: middle;
   background-color: $gray-lightest;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .social__item {
   display: inline-block;
+  margin-right: 40px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
 }
 
 .social__link {
