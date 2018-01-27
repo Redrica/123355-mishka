@@ -5,7 +5,7 @@
   width: 320px;
   margin: 0 auto;
   background-color: $white;
-  //outline: 1px solid red;
+  outline: 1px solid red;
 
   @include max-width;
   @include display-flex-column;
@@ -26,17 +26,34 @@
   flex-wrap: wrap;
   padding: 30px;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 50px;
+  }
 }
 
 .about__wrapper {
   padding: 40px 30px 15px;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 50px 50px;
+  }
 }
 
 .reviews__wrapper {
   padding: 30px;
   padding-bottom: 40px;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 77px 50px 47px;
+    background: $white url("../../img/review@1x.jpg") no-repeat 0 0;
+  }
 }
 
 .contacts__wrapper {

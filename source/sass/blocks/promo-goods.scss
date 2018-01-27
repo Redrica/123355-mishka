@@ -3,11 +3,13 @@
 
 .promo-goods__header {
   @include display-flex-column;
-  @include outline-block;
+  //@include outline-block;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -22,6 +24,8 @@
 
   @media (min-width: 768px) {
     line-height: 17px;
+    margin: 0;
+    flex-shrink: 10;
   }
 }
 
@@ -36,25 +40,34 @@
   @media (min-width: 768px) {
     font-size: 43px;
     line-height: 50px;
+    flex-grow: 1;
   }
 }
 
 .promo-goods__content {
-  width: 875px;
-  height: 404px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap-reverse;
-  //justify-content: space-between;
-  align-content: center;
-
-  @include outline-block;
+  //@include outline-block;
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    height: 404px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+  }
 }
 
 .promo-goods__description {
   font-size: 15px;
   line-height: 24px;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 292px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .promo-goods__properties {
@@ -63,7 +76,7 @@
   line-height: 20px;
   color: $gray-dark;
 
-  @include outline-item;
+  //@include outline-item;
 }
 
 .promo-goods__image {
@@ -71,9 +84,10 @@
   margin-top: 28px;
 
   @media (min-width: $tablet-width) {
-    order: -1;
-    flex-basis: 404px;
-    //flex-shrink: 0;
+    order: 1;
+    align-self: flex-end;
+    flex-basis: 100%;
+    width: 50%;
     margin: 0;
   }
 }
@@ -84,10 +98,18 @@
   font-size: 17px;
   line-height: 24px;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .promo-goods__button {
   margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 292px;
+  }
 }
 
 //для себя: не забыть про этот блок!
