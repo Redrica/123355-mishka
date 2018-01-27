@@ -18,3 +18,8 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin header-tablet {
+  font-size: 43px;
+  line-height: 50px;
+}

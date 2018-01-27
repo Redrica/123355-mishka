@@ -11,15 +11,14 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
+    @include header-tablet;
     order: -2;
-    font-size: 43px;
-    line-height: 50px;
     margin-bottom: 0;
   }
 }
 
 .reviews__list {
-  @include outline-block;
+  //@include outline-block;
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;

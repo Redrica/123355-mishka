@@ -11,8 +11,7 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
-    font-size: 43px;
-    line-height: 50px;
+    @include header-tablet;
     margin-bottom: 40px;
   }
 }
@@ -54,26 +53,26 @@
   }
 }
 
-  .about__item--eco {
-    background: url("../../img/icon-feature-flower.svg") no-repeat 20px 0;
-  }
+.about__item--eco {
+  background: url("../../img/icon-feature-flower.svg") no-repeat 20px 0;
+}
 
-  .about__item--style {
-    background: url("../../img/icon-feature-money.svg") no-repeat 0 0;
-  }
+.about__item--style {
+  background: url("../../img/icon-feature-money.svg") no-repeat 0 0;
+}
 
-  .about__item--like {
-    background: url("../../img/icon-feature-heart.svg") no-repeat 0 0;
-  }
+.about__item--like {
+  background: url("../../img/icon-feature-heart.svg") no-repeat 0 0;
+}
 
-  .about__item--knit {
-    background: url("../../img/icon-feature-ball.svg") no-repeat 0 0;
-  }
+.about__item--knit {
+  background: url("../../img/icon-feature-ball.svg") no-repeat 0 0;
+}
 
-  .about__item--support {
-    background: url("../../img/icon-feature-rocket.svg") no-repeat 0 0;
-  }
+.about__item--support {
+  background: url("../../img/icon-feature-rocket.svg") no-repeat 0 0;
+}
 
-  .about__item--gift {
-    background: url("../../img/icon-feature-gift.svg") no-repeat 0 0;
-  }
+.about__item--gift {
+  background: url("../../img/icon-feature-gift.svg") no-repeat 0 0;
+}

@@ -46,19 +46,23 @@
   padding-bottom: 40px;
   background-color: $white;
 
+  @include outline-block;
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 77px 50px 47px;
+    padding: 77px 50px 115px;
     background: $white url("../../img/review@1x.jpg") no-repeat 0 0;
   }
 }
 
 .contacts__wrapper {
-  padding: 40px 30px;
+  padding: 40px 0;
   background-color: $white;
+
+  //@media (min-width: $tablet-width) {
+  //}
 }
 
 .page-footer__wrapper {

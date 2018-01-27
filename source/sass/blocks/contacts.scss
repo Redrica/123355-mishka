@@ -1,22 +1,62 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.contacts__info {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}
+
 .contacts__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    @include header-tablet;
+    position: relative;
+    margin-bottom: 50px;
+  }
+}
+
+.contacts__title::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47px;
+  height: 81px;
+  background: url("../../img/icon-flag.svg") no-repeat 0 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .contacts__table {
   display: table;
+  width: 100%;
+
+  //@include outline-block;
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .contacts__row {
   display: table-row;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 50%;
+  }
 }
 
 .contacts__data {
@@ -25,9 +65,26 @@
   line-height: 30px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.contacts__data:first-child {
+  width: 75px;
+}
+
+.contacts__row:last-child .contacts__data {
+  padding-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .contacts__mail {
+  padding-bottom: 4px;
   text-decoration: none;
   color: $gray-dark;
   border-bottom: 1px solid $turquoise;
@@ -36,8 +93,12 @@
 .contacts__map {
   width: 100%;
   height: 457px;
-  margin-top: 40px;
+  margin-top: 57px;
   background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/map-tablet@1x.jpg");
+  }
 }
 
 .contacts__marker {
@@ -48,5 +109,12 @@
 }
 
 .contacts__write {
-  margin-top: 35px;
+  margin: 35px 30px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin: 55px auto 0;
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
