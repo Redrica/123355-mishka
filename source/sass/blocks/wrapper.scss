@@ -61,11 +61,20 @@
   padding: 40px 30px;
   background-color: $white;
 
-  //@media (min-width: $tablet-width) {
-  //}
+  @media (min-width: $tablet-width) {
+    padding: 40px 50px;
+  }
 }
 
 .page-footer__wrapper {
   background-color: $gray-lightest;
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    height: 143px;
+    padding: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
