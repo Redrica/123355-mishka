@@ -1,14 +1,6 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.contacts__info {
-  padding: 0 30px;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 50px;
-  }
-}
-
 .contacts__title {
   margin: 0;
   margin-bottom: 25px;
@@ -91,7 +83,10 @@
 }
 
 .contacts__map {
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
   height: 457px;
   margin-top: 57px;
   background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
