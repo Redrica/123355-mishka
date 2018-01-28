@@ -3,21 +3,23 @@
 
 .main-nav {
   position: relative;
-  padding-top: 78px;
-  margin-top: -78px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    margin-top: -89px;
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: -77px;
+  top: 2px;
   right: 0;
   width: 82px;
-  height: 76px;
+  height: 72px;
   font-size: 0;
   background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
   border: none;
@@ -28,6 +30,59 @@
   }
 }
 
+.main-nav__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 79px;
+  background-color: $white;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 10;
+    justify-content: flex-start;
+    flex-basis: 370px;
+    height: 89px;
+    flex-shrink: 0;
+    border-top: none;
+    border-right: 1px solid #ececec;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-basis: 89px;
+    width: 288px;
+    margin-left: 512px;
+    border-right: none;
+  }
+}
+
+.main-nav__logo-link {
+  position: relative;
+  z-index: 100;
+}
+
+// себе: смена логотипов мобильная -> планшет
+.main-nav__logo-image--tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__logo-image--mobile {
+    display: none;
+  }
+
+  .main-nav__logo-image--tablet {
+    display: block;
+    margin-left: 48px;
+  }
+}
+
 //Отключение МЕНЮ
 .main-nav__list {
   margin: 0;
@@ -35,9 +90,18 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-content: flex-start;
+    margin-left: -370px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -89px;
+    margin-left: 0;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -47,7 +111,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
+    display: block;
     border-left: 1px solid #ececec;
     padding: 0;
   }
@@ -55,7 +119,12 @@
 
 .main-nav__item:nth-child(3) {
   @media (min-width: $tablet-width) {
-    margin-left: 370px;
+    padding-left: 370px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+
   }
 }
 
@@ -88,9 +157,17 @@
   }
 
   @media (min-width: $desktop-width) {
+    order: -3;
     background-color: $white;
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
+}
 
+.main-nav__item--catalog {
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+  }
 }
 
 .main-nav__link--catalog {
@@ -102,8 +179,16 @@
 
   @media (min-width: $desktop-width) {
     font-size: 17px;
+    padding: 30px 36px 33px 100px;
+    margin-left: 0;
   }
+}
 
+.main-nav__item--order {
+  @media (min-width: $desktop-width) {
+    margin-right: 288px;
+    border-right: none;
+  }
 }
 
 .main-nav__link--order {
@@ -115,13 +200,18 @@
 
   @media (min-width: $desktop-width) {
     font-size: 17px;
+    padding: 30px 35px 33px 36px;
   }
-  }
+}
 
 .main-nav__item--search {
   @media (min-width: $tablet-width) {
     order: -2;
     flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 0;
   }
 }
 
@@ -153,13 +243,14 @@
 .main-nav__item--cart {
   @media (min-width: $tablet-width) {
     order: -1;
+    border-bottom: 0;
   }
 }
 
 .main-nav__link--cart {
   @media (min-width: $tablet-width) {
     flex-grow: 1;
-    padding: 30px 50px 33px 84px;
+    padding: 30px 100px 33px 84px;
   }
 }
 
@@ -183,10 +274,18 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin-left: 50px;
+    margin-top: -1px;
+    padding-right: 28px;
+    border: none;
+    background-color: transparent;
+    border-top: 1px solid #ececec;
   }
 }
 
 .main-nav__link--novelty {
+  margin-left: 50px;
+  padding-top: 16px;
   font-size: 15px;
   line-height: 24px;
 }
@@ -196,10 +295,14 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    border: none;
+    background-color: transparent;
   }
 }
 
 .main-nav__link--sale {
+  margin-left: 36px;
+  padding-top: 16px;
   font-size: 15px;
   line-height: 24px;
 }

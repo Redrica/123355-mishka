@@ -1,44 +1,17 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-
 .page-header__top {
   position: relative;
   z-index: 10;
   display: flex;
   justify-content: center;
-  width: auto;
   padding: 19px 0;
-  background-color: $white;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
 
   @media (min-width: $tablet-width) {
     width: 370px;
     padding: 21px 0;
     justify-content: flex-start;
-    border-top: none;
-  }
-}
-
-.page-header__logo {
-  display: block;
-  width: 86px;
-}
-
-// себе: смена логотипов мобильная -> планшет
-.logo-image--tablet {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .logo-image--mobile {
-    display: none;
-  }
-
-  .logo-image--tablet {
-    display: block;
-    margin-left: 48px;
   }
 }
 
@@ -56,6 +29,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    //margin-top: -83px; // смещение, чтоб залезть под меню
     padding: 17px 100px 0;
     background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0;
   }
@@ -72,16 +46,23 @@
 .page-header__delivery-info {
   display: none;
   float: right;
-  // себе: если это ссылка, то ей понадобится:
-  //position: relative;
-  //z-index: 5;
+  position: relative;
+  z-index: 5;
   font-size: 15px;
   line-height: 24px;
+  color: $gray-dark;
 
   @media (min-width: $tablet-width) {
     display: block;
     align-self: flex-end;
   }
+
+  @media (min-width: $desktop-width) {
+    border-top: 1px solid #ececec;
+    margin-top: -17px;
+    padding: 14px 0 0 36px;
+  }
+
 }
 
 .page-header__title {
@@ -97,6 +78,11 @@
     @include header-tablet;
     margin: 0 0 260px;
     padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include header-desktop;
+    margin: 0 0 245px;
   }
 }
 
