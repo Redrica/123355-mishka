@@ -15,6 +15,10 @@
     order: -2;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+   @include header-desktop;
+  }
 }
 
 .reviews__list {
@@ -36,6 +40,10 @@
     flex-basis: 100%;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    //padding-right: 50px;
+  }
 }
 
 .reviews__text {
@@ -50,6 +58,10 @@
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 80px;
   }
 }
 

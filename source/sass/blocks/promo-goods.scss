@@ -11,6 +11,13 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 89px;
+    left: 138px;
+    margin-top: 50px;
+  }
 }
 
 .promo-goods__title {
@@ -23,10 +30,18 @@
   color: $turquoise;
 
   @media (min-width: 768px) {
+    width: 90px;
+    text-align: center;
+    vertical-align: top;
     line-height: 17px;
     margin: 0;
   }
-}
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    margin-right: 44px;
+  }
+  }
 
 .promo-goods__item {
   order: -1;
@@ -39,6 +54,10 @@
   @media (min-width: 768px) {
     @include header-tablet;
     flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include header-desktop;
   }
 }
 
@@ -54,6 +73,11 @@
     align-content: stretch;
     align-items: flex-start;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 875px;
+    height: 632px;
+  }
 }
 
 .promo-goods__description {
@@ -65,6 +89,10 @@
     width: 292px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 160px;
   }
 }
 
@@ -88,6 +116,11 @@
     width: 50%;
     margin: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 525px;
+    align-self: flex-end;
+  }
 }
 
 .promo-goods__price {
@@ -99,6 +132,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    margin: 22px 0 0;
   }
 }
 

@@ -15,6 +15,11 @@
     position: relative;
     margin-bottom: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    @include header-desktop;
+    margin-top: 70px;
+  }
 }
 
 .contacts__title::after {
@@ -30,6 +35,11 @@
   @media (min-width: $tablet-width) {
     display: block;
   }
+
+  @media (min-width: $desktop-width) {
+    top: -9px;
+    left: -111px;
+  }
 }
 
 .contacts__table {
@@ -40,6 +50,11 @@
   @media (min-width: $tablet-width) {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    display: table;
+    width: auto;
+  }
 }
 
 .contacts__row {
@@ -48,6 +63,10 @@
   @media (min-width: $tablet-width) {
     display: block;
     width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: table-row;
   }
 }
 
@@ -73,6 +92,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+  }
 }
 
 .contacts__mail {
@@ -95,6 +118,17 @@
     background-image: url("../../img/map-tablet@1x.jpg");
     margin-top: 57px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    order: 1;
+    flex-basis: 100%;
+    align-self: flex-end;
+    flex-shrink: 0;
+    width: 525px;
+    margin: 0;
+    background-image: url("../../img/map-desktop@1x.png");
+  }
 }
 
 .contacts__marker {
@@ -112,5 +146,9 @@
     margin: 55px auto 0;
     font-size: 17px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 55px 0 0;
   }
 }
