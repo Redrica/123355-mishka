@@ -1,6 +1,7 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+
 .page-header__top {
   position: relative;
   z-index: 10;
@@ -8,14 +9,12 @@
   justify-content: center;
   width: auto;
   padding: 19px 0;
-  //height: 78px;
   background-color: $white;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 
   @media (min-width: $tablet-width) {
     width: 370px;
-    //height: 89px;
     padding: 21px 0;
     justify-content: flex-start;
     border-top: none;
@@ -50,16 +49,24 @@
   font-size: 0;
 
   @media (min-width: $tablet-width) {
-
     height: 745px;
     margin-top: -69px; // смещение, чтоб залезть под меню
     padding: 17px 50px 0;
+    background: url("../../img/hero-tablet@1x_made.jpg") no-repeat center 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 100px 0;
     background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0;
   }
 }
 
 .page-header__body--main {
   background-color: $white;
+
+  @media (min-width: $desktop-width) {
+    background-color: #f9f9f9;
+  }
 }
 
 .page-header__delivery-info {
@@ -109,14 +116,17 @@
   @media (min-width: $tablet-width) {
     display: inline-block;
     width: 50%;
-    padding: 30px 37px 30px;
+    padding: 30px 200px 30px 37px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 305px;
   }
 }
 
 .page-header__link--interior {
-  padding-right: 200px;
   background: $turquoise url("../../img/icon-interior.svg") no-repeat right 35px center;
 
   //@media (min-width: $tablet-width) {
@@ -124,7 +134,6 @@
 }
 
 .page-header__link--toy {
-  padding-right: 200px;
   background: $turquoise-darker url("../../img/icon-toy.svg") no-repeat right 27px center;
 
   //@media (min-width: $tablet-width) {
