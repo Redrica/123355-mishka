@@ -2,19 +2,45 @@
 @import "../variables.scss";
 
 .page-header__top {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   width: auto;
-  min-height: 78px;
+  padding: 19px 0;
+  //height: 78px;
   background-color: $white;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+
+  @media (min-width: $tablet-width) {
+    width: 370px;
+    //height: 89px;
+    padding: 21px 0;
+    justify-content: flex-start;
+    border-top: none;
+  }
 }
 
 .page-header__logo {
   display: block;
   width: 86px;
-  margin-top: 20px;
+  //margin-top: 20px;
+}
+
+// себе: смена логотипов мобильная -> планшет
+.logo-image--tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .logo-image--mobile {
+    display: none;
+  }
+  .logo-image--tablet {
+    display: block;
+    margin-left: 48px;
+  }
 }
 
 .page-header__body {

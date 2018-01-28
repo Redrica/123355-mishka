@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .wrapper {
-  width: 320px;
+  //width: 320px;
   margin: 0 auto;
   background-color: $white;
   outline: 1px solid red;
@@ -10,7 +10,7 @@
   @include max-width;
   @include display-flex-column;
   @media (min-width: $tablet-width) {
-    width: 768px;
+    //width: 768px;
   }
   @media (min-width: $desktop-width) {
     width: 1250px;
