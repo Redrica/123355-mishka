@@ -43,19 +43,43 @@
   }
 }
 
+.page-header__delivery-info {
+  float: right;
+  display: none;
+  //position: relative;
+  z-index: 5;
+  font-size: 15px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-right: 50px;
+      }
+}
+
 .page-header__body {
-  //padding-top: 70px;
   background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -69px;
+    padding-top: 17px;
+    background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0px;
+  }
 }
 
 .page-header__title {
   font-weight: bold;
   margin: 0;
-  padding: 70px 0 75px 0;
+  padding: 70px 30px 75px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    @include header-tablet;
+    padding: 136px 50px 75px;
+  }
 }
 
 .page-header__link {
