@@ -18,6 +18,10 @@
   text-align: center;
   background-color: $gray-lightest;
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .social__item {

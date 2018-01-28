@@ -25,7 +25,6 @@
 .page-header__logo {
   display: block;
   width: 86px;
-  //margin-top: 20px;
 }
 
 // себе: смена логотипов мобильная -> планшет
@@ -37,40 +36,51 @@
   .logo-image--mobile {
     display: none;
   }
+
   .logo-image--tablet {
     display: block;
     margin-left: 48px;
   }
 }
 
+.page-header__body {
+  @include display-flex-column;
+  justify-content: space-between;
+  background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
+  font-size: 0;
+
+  @media (min-width: $tablet-width) {
+
+    height: 745px;
+    margin-top: -69px; // смещение, чтоб залезть под меню
+    padding: 17px 50px 0;
+    background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0;
+  }
+}
+
+.page-header__body--main {
+  background-color: $white;
+}
+
 .page-header__delivery-info {
-  float: right;
   display: none;
+  float: right;
+  // себе: если это ссылка, то ей понадобится:
   //position: relative;
-  z-index: 5;
+  //z-index: 5;
   font-size: 15px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
     display: block;
-    margin-right: 50px;
-      }
-}
-
-.page-header__body {
-  background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: -69px;
-    padding-top: 17px;
-    background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0px;
+    align-self: flex-end;
   }
 }
 
 .page-header__title {
   font-weight: bold;
-  margin: 0;
-  padding: 70px 30px 75px;
+  margin: 70px 0 123px;
+  padding: 0 30px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
@@ -78,7 +88,8 @@
 
   @media (min-width: $tablet-width) {
     @include header-tablet;
-    padding: 136px 50px 75px;
+    margin: 0 0 260px;
+    padding: 0 50px;
   }
 }
 
@@ -94,15 +105,28 @@
   text-align: left;
   vertical-align: middle;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 50%;
+    padding: 30px 37px 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .page-header__link--interior {
-  margin-top: 48px;
   padding-right: 200px;
   background: $turquoise url("../../img/icon-interior.svg") no-repeat right 35px center;
+
+  //@media (min-width: $tablet-width) {
+  //}
 }
 
 .page-header__link--toy {
   padding-right: 200px;
   background: $turquoise-darker url("../../img/icon-toy.svg") no-repeat right 27px center;
+
+  //@media (min-width: $tablet-width) {
+  //}
 }
