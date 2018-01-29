@@ -18,28 +18,44 @@
 .page-header__body {
   @include display-flex-column;
   justify-content: space-between;
-  background: url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
+  background-color: $gray-lightest;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -69px; // смещение, чтоб залезть под меню
+    padding: 17px 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 100px 0;
+  }
+
+}
+
+.page-header__body--main {
+  background: $white url("../../img/hero-mobile@1x.jpg") no-repeat center -18px;
   font-size: 0;
 
   @media (min-width: $tablet-width) {
     height: 745px;
-    margin-top: -69px; // смещение, чтоб залезть под меню
     padding: 17px 50px 0;
     background: url("../../img/hero-tablet@1x_made.jpg") no-repeat center 0;
   }
 
   @media (min-width: $desktop-width) {
-    //margin-top: -83px; // смещение, чтоб залезть под меню
     padding: 17px 100px 0;
     background: url("../../img/hero-desktop@1x_made.jpg") no-repeat center 0;
+    background-color: #f9f9f9;
   }
 }
 
-.page-header__body--main {
-  background-color: $white;
+.page-header__body--catalog,
+.page-header__body--form {
+  @media (min-width: $tablet-width) {
+    height: 224px;
+  }
 
   @media (min-width: $desktop-width) {
-    background-color: #f9f9f9;
+    height: 252px;
   }
 }
 
@@ -60,7 +76,7 @@
   @media (min-width: $desktop-width) {
     border-top: 1px solid #ececec;
     margin-top: -17px;
-    padding: 14px 0 0 36px;
+    padding: 16px 0 0 36px;
   }
 
 }
@@ -86,6 +102,23 @@
   }
 }
 
+.page-header__title--catalog,
+.page-header__title--form {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+    padding: 0 100px;
+  }
+}
+
+.page-header__link-wrapper {
+  font-size: 0;
+}
+
 .page-header__link {
   display: block;
   width: auto;
@@ -107,7 +140,7 @@
     line-height: 30px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-right: 305px;
   }
 }

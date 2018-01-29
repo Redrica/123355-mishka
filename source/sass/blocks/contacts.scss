@@ -43,22 +43,22 @@
 }
 
 .contacts__table {
-  display: table;
+  @include table;
   width: 100%;
 
   //@include outline-block;
   @media (min-width: $tablet-width) {
-    display: flex;
+    @include display-flex;
   }
 
   @media (min-width: $desktop-width) {
-    display: table;
+    @include table;
     width: auto;
   }
 }
 
 .contacts__row {
-  display: table-row;
+  @include table-row;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -66,12 +66,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: table-row;
+    @include table-row;
   }
 }
 
 .contacts__data {
-  display: table-cell;
+  @include table-cell;
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;

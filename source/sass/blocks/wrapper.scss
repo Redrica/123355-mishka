@@ -5,7 +5,7 @@
   width: 320px;
   margin: 0 auto;
   background-color: $white;
-  outline: 1px solid red;
+  //outline: 1px solid red;
 
   @include max-width;
   @include display-flex-column;
@@ -21,7 +21,6 @@
 
 // ХЕДЕР
 .page-header__wrapper {
-  background-color: $gray-lightest;
 }
 
 // ТОВАРЫ НЕДЕЛИ
@@ -106,7 +105,49 @@
     align-items: center;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 100px;
+  }
+}
+
+// КАТАЛОГ
+.goods__wrapper {
+  padding: 30px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 91px 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 145px 100px 0;
+  }
+}
+
+// ВИДЕО
+.promo__wrapper {
+  padding: 30px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 100px;
+  }
+}
+
+// ФОРМА
+.order-wrapper {
+  padding: 23px 30px 55px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 88px 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 142px 100px 0;
   }
 }

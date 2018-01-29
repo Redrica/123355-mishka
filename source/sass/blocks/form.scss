@@ -1,8 +1,27 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-//.form {
-//}
+.form__table {
+  @include table;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.form__row {
+  @include table-row;
+  
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.form__cell {
+  @include table-cell;
+}
 
 .form__set {
   margin: 0;
@@ -11,12 +30,20 @@
   border-top: 1px solid $turquoise;
 }
 
-.form__legend {
+.form__cell--legend {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: $turquoise;
+}
+
+.form__cell--input {
+  width: 40px;
+}
+
+.form__cell--description {
+  padding-right: 40px;
 }
 
 .form__description {

@@ -1,11 +1,6 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.goods__wrapper {
-  padding: 30px;
-  background-color: $white;
-}
-
 .goods__item {
   margin-bottom: 30px;
   border: 1px solid $gray-lightest;

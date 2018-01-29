@@ -113,11 +113,11 @@
     order: 1;
     align-self: flex-end;
     flex-basis: 100%;
-    width: 50%;
+    width: 333px;
     margin: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 525px;
     align-self: flex-end;
   }

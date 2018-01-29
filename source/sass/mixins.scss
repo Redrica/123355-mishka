@@ -28,3 +28,16 @@
   font-size: 53px;
   line-height: 57px;
 }
+
+@mixin table {
+  display: table;
+  border-collapse: collapse;
+}
+
+@mixin table-row {
+  display: table-row;
+}
+
+@mixin table-cell {
+  display: table-cell;
+}

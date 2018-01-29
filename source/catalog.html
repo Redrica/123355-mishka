@@ -10,21 +10,21 @@
 
 <header class="page-header">
   <div class="page-header__wrapper wrapper">
-    <div class="page-header__top">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        <!--Временный вариант, не знаю, как по-другому сделать-->
-        <img class="page-header__logo-image logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">      </a>
-    </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <!--<div class="main-nav__wrapper">-->
+      <div class="main-nav__logo">
+        <a class="main-nav__logo-link" href="index.html">
+          <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          <!--Временный вариант, не знаю, как по-другому сделать-->
+          <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+        </a>
+      </div>
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <span class="main-nav__link">Каталог товаров</span>
+        <li class="main-nav__item main-nav__item--catalog">
+          <span class="main-nav__link main-nav__link--catalog">Каталог товаров</span>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <li class="main-nav__item main-nav__item--order">
+          <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
         </li>
         <li class="main-nav__item main-nav__item--search">
           <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
@@ -32,10 +32,18 @@
         <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
+        <li class="main-nav__item main-nav__item--novelty">
+          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item--sale">
+          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
+        </li>
       </ul>
-      <!--</div>-->
     </nav>
-    <h1 class="page-header__title">Каталог товаров</h1>
+    <div class="page-header__body page-header__body--catalog">
+      <span class="page-header__delivery-info">Бесплатная доставка по России</span>
+      <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
+    </div>
   </div>
 </header>
 
@@ -107,6 +115,9 @@
 
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Мишка">
+    </a>
     <div class="page-footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">
@@ -122,7 +133,7 @@
         </li>
       </ul>
     </div>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
   </div>
 </footer>
 </body>
