@@ -111,7 +111,6 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    display: block;
     border-left: 1px solid #ececec;
     padding: 0;
   }
@@ -284,6 +283,7 @@
     display: block;
     margin-left: 50px;
     margin-top: -1px;
+    padding-top: 16px;
     padding-right: 28px;
     border: none;
     background-color: transparent;
@@ -292,8 +292,9 @@
 }
 
 .main-nav__link--novelty {
+  display: inline;
   margin-left: 50px;
-  padding-top: 16px;
+  padding: 0;
   font-size: 15px;
   line-height: 24px;
 }
@@ -303,14 +304,16 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    padding-top: 16px;
     border: none;
     background-color: transparent;
   }
 }
 
 .main-nav__link--sale {
+  display: inline;
   margin-left: 36px;
-  padding-top: 16px;
+  padding: 0;
   font-size: 15px;
   line-height: 24px;
 }

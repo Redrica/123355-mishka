@@ -113,6 +113,8 @@
   height: 457px;
   margin-top: 40px;
   background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
+  //себе: иначе будут поля оставаться, тк фон не тянется на 100vm внутри родителя;
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
     background-image: url("../../img/map-tablet@1x.jpg");

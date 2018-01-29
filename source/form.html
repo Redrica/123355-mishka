@@ -54,8 +54,8 @@
         свяжемся с вами, чтобы
         уточнить детали.</p>
       <form class="order__form form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form__table">
-          <div class="form__row">
+        <div class="form__table form__table--type">
+          <div class="form__row form__row--legend">
             <div class="form__cell form__cell--legend">Тип</div>
             <div class="form__cell"></div>
           </div>
@@ -68,8 +68,8 @@
             <div class="form__cell"><label class="form__description" for="toy">Детская игрушка</label></div>
           </div>
         </div>
-        <div class="form__table">
-          <div class="form__row">
+        <div class="form__table form__table--color">
+          <div class="form__row form__row--legend">
             <div class="form__cell form__cell--legend">Цвет</div>
             <div class="form__cell"></div>
           </div>
@@ -99,8 +99,8 @@
             <div class="form__cell"><label class="form__description" for="orange">Оранжевый</label></div>
           </div>
         </div>
-        <div class="form__table">
-          <div class="form__row">
+        <div class="form__table form__table--name">
+          <div class="form__row form__row--legend">
             <div class="form__cell form__cell--legend">фио</div>
             <div class="form__cell"></div>
           </div>
@@ -117,9 +117,9 @@
             <div class="form__cell"><input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете"></div>
           </div>
         </div>
-        <div class="form__table">
+        <div class="form__table form__table--contacts">
           <div class="form__row">
-            <div class="form__cell form__cell--legend"><label class="form__description" for="phone-number">тел</label></div>
+            <div class="form__cell form__row--legend"><label class="form__description" for="phone-number">тел</label></div>
             <div class="form__cell"><input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*"></div>
           </div>
           <div class="form__row form__cell--legend">
@@ -127,9 +127,8 @@
             <div class="form__cell"><input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*"></div>
           </div>
         </div>
-
-        <div class="form__table">
-          <div class="form__row form__cell--legend">
+        <div class="form__table form__table--addition">
+          <div class="form__row form__row--legend">
             <div class="form__cell"><label class="form__description" for="addition">доп</label></div>
             <div class="form__cell"><textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea></div>
           </div>
