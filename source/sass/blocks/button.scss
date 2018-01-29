@@ -15,6 +15,10 @@
   outline: none;
   border: 2px solid $gray-dark;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+  }
 }
 
 .button--turq {

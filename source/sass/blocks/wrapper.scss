@@ -12,7 +12,6 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -145,10 +144,10 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 88px 50px 0;
+    padding: 88px 0 0;
   }
 
-  @media (min-width: $desktop-width) {
-    padding: 142px 100px 0;
-  }
+  //@media (min-width: $desktop-width) {
+  //  padding: 142px 100px 0;
+  //}
 }

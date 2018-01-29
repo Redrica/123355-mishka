@@ -1,70 +1,67 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.form__table {
-  @include outline-block;
-  @include display-flex-column;
-  margin-bottom: 20px;
-
+.form__item {
+  margin-bottom: 30px;
   @media (min-width: $tablet-width) {
+    @include display-flex;
     flex-wrap: wrap;
-    // пошел эксперимент
-    height: 200px;
-    padding: 25px 0;
+    margin-bottom: 0;
+    padding: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 180px 50px 50px;
   }
 }
 
-.form__row {
-  @include outline-item;
-  @include display-flex;
-  margin: 5px;
-}
-
-.form__row--name {
-  @include display-flex-column;
-
+.form__item:nth-child(2n) {
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    background-color: $gray-lightest;
   }
 }
 
-.form__row--legend {
-  @media (min-width: $tablet-width) {
-    flex-basis: 100%;
-    width: 100px;
-  }
-}
-
-//.form__cell {
-//  width: 100%;
-//}
-
-//.form__cell--legend {
-//  width: 100px;
-//  height: 200px;
-//}
-
-.form__set {
-  margin: 0;
-  padding: 20px;
-  border: none;
-  border-top: 1px solid $turquoise;
-}
-
-.form__cell--legend {
+.form__title {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: $turquoise;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 175px;
+    text-align: center;
+  }
 }
 
-.form__cell--input {
-  width: 40px;
+.form__content {
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
 }
 
-.form__cell--description {
-  padding-right: 40px;
+.form__item--color .form__content {
+  @media (min-width: $tablet-width) {
+    @include display-flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__item--color .form__element {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 33.33%;
+  }
 }
 
 .form__description {
@@ -72,12 +69,16 @@
   line-height: 18px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 }
 
 // ВНИМАНИЕ!!! Поле формы видимо не воспринимает transparentize!!!
 // Вводимый текст тоже будет с прозрачностью!!!
 .form__field {
-  width: 100%;
+  //width: 100%;
   padding: 10px;
   font: inherit;
   font-size: 17px;
@@ -93,7 +94,6 @@
 }
 
 .form__field--addition {
-  margin-bottom: 15px;
   color: transparentize($gray-dark, 0.6);
 }
 
@@ -112,4 +112,20 @@
   line-height: 16px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.order__submit {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
+  }
 }
