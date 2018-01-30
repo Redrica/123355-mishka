@@ -1,12 +1,26 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.promo__wrapper {
+  padding: 30px;
+  background-color: $white;
+
+  @media (min-width: $width-tablet) {
+    padding: 53px 50px 63px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 50px;
+  }
+}
+
 .promo__item {
   padding: 32px 33px;
   border: 1px solid $gray-lighter;
 
-  @media (min-width: $desktop-width) {
-    @include display-flex-column;
+  @media (min-width: $width-desktop) {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: stretch;
@@ -16,7 +30,6 @@
   }
 }
 
-
 .promo__title {
   display: block;
   margin: 0;
@@ -24,10 +37,10 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  background: url("../../img/icon-video.svg") no-repeat 3px center;
+  background: url("../img/icon-video.svg") no-repeat 3px center;
   color: $black;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     padding: 95px 0 0 0;
   }
 }
@@ -39,43 +52,46 @@
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     font-size: 15px;
     line-height: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 230px;
+  }
+
+  &--no-wrap {
+    white-space: nowrap;
   }
 }
 
 .promo__video {
+  width: 260px;
+  height: 150px;
   margin-left: -34px;
-}
+  //себе: чтобы видеть, где placeholder расположился
+  background-color: red;
 
-.promo__video--mobile {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.promo__video--tablet {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
+  @media (min-width: $width-tablet) {
+    width: 668px;
+    height: 455px;
     order: -1;
-    background-color: #b5b4b1;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 682px;
+    height: 455px;
   }
 }
 
 .promo__write {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 584px;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 230px;
     margin: 0 0 59px 0;
   }

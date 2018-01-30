@@ -21,7 +21,7 @@
       </div>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--catalog">
-          <span class="main-nav__link main-nav__link--catalog">Каталог товаров</span>
+          <a class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
         </li>
         <li class="main-nav__item main-nav__item--order">
           <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
@@ -54,9 +54,7 @@
         <div class="goods__item">
           <div class="goods__picture">
             <a class="goods__link" href="item-page.html">
-              <img class="goods__picture goods__picture--mobile" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-              <img class="goods__picture goods__picture--tablet" src="img/photo-1-tablet.jpg" width="334" height="334" alt="Зайчик-попрыгайчик">
-              <img class="goods__picture goods__picture--desktop" src="http://placehold.it/316x467" width="316" height="467" alt="Зайчик-попрыгайчик">
+              <img class="goods__picture" src="http://placehold.it/334x462" width="334" height="462" alt="Зайчик-попрыгайчик">
             </a>
           </div>
           <div class="goods__info">
@@ -74,9 +72,7 @@
       <div class="goods__item-wrapper">
         <div class="goods__item">
           <a class="goods__link" href="item-page.html">
-            <img class="goods__picture goods__picture--mobile" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-            <img class="goods__picture goods__picture--tablet" src="img/photo-2-tablet.jpg" width="334" height="334" alt="Зайчик-попрыгайчик">
-            <img class="goods__picture goods__picture--desktop" src="http://placehold.it/316x467" width="316" height="467" alt="Зайчик-попрыгайчик">
+            <img class="goods__picture" src="http://placehold.it/334x462" width="334" height="462" alt="Корзинка для белья">
           </a>
           <div class="goods__info">
             <a class="goods__link" href="item-page.html">
@@ -93,9 +89,7 @@
       <div class="goods__item-wrapper">
         <div class="goods__item">
           <a class="goods__link" href="item-page.html">
-            <img class="goods__picture goods__picture--mobile" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-            <img class="goods__picture goods__picture--tablet" src="img/photo-3-tablet.jpg" width="334" height="334" alt="Зайчик-попрыгайчик">
-            <img class="goods__picture goods__picture--desktop" src="http://placehold.it/316x467" width="316" height="467" alt="Зайчик-попрыгайчик">
+            <img class="goods__picture" src="http://placehold.it/334x462" width="334" height="462" alt="Большая корзинка для игрушек">
           </a>
           <div class="goods__info">
             <a class="goods__link" href="item-page.html">
@@ -112,7 +106,7 @@
 
       <aside class="buy">
         <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__size">Выберите размер</p>
+        <p class="buy__subtitle">Выберите размер</p>
         <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
           <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
           <label class="buy__radio-display" for="size-s">S</label>
@@ -130,17 +124,12 @@
     <div class="promo__wrapper wrapper">
       <div class="promo__item">
         <h2 class="promo__title">Процесс производства</h2>
-        <video class="promo__video promo__video--mobile" width="260" height="150" poster="img/video-mobile@1x.jpg">
+        <video class="promo__video" width="682" height="455" poster="img/video-desktop_made.jpg">
           <source src="#" type="video/mp4">
           <source src="#" type="video/ogg">
           <source src="#" type="video/webm">
         </video>
-        <video class="promo__video promo__video--tablet" width="668" height="455" poster="img/video-mobile@1x.jpg">
-          <source src="#" type="video/mp4">
-          <source src="#" type="video/ogg">
-          <source src="#" type="video/webm">
-        </video>
-        <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео <span class="no-wrap">о том,</span> как появляются наши товары.</p>
+        <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео <span class="promo-intro--no-wrap">о том,</span> как появляются наши товары.</p>
         <a class="promo__write button" href="form.html">Сделать заказ</a>
       </div>
     </div>

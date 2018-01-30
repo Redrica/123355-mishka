@@ -1,22 +1,39 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.promo-goods__wrapper {
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: $white;
+
+  @media (min-width: $width-tablet) {
+    padding: 30px 50px 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: relative;
+    padding: 88px 100px 73px 275px;
+  }
+}
+
 .promo-goods__header {
-  @include display-flex-column;
+  display: flex;
+  flex-direction: column;
   //@include outline-block;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     margin-bottom: 50px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     position: absolute;
     top: 89px;
     left: 138px;
-    margin-top: 50px;
+    order: 1;
+    margin: 50px 0 0 0;
   }
 }
 
@@ -37,7 +54,7 @@
     margin: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     order: -1;
     margin-right: 44px;
   }
@@ -56,14 +73,14 @@
     flex-grow: 1;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     @include header-desktop;
   }
 }
 
 .promo-goods__content {
   //@include outline-block;
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 668px;
     height: 404px;
     display: flex;
@@ -74,7 +91,7 @@
     align-items: flex-start;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 875px;
     height: 632px;
   }
@@ -85,13 +102,13 @@
   line-height: 24px;
   color: $gray-dark;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 292px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     margin-top: 160px;
   }
 }
@@ -101,7 +118,6 @@
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
-
   //@include outline-item;
 }
 
@@ -109,7 +125,7 @@
   display: block;
   margin-top: 28px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     order: 1;
     align-self: flex-end;
     flex-basis: 100%;
@@ -117,7 +133,7 @@
     margin: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 525px;
     align-self: flex-end;
   }
@@ -130,7 +146,7 @@
   line-height: 24px;
   color: $gray-dark;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     font-size: 20px;
     margin: 22px 0 0;
   }
@@ -139,7 +155,7 @@
 .promo-goods__button {
   margin-top: 22px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 292px;
   }
 }

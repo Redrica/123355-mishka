@@ -4,20 +4,20 @@
 .form__item {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
-    @include display-flex;
+  @media (min-width: $width-tablet) {
+    display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
     padding: 50px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     padding: 50px 180px 50px 50px;
   }
 }
 
 .form__item:nth-child(2n) {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     background-color: $gray-lightest;
   }
 }
@@ -29,40 +29,40 @@
   text-transform: uppercase;
   color: $turquoise;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 168px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 175px;
     text-align: center;
   }
 }
 
 .form__content {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 500px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 700px;
   }
 }
 
 .form__item--color .form__content {
-  @media (min-width: $tablet-width) {
-    @include display-flex;
+  @media (min-width: $width-tablet) {
+    display: flex;
     flex-wrap: wrap;
   }
 }
 
 .form__item--color .form__element {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 50%;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 33.33%;
+  @media (min-width: $width-desktop) {
+    width: 100%/3;
   }
 }
 
@@ -72,7 +72,7 @@
   font-weight: bold;
   color: $black;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     font-size: 19px;
   }
 }
@@ -100,11 +100,11 @@
 }
 
 .form__field--phone {
-  background: $white url("../../img/icon-phone.svg") no-repeat right 5px center;
+  background: $white url("../img/icon-phone.svg") no-repeat right 5px center;
 }
 
 .form__field--email {
-  background: $white url("../../img/icon-mail.svg") no-repeat right 5px center;
+  background: $white url("../img/icon-mail.svg") no-repeat right 5px center;
 }
 
 .order__note {
@@ -115,7 +115,7 @@
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     order: 1;
   }
 }
@@ -123,11 +123,11 @@
 .order__submit {
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     margin-left: 175px;
   }
 }

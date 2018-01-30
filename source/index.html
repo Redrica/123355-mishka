@@ -12,11 +12,11 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__logo">
-        <span class="main-nav__logo-link">
+        <a class="main-nav__logo-link">
           <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           <!--Временный вариант, не знаю, как по-другому сделать-->
           <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
-        </span>
+        </a>
       </div>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--catalog">
@@ -43,8 +43,8 @@
       <span class="page-header__delivery-info">Бесплатная доставка по России</span>
       <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
       <div class="page-header__link-wrapper">
-        <a class="page-header__link page-header__link--interior" href="#">Предметы интерьера</a>
-        <a class="page-header__link page-header__link--toy" href="#">Детские игрушки</a>
+        <a class="page-header__link page-header__link--look-1" href="#">Предметы интерьера</a>
+        <a class="page-header__link page-header__link--look-2" href="#">Детские игрушки</a>
       </div>
     </div>
   </div>
@@ -62,16 +62,16 @@
           размерах.</p>
         <table class="promo-goods__properties">
           <tr>
-            <td class="promo-goods__col-1">Цвет:</td>
-            <td class="promo-goods__col-2">&laquo;Тиффани&raquo;/серый</td>
+            <td class="promo-goods__property-title">Цвет:</td>
+            <td class="promo-goods__property-value">&laquo;Тиффани&raquo;/серый</td>
           </tr>
           <tr>
-            <td class="promo-goods__col-1">Диаметр:</td>
-            <td class="promo-goods__col-2">25 cм</td>
+            <td class="promo-goods__property-title">Диаметр:</td>
+            <td class="promo-goods__property-value">25 cм</td>
           </tr>
           <tr>
-            <td class="promo-goods__col-1">Высота</td>
-            <td class="promo-goods__col-1">15 см</td>
+            <td class="promo-goods__property-title">Высота</td>
+            <td class="promo-goods__property-value">15 см</td>
           </tr>
         </table>
         <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
@@ -80,7 +80,7 @@
         <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
         <div class="promo-goods__buy buy">
           <b class="buy__title">Добавить в корзину</b>
-          <p class="buy__size">Выберите размер</p>
+          <p class="buy__subtitle">Выберите размер</p>
           <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
             <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
             <label class="buy__radio-display" for="size-s">S</label>
@@ -110,13 +110,13 @@
   </aside>
 
   <section class="reviews">
-    <div class="reviews__wrapper wrapper">
+    <div class="reviews__wrapper wrapper slider">
       <h2 class="reviews__title">Отзывы</h2>
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
             лайков,
-            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <span class="no-wrap">и мои</span> фотографии сразу
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <span class="reviews__text--no-wrap">и мои</span> фотографии сразу
             стали более стильными, а также набирают больше лайков!</p>
         </blockquote>
         <cite class="reviews__author-name">Анастасия Красильникова

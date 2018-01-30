@@ -1,10 +1,27 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.page-footer__wrapper {
+  background-color: $gray-lightest;
+  padding: 0 30px;
+
+  @media (min-width: $width-tablet) {
+    height: 143px;
+    padding: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 100px;
+  }
+}
+
 .page-footer__logo {
   display: none;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     display: block;
     margin-right: 78px;
   }
@@ -22,7 +39,7 @@
 }
 
 .page-footer__copyright-link::after {
-  content: url("../../img/logo-htmlacademy.svg");
+  content: url("../img/logo-htmlacademy.svg");
   display: inline-block;
   vertical-align: middle;
   margin-left: 29px;

@@ -2,167 +2,31 @@
 @import "../variables.scss";
 
 .wrapper {
-  //width: 320px;
+  @include max-width;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
   margin: 0 auto;
   background-color: $white;
   //outline: 1px solid red;
 
-  @include max-width;
-  @include display-flex-column;
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     width: 768px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-desktop) {
     width: 1250px;
   }
 }
 
 //.wrapper-catalog {
-//  @media (min-width: $desktop-width) {
+//  @media (min-width: $width-desktop) {
 //    width: 1150px;
 //  }
 //}
 //
 //.wrapper-form {
-//  @media (min-width: $desktop-width) {
+//  @media (min-width: $width-desktop) {
 //    width: 1150px;
 //  }
 //}
-
-//// ХЕДЕР
-//.page-header__wrapper {
-//}
-
-// ТОВАРЫ НЕДЕЛИ
-.promo-goods__wrapper {
-  flex-wrap: wrap;
-  padding: 30px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 30px 50px 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: relative;
-    padding: 88px 100px 73px 275px;
-  }
-}
-
-// КОРОТКО О НАС
-.about__wrapper {
-  padding: 40px 30px 15px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 65px 50px 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 65px 100px 50px;
-  }
-}
-
-// ОТЗЫВЫ
-.reviews__wrapper {
-  padding: 30px 30px 40px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    padding: 77px 50px 115px;
-    background: $white url("../../img/review@1x.jpg") no-repeat 0 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 77px 100px 115px 275px;
-    background: $white url("../../img/review@1x.jpg") no-repeat 100px 0;
-  }
-}
-
-// КОНТАКТЫ
-.contacts__wrapper {
-  padding: 40px 30px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 40px 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 657px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: stretch;
-    align-items: flex-start;
-    padding: 95px 100px 105px 275px;
-  }
-}
-
-// ФУТЕР
-.page-footer__wrapper {
-  background-color: $gray-lightest;
-  padding: 0 30px;
-
-  @media (min-width: $tablet-width) {
-    height: 143px;
-    padding: 0 50px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 100px;
-  }
-}
-
-// КАТАЛОГ
-.goods__wrapper {
-  padding: 30px 30px 0 30px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 91px 50px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 145px 50px 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-}
-
-// ВИДЕО
-.promo__wrapper {
-  padding: 30px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 53px 50px 63px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 50px;
-  }
-}
-
-// ФОРМА
-.order-wrapper {
-  padding: 23px 30px 55px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 88px 0 0;
-  }
-
-  //@media (min-width: $desktop-width) {
-  //  padding: 142px 100px 0;
-  //}
-}

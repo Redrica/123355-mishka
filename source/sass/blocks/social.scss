@@ -19,7 +19,7 @@
   background-color: $gray-lightest;
   border-bottom: 1px solid #e5e5e5;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $width-tablet) {
     border-bottom: none;
   }
 }
@@ -41,13 +41,13 @@
 }
 
 .social__link--instagram {
-  background: url("../../img/icon-insta.svg") no-repeat center center;
+  background: url("../img/icon-insta.svg") no-repeat center center;
 }
 
 .social__link--facebook {
-  background: url("../../img/icon-fb.svg") no-repeat center center;
+  background: url("../img/icon-fb.svg") no-repeat center center;
 }
 
 .social__link--twitter {
-  background: url("../../img/icon-twitter.svg") no-repeat center center;
+  background: url("../img/icon-twitter.svg") no-repeat center center;
 }

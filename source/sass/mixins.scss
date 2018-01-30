@@ -1,22 +1,7 @@
-@mixin outline-block {
-  outline: 2px solid #7e1f1e;
-}
-
-@mixin outline-item {
-  outline: 2px solid #2d7071;
-}
+@import "variables.scss";
 
 @mixin max-width {
   max-width: 1250px;
-}
-
-@mixin display-flex {
-  display: flex;
-}
-
-@mixin display-flex-column {
-  display: flex;
-  flex-direction: column;
 }
 
 @mixin header-tablet {
@@ -29,15 +14,11 @@
   line-height: 57px;
 }
 
-@mixin table {
-  display: table;
-  border-collapse: collapse;
+// себе: вспомогательные, в конце - убрать!
+@mixin outline-block {
+  outline: 2px solid #7e1f1e;
 }
 
-@mixin table-row {
-  display: table-row;
-}
-
-@mixin table-cell {
-  display: table-cell;
+@mixin outline-item {
+  outline: 2px solid #2d7071;
 }
