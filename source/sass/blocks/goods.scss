@@ -1,22 +1,107 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.goods__item-wrapper {
+  @media (min-width: $desktop-width) {
+    @include display-flex-column;
+  }
+}
+
 .goods__item {
   margin-bottom: 30px;
   border: 1px solid $gray-lightest;
+
+  @media (min-width: $tablet-width) {
+    @include display-flex-column;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 336px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 316px;
+    height: auto;
+    flex-grow: 1;
+  }
 }
+
+.goods__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.goods__link {
+  //@include outline-block;
+  display: block;
+  font-size: 0;
+  text-decoration: none;
+}
+
+.goods__picture {
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 334px;
+    height: 334px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    height: 457px;
+      }
+}
+
+.goods__picture--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.goods__picture--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: 1050px) {
+    display: block;
+  }
+}
+
+.goods__picture--desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
 
 .goods__info {
   padding: 23px 30px 15px;
+
+  @media (min-width: $tablet-width) {
+    @include display-flex-column;
+    flex-basis: 100%;
+    justify-content: space-between;
+    width: 334px;
+    padding: 23px 27px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: auto;
+  }
 }
 
 .goods__title {
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    //width: 300px;
+  }
 }
 
 .goods__title:hover {
@@ -33,10 +118,6 @@
 //  color: transparentize($black, 0.7);
 //}
 
-.goods__link {
-  text-decoration: none;
-}
-
 .goods__description {
   margin: 0;
   margin-bottom: 30px;
@@ -44,12 +125,17 @@
   line-height: 30px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: auto;
+      }
 }
 
 .goods__buy {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid $gray-lighter;
 }
 
 .goods__price {
