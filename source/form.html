@@ -9,7 +9,7 @@
 <body>
 
 <header class="page-header">
-  <div class="page-header__wrapper wrapper">
+  <div class="page-header__wrapper wrapper wrapper-form">
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__logo">
@@ -54,78 +54,81 @@
         свяжемся с вами, чтобы
         уточнить детали.</p>
       <form class="order__form form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form__wrapper">
+        <div class="form__item">
           <div class="form__title">Тип</div>
-          <table class="form__table">
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__radio-input" id="accessory" type="radio" name="type-of-goods" value="accessory" checked></td>
-              <td class="form__cell"><label class="form__description" for="accessory">Аксессуар для интерьера</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__radio-input" id="toy" type="radio" name="type-of-goods" value="toy"></td>
-              <td class="form__cell"><label class="form__description" for="toy">Детская игрушка</label></td>
-            </tr>
-          </table>
+          <div class="form__content">
+            <div class="form__element">
+              <input class="form__radio-input" id="accessory" type="radio" name="type-of-goods" value="accessory" checked>
+              <label class="form__description" for="accessory">Аксессуар для интерьера</label>
+            </div>
+            <div class="form__element">
+              <input class="form__radio-input" id="toy" type="radio" name="type-of-goods" value="toy">
+              <label class="form__description" for="toy">Детская игрушка</label>
+            </div>
+          </div>
         </div>
-        <div class="form__wrapper">
+
+        <div class="form__item form__item--color">
           <div class="form__title">Цвет</div>
-          <table class="form__table">
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="white" type="checkbox" name="white" checked></td>
-              <td class="form__cell"><label class="form__description" for="white">Белый</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="grey" type="checkbox" name="grey" checked></td>
-              <td class="form__cell"><label class="form__description" for="grey">Серый</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="tiffani" type="checkbox" name="tiffani"></td>
-              <td class="form__cell"><label class="form__description" for="tiffani">&laquo;Тиффани&raquo;</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="black" type="checkbox" name="black"></td>
-              <td class="form__cell"><label class="form__description" for="black">Черный</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="pink" type="checkbox" name="pink"></td>
-              <td class="form__cell"><label class="form__description" for="pink">Розовый</label></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><input class="form__option" id="orange" type="checkbox" name="orange"></td>
-              <td class="form__cell"><label class="form__description" for="orange">Оранжевый</label></td>
-            </tr>
-          </table>
+          <div class="form__content">
+            <div class="form__element">
+              <input class="form__option" id="white" type="checkbox" name="white" checked>
+              <label class="form__description" for="white">Белый</label>
+            </div>
+            <div class="form__element">
+              <input class="form__option" id="grey" type="checkbox" name="grey" checked>
+              <label class="form__description" for="grey">Серый</label>
+            </div>
+            <div class="form__element">
+              <input class="form__option" id="tiffani" type="checkbox" name="tiffani">
+              <label class="form__description" for="tiffani">&laquo;Тиффани&raquo;</label>
+            </div>
+            <div class="form__element">
+              <input class="form__option" id="black" type="checkbox" name="black">
+              <label class="form__description" for="black">Черный</label>
+            </div>
+            <div class="form__element">
+              <input class="form__option" id="pink" type="checkbox" name="pink">
+              <label class="form__description" for="pink">Розовый</label>
+            </div>
+            <div class="form__element">
+              <input class="form__option" id="orange" type="checkbox" name="orange">
+              <label class="form__description" for="orange">Оранжевый</label>
+            </div>
+          </div>
         </div>
-        <div class="form__wrapper">
+
+        <div class="form__item">
           <div class="form__title">фио</div>
-          <table class="form__table form__table--name">
-            <tr class="form__row">
-              <td class="form__cell"><label class="form__description" for="first-name">Имя:</label></td>
-              <td class="form__cell"><input class="form__field" id="first-name" type="text" name="first-name" required autocomplete="on" placeholder="Введите ваше имя*"></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><label class="form__description" for="last-name">Фамлия:</label></td>
-              <td class="form__cell"><input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on" placeholder="Укажите фамилию*"></td>
-            </tr>
-            <tr class="form__row">
-              <td class="form__cell"><label class="form__description" for="patronymic">Отчество:</label></td>
-              <td class="form__cell"><input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете"></td>
-            </tr>
-          </table>
-        </div>
-        <div class="form__wrapper">
-          <div class="form__row">
-            <div class="form__title"><label for="phone-number">тел</label></div>
-            <div class="form__row"><input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*"></div>
-          </div>
-          <div class="form__row">
-            <div class="form__title"><label for="email">e-mail</label></div>
-            <div class="form__row"><input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*"></div>
+          <div class="form__content">
+            <div class="form__element">
+              <label class="form__description" for="first-name">Имя:</label>
+              <input class="form__field" id="first-name" type="text" name="first-name" required autocomplete="on" placeholder="Введите ваше имя*">
+            </div>
+            <div class="form__element">
+              <label class="form__description" for="last-name">Фамлия:</label>
+              <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on" placeholder="Укажите фамилию*">
+            </div>
+            <div class="form__element">
+              <label class="form__description" for="patronymic">Отчество:</label>
+              <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете">
+            </div>
           </div>
         </div>
-        <div class="form__wrapper">
+
+        <div class="form__item">
+          <div class="form__title"><label for="phone-number">тел</label></div>
+          <div class="form__content"><input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*"></div>
+          <div class="form__title"><label for="email">e-mail</label></div>
+          <div class="form__content"><input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*"></div>
+        </div>
+
+        <div class="form__item">
           <div class="form__title"><label for="addition">доп</label></div>
-          <div class="form__row"><textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea></div>
+          <div class="form__content">
+            <textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea>
+          </div>
+>>>>>>> 4-final
           <strong class="order__note">*Поля обязательны для заполнения</strong>
           <input class="order__submit button" type="submit" value="Отправить заказ">
         </div>

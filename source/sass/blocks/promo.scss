@@ -1,21 +1,82 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.promo__item {
+  padding: 32px 33px;
+  border: 1px solid $gray-lighter;
+
+  @media (min-width: $desktop-width) {
+    @include display-flex-column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    width: 1150px;
+    height: 455px;
+    padding: 0 33px;
+  }
+}
+
 
 .promo__title {
   display: block;
   margin: 0;
-  padding: 25px 0 25px 90px;
+  padding: 25px 0 25px 60px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  background: url("../../img/icon-video.svg") no-repeat 33px center;
+  background: url("../../img/icon-video.svg") no-repeat 3px center;
   color: $black;
+
+  @media (min-width: $desktop-width) {
+    padding: 95px 0 0 0;
+  }
 }
 
 .promo__intro {
+  margin-bottom: 28px;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
+}
+
+.promo__video {
+  margin-left: -34px;
+}
+
+.promo__video--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.promo__video--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    order: -1;
+    background-color: #b5b4b1;
+  }
+}
+
+.promo__write {
+  @media (min-width: $tablet-width) {
+    width: 584px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin: 0 0 59px 0;
+  }
 }

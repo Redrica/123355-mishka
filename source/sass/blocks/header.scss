@@ -72,7 +72,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    border-top: 1px solid #ececec;
+    border-top: 1px solid $gray-lighter;
     margin-top: 11px;
     padding: 16px 0 0 36px;
   }
