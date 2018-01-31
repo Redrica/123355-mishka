@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .contacts__wrapper {
-  padding: 40px 30px;
+  padding: 40px 0;
   background-color: $white;
 
   @media (min-width: $width-tablet) {
@@ -22,7 +22,7 @@
 }
 
 .contacts__title {
-  margin: 0 0 25px;
+  margin: 0 30px 25px;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
@@ -63,7 +63,8 @@
 
 .contacts__table {
   display: table;
-  width: 100%;
+  width: auto;
+  margin: 0 30px 40px;
 
   //@include outline-block;
   @media (min-width: $width-tablet) {
@@ -125,10 +126,9 @@
 }
 
 .contacts__map {
-  position: relative;
-  width: 322px;
+  width: 100%;
   height: 457px;
-  margin: 40px 0 0 -30px;
+  margin-bottom: 35px;
   background: url("../img/map-mobile@1x.jpg") no-repeat center center;
 
   @media (min-width: $width-tablet) {
@@ -157,7 +157,7 @@
 }
 
 .contacts__write {
-  margin-top: 35px;
+  margin: 0 30px;
 
   @media (min-width: $width-tablet) {
     width: 230px;

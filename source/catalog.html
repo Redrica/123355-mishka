@@ -95,20 +95,6 @@
           </div>
         </div>
       </div>
-
-      <aside class="buy">
-        <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__subtitle">Выберите размер</p>
-        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-          <label class="buy__radio-display" for="size-s">S</label>
-          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
-          <label class="buy__radio-display" for="size-m">M</label>
-          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
-          <label class="buy__radio-display" for="size-l">L</label>
-          <input class="buy__submit button button--turq" type="submit" value="Добавить">
-        </form>
-      </aside>
     </div>
   </section>
 
@@ -126,8 +112,23 @@
       </div>
     </div>
   </section>
-</main>
 
+  <aside class="modal">
+    <div class="modal__wrapper wrapper">
+      <b class="modal__title">Добавить в корзину</b>
+      <p class="modal__subtitle">Выберите размер:</p>
+      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+        <label class="modal__radio-display" for="size-s">S</label>
+        <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
+        <label class="modal__radio-display" for="size-m">M</label>
+        <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
+        <label class="modal__radio-display" for="size-l">L</label>
+        <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
+      </form>
+    </div>
+  </aside>
+</main>
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
     <a class="page-footer__logo">

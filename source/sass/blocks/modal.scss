@@ -1,0 +1,107 @@
+@import "../variables.scss";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // скрытие модального окна - ЗДЕСЬ :-)
+  display: block;
+  width: 322px;
+  margin-left: -161px;
+  margin-top: -161px;
+  padding: 30px 30px 46px;
+  text-align: center;
+  background-color: $white;
+  border: 1px solid $gray;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25),
+      0 10px 0 2500px rgba(255, 255, 255, 0.9);
+
+  @media (min-width: $width-tablet) {
+    width: 568px;
+    padding: 33px 106px 46px;
+    margin-left: -284px;
+  }
+}
+
+.modal__title {
+  display: block;
+  margin: 0 auto 12px;
+  padding: 0 55px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 14px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__subtitle {
+  margin: 0 auto 22px;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.modal__form {
+  font-size: 0;
+  text-align: center;
+}
+
+.modal__input-radio {
+  display: none;
+}
+
+.modal__radio-display {
+  display: inline-block;
+  width: 82px;
+  margin-right: 7px;
+  padding: 16px 0;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+  border: 2px solid $gray-lighter;
+  color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    width: 112px;
+
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.modal__submit {
+  width: 100%;
+  margin: 30px auto 0;
+  line-height: 16px;
+  padding: 16px 0 14px;
+
+}
+
+.modal__input-radio:hover + .modal__radio-display {
+  border: 2px solid $gray;
+  color: #3e3e3e;
+}
+
+.modal__input-radio:checked + .modal__radio-display {
+  border: 2px solid $turquoise;
+  color: #3e3e3e;
+}

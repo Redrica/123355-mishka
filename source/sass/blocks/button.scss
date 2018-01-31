@@ -3,8 +3,8 @@
 .button {
   font-family: "Open Sans", "Tahoma", sans-serif;
   display: block;
-  width: auto;
-  padding: 12px 10px;
+  width: 100%;
+  padding: 14px 0;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
@@ -17,8 +17,8 @@
   color: $gray-dark;
 }
 
-.button--turq {
-  line-height: 16px;
+.button--turquoise {
   background-color: $turquoise;
+  border-color: $turquoise;
   color: $white;
 }
