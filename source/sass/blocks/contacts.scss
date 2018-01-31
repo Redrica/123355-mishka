@@ -10,6 +10,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    display: flex;
+    flex-direction: column;
     height: 657px;
     flex-wrap: wrap;
     justify-content: space-between;

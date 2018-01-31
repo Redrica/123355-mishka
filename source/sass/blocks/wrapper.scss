@@ -3,11 +3,9 @@
 
 .wrapper {
   @include max-width;
-  display: flex;
-  flex-direction: column;
   width: 320px;
   margin: 0 auto;
-  background-color: $white;
+  font-size: 0;
   //outline: 1px solid red;
 
   @media (min-width: $width-tablet) {

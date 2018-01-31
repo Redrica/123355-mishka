@@ -6,6 +6,7 @@
   padding: 0 30px;
 
   @media (min-width: $width-tablet) {
+    display: flex;
     height: 143px;
     padding: 0 50px;
     flex-direction: row;
@@ -22,7 +23,7 @@
   display: none;
 
   @media (min-width: $width-tablet) {
-    display: block;
+    display: inline;
     margin-right: 78px;
   }
 }
@@ -36,12 +37,12 @@
   font-weight: bold;
   text-decoration: none;
   color: $black;
-}
 
-.page-footer__copyright-link::after {
-  content: url("../img/logo-htmlacademy.svg");
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 29px;
-  //  себе: для PP можно еще margin-top: 1px;
+  &::after {
+    content: url("../img/logo-htmlacademy.svg");
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 29px;
+    //  себе: для PP можно еще margin-top: 1px;
+  }
 }

@@ -16,9 +16,9 @@
 
 // себе: вспомогательные, в конце - убрать!
 @mixin outline-block {
-  outline: 2px solid #7e1f1e;
+  outline: 10px solid #7e1f1e;
 }
 
 @mixin outline-item {
-  outline: 2px solid #2d7071;
+  outline: 5px solid #2d7071;
 }

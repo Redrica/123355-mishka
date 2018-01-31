@@ -2,7 +2,6 @@
 @import "../variables.scss";
 
 .promo-goods__wrapper {
-  flex-wrap: wrap;
   padding: 30px;
   background-color: $white;
 
@@ -22,8 +21,9 @@
   //@include outline-block;
 
   @media (min-width: $width-tablet) {
-    margin-bottom: 50px;
+    display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
     justify-content: space-between;
     align-items: center;
   }
@@ -81,7 +81,7 @@
 .promo-goods__content {
   //@include outline-block;
   @media (min-width: $width-tablet) {
-    width: 668px;
+    width: 100%;
     height: 404px;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    width: 875px;
+    width: 100%;
     height: 632px;
   }
 }
@@ -103,12 +103,14 @@
   color: $gray-dark;
 
   @media (min-width: $width-tablet) {
-    width: 292px;
+    width: 50%;
+    padding-right: 44px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: $width-desktop) {
+    width: 40%;
     margin-top: 160px;
   }
 }
@@ -127,14 +129,13 @@
 
   @media (min-width: $width-tablet) {
     order: 1;
-    align-self: flex-end;
     flex-basis: 100%;
-    width: 333px;
+    width: 50%;
     margin: 0;
   }
 
   @media (min-width: $width-desktop) {
-    width: 525px;
+    width: 60%;
     align-self: flex-end;
   }
 }
@@ -144,11 +145,13 @@
   margin: 22px auto 0;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
   color: $gray-dark;
 
   @media (min-width: $width-tablet) {
     font-size: 20px;
-    margin: 22px 0 0;
+    margin: 0;
+    align-self: center;
   }
 }
 
@@ -157,6 +160,7 @@
 
   @media (min-width: $width-tablet) {
     width: 292px;
+    margin: 0;
   }
 }
 

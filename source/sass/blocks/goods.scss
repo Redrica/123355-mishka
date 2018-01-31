@@ -11,120 +11,92 @@
 
   @media (min-width: $width-desktop) {
     padding: 145px 50px 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-}
-
-.goods__item-wrapper {
-  margin-top: 30px;
-
-  @media (min-width: $width-desktop) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
   }
 }
 
 .goods__item {
   margin-bottom: 30px;
-  border: 1px solid $gray-lightest;
+  font-size: 0;
 
   @media (min-width: $width-tablet) {
     display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    height: 336px;
+    width: 100%;
   }
 
   @media (min-width: $width-desktop) {
-    flex-wrap: nowrap;
-    align-items: stretch;
-    width: 316px;
-    height: auto;
-    flex-grow: 1;
-  }
-}
-
-.goods__item:last-of-type {
-  margin-bottom: 0;
-}
-
-.goods__link {
-  //@include outline-block;
-  display: block;
-  font-size: 0;
-  text-decoration: none;
-}
-
-.goods__picture {
-  width: 100%;
-  height: auto;
-
-  @media (min-width: $width-tablet) {
-    display: block;
-    width: 100%;
-    align-self: stretch;
-    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
     margin: 0;
   }
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.goods__link {
+  font-size: 0;
+  text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    width: 50%;
+  }
+
   @media (min-width: $width-desktop) {
-    width: 316px;
-    height: 462px;
+    width: 100%;
+  }
+}
+
+.goods__info .goods__link {
+  @media (min-width: $width-tablet) {
+    width: 100%;
   }
 }
 
 .goods__info {
-  padding: 23px 30px 15px;
+  padding: 26px 27px;
+  border: 1px solid $gray-lighter;
 
   @media (min-width: $width-tablet) {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
-    justify-content: space-between;
-    width: 334px;
-    padding: 23px 27px 15px;
+    width: 50%;
+    padding: 25px 32px 27px 33px;
   }
 
   @media (min-width: $width-desktop) {
-    margin-top: auto;
+    width: 100%;
+    flex-grow: 1;
   }
 }
 
 .goods__title {
-  margin: 0 0 5px;
+  margin: 0 0 5px 0;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
   color: $black;
-}
 
-.goods__title:hover {
-  color: transparentize($black, 0.4);
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
-
-//себе: то работает, то нет. Почему – хз.
-.goods__title:active {
-  color: transparentize($black, 0.7);
-}
-
-////а вот тут не совсем по БЭМ о_О
-//.goods__link:active .goods__title {
-//  color: transparentize($black, 0.7);
-//}
 
 .goods__description {
-  margin: 0 0 30px;
+  margin: 0;
   font-size: 13px;
   line-height: 30px;
   font-weight: normal;
   color: $gray-dark;
 
   @media (min-width: $width-tablet) {
-    margin-bottom: auto;
+    font-size: 15px;
   }
 }
 
@@ -132,22 +104,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 19px;
+  padding-top: 21px;
   border-top: 1px solid $gray-lighter;
+
+  @media (min-width: $width-tablet) {
+    margin-top: auto;
+  }
 }
 
 .goods__price {
   font-size: 15px;
-  line-height: 30px;
+  line-height: 24px;
   font-weight: bold;
   color: $black;
 }
 
 .goods__cart {
   display: block;
-  margin: 0;
-  padding: 0;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 19px;
   font-size: 0;
   background: url("../img/icon-cart.svg") no-repeat center center;
 }
+
+//.goods__title:hover {
+//  color: transparentize($black, 0.4);
+//}
+
+//себе: то работает, то нет. Почему – хз.
+//.goods__title:active {
+//  color: transparentize($black, 0.7);
+//}
+
+////а вот тут не совсем по БЭМ о_О
+//.goods__link:active .goods__title {
+//  color: transparentize($black, 0.7);
+//}

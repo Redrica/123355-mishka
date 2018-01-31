@@ -6,6 +6,7 @@
   background-color: $white;
 
   @media (min-width: $width-tablet) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
