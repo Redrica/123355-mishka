@@ -1,26 +1,92 @@
-@import "variables.scss";
+@import "../mixins.scss";
+@import "../variables.scss";
 
 .contacts__wrapper {
   padding: 40px 30px;
   background-color: $white;
+
+  @media (min-width: $width-tablet) {
+    padding: 40px 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    display: flex;
+    flex-direction: column;
+    height: 657px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+    padding: 95px 100px 105px 275px;
+  }
 }
 
 .contacts__title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 25px;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    @include header-tablet;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    @include header-desktop;
+    margin-top: 70px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47px;
+    height: 81px;
+    background: url("../img/icon-flag.svg") no-repeat 0 0;
+
+    @media (min-width: $width-tablet) {
+      display: block;
+    }
+
+    @media (min-width: $width-desktop) {
+      top: -9px;
+      left: -111px;
+    }
+  }
 }
 
 .contacts__table {
   display: table;
+  width: 100%;
+
+  //@include outline-block;
+  @media (min-width: $width-tablet) {
+    display: flex;
+  }
+
+  @media (min-width: $width-desktop) {
+    display: table;
+    width: auto;
+  }
 }
 
 .contacts__row {
   display: table-row;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+    width: 50%;
+  }
+
+  @media (min-width: $width-desktop) {
+    display: table-row;
+  }
 }
 
 .contacts__data {
@@ -29,28 +95,78 @@
   line-height: 30px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    font-size: 17px;
+  }
+
+  &:first-child {
+    width: 75px;
+  }
+}
+
+.contacts__row:last-child .contacts__data {
+  padding-top: 30px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 30px;
+  }
 }
 
 .contacts__mail {
+  padding-bottom: 4px;
   text-decoration: none;
   color: $gray-dark;
   border-bottom: 1px solid $turquoise;
 }
 
 .contacts__map {
-  width: 320px;
+  position: relative;
+  width: 322px;
   height: 457px;
-  margin-top: 40px;
-  background: url("../../img/map-mobile@1x.jpg") no-repeat center center;
+  margin: 40px 0 0 -30px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat center center;
+
+  @media (min-width: $width-tablet) {
+    width: 768px;
+    background-image: url("../img/map-tablet@1x.jpg");
+    margin: 57px 0 0 -50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: static;
+    order: 1;
+    flex-basis: 100%;
+    align-self: flex-end;
+    flex-shrink: 0;
+    width: 525px;
+    margin: 0;
+    background-image: url("../img/map-desktop@1x.png");
+  }
 }
 
 .contacts__marker {
   margin: 0 auto;
   width: 50px;
   height: 60px;
-  background: url("../../img/icon-map-pin.svg") no-repeat center center;
+  background: url("../img/icon-map-pin.svg") no-repeat center center;
 }
 
 .contacts__write {
   margin-top: 35px;
+
+  @media (min-width: $width-tablet) {
+    width: 230px;
+    margin: 55px auto 0;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 55px 0 0;
+  }
 }

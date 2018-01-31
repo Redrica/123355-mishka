@@ -3,72 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка</title>
 </head>
 <body>
 <header class="page-header">
   <div class="page-header__wrapper wrapper">
-    <div class="page-header__top">
-      <span class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-      </span>
-    </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <!--<div class="main-nav__wrapper">-->
+      <div class="main-nav__logo">
+        <a class="main-nav__logo-link">
+          <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          <!--Временный вариант, не знаю, как по-другому сделать-->
+          <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+        </a>
+      </div>
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        <li class="main-nav__item main-nav__item--catalog">
+          <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <li class="main-nav__item main-nav__item--order">
+          <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--search">
           <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
+        <li class="main-nav__item main-nav__item--novelty">
+          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item--sale">
+          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
+        </li>
       </ul>
-      <!--</div>-->
     </nav>
-    <div class="page-header__body">
-      <h1 class="page-header__title">Милые штуки<br> ручной<br> работы для дома</h1>
-      <a class="page-header__link page-header__link--interior" href="#">Предметы интерьера</a>
-      <a class="page-header__link page-header__link--toy" href="#">Детские игрушки</a>
+    <div class="page-header__body page-header__body--main">
+      <span class="page-header__delivery-info">Бесплатная доставка по России</span>
+      <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
+      <div class="page-header__link-wrapper">
+        <a class="page-header__link page-header__link--look-1" href="#">Предметы интерьера</a>
+        <a class="page-header__link page-header__link--look-2" href="#">Детские игрушки</a>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="page-main">
-  <section class="week-goods">
-    <div class="week-goods__wrapper wrapper">
-      <!-- Не знаю, насколько это верное решение, но мне кажется, что заголовок тут именно "Товар недели", а надпись про корзинки наверх перенести уже другими средствами.-->
-      <b class="week-goods__item">Вязаные корзинки</b>
-      <h2 class="week-goods__title">Товар недели</h2>
-      <p class="week-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="week-goods__properties">
-        <tr>
-          <td class="week-goods__col-1">Цвет:</td>
-          <td class="week-goods__col-2">&laquo;Тиффани&raquo;/серый</td>
-        </tr>
-        <tr>
-          <td class="week-goods__col-1">Диаметр:</td>
-          <td class="week-goods__col-2">25 cм</td>
-        </tr>
-        <tr>
-          <td class="week-goods__col-1">Высота</td>
-          <td class="week-goods__col-1">15 см</td>
-        </tr>
-      </table>
-      <img class="week-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
-      <b class="week-goods__price">Цена: 990 руб.</b>
-      <a class="week-goods__button button" href="#">Заказать</a>
-      <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
-      <div class="week-goods__buy buy">
+  <section class="promo-goods">
+    <div class="promo-goods__wrapper wrapper">
+      <div class="promo-goods__header">
+        <h2 class="promo-goods__title">Товар недели</h2>
+        <b class="promo-goods__item">Вязаные корзинки</b>
+      </div>
+      <div class="promo-goods__content">
+        <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+          размерах.</p>
+        <table class="promo-goods__properties">
+          <tr>
+            <td class="promo-goods__property-title">Цвет:</td>
+            <td class="promo-goods__property-value">&laquo;Тиффани&raquo;/серый</td>
+          </tr>
+          <tr>
+            <td class="promo-goods__property-title">Диаметр:</td>
+            <td class="promo-goods__property-value">25 cм</td>
+          </tr>
+          <tr>
+            <td class="promo-goods__property-title">Высота</td>
+            <td class="promo-goods__property-value">15 см</td>
+          </tr>
+        </table>
+        <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
+        <b class="promo-goods__price">Цена: 990 руб.</b>
+        <a class="promo-goods__button button" href="#">Заказать</a>
+        <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
+      </div>
+      <div class="promo-goods__buy buy">
         <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__size">Выберите размер</p>
+        <p class="buy__subtitle">Выберите размер</p>
         <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
           <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
           <label class="buy__radio-display" for="size-s">S</label>
@@ -82,19 +95,19 @@
     </div>
   </section>
 
-  <section class="about">
+  <aside class="about">
     <div class="about__wrapper  wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--eco">Экологически чистые материалы</li>
         <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
         <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
-        <li class="about__item about__item--knit">Связано вручную с умилением</li>
+        <li class="about__item about__item--knit">Связано вручную с любовью и умилением</li>
         <li class="about__item about__item--support">Поддержка отечественного производителя</li>
         <li class="about__item about__item--gift">Поставляется в подарочной упаковке</li>
       </ul>
     </div>
-  </section>
+  </aside>
 
   <section class="reviews">
     <div class="reviews__wrapper wrapper slider">
@@ -103,14 +116,17 @@
         <blockquote class="reviews__item slider__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
             лайков,
-            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <span class="reviews__text--no-wrap">и мои</span> фотографии сразу
             стали более стильными, а также набирают больше лайков!</p>
-          <cite class="reviews__author-name">Анастасия Красильникова</cite>
-          <a class="reviews__author-link" href="https://www.instagram.com/misssssiskras">@misssssiskras</a>
         </blockquote>
+        <cite class="reviews__author-name">Анастасия Красильникова
+          <a class="reviews__author-link" href="https://www.instagram.com/misssssiskras">@misssssiskras</a>
+        </cite>
+        <div class="reviews__transition">
+          <button class="reviews__switch reviews__switch--prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
+        </div>
       </div>
-      <button class="reviews__switch reviews__switch--prev" type="button">Предыдущий отзыв</button>
-      <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
       <a class="reviews__write button" href="#">Написать</a>
     </div>
   </section>
@@ -125,7 +141,7 @@
           </div>
         </div>
         <div class="contacts__row">
-          <div class="contacts__data">адрес</div>
+          <div class="contacts__data">адрес:</div>
           <div class="contacts__data">г. Санкт-Петербург,<br>
             ул. Большая Конюшенная,<br>
             д. 19/8, офис 101
@@ -142,6 +158,9 @@
 
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Мишка">
+    </a>
     <div class="page-footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">
@@ -157,7 +176,7 @@
         </li>
       </ul>
     </div>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
   </div>
 </footer>
 </body>

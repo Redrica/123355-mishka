@@ -1,21 +1,69 @@
-@import "variables.scss";
+@import "../mixins.scss";
+@import "../variables.scss";
 
-//.form {
-//}
+.form__item {
+  margin-bottom: 30px;
 
-.form__set {
-  margin: 0;
-  padding: 20px;
-  border: none;
-  border-top: 1px solid $turquoise;
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 50px 180px 50px 50px;
+  }
 }
 
-.form__legend {
+.form__item:nth-child(2n) {
+  @media (min-width: $width-tablet) {
+    background-color: $gray-lightest;
+  }
+}
+
+.form__title {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: $turquoise;
+
+  @media (min-width: $width-tablet) {
+    width: 168px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 175px;
+    text-align: center;
+  }
+}
+
+.form__content {
+  @media (min-width: $width-tablet) {
+    width: 500px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 700px;
+  }
+}
+
+.form__item--color .form__content {
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__item--color .form__element {
+  @media (min-width: $width-tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: (100%/3);
+  }
 }
 
 .form__description {
@@ -23,11 +71,16 @@
   line-height: 18px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    font-size: 19px;
+  }
 }
 
 // ВНИМАНИЕ!!! Поле формы видимо не воспринимает transparentize!!!
 // Вводимый текст тоже будет с прозрачностью!!!
 .form__field {
+  //width: 100%;
   padding: 10px;
   font: inherit;
   font-size: 17px;
@@ -43,16 +96,15 @@
 }
 
 .form__field--addition {
-  margin-bottom: 15px;
   color: transparentize($gray-dark, 0.6);
 }
 
 .form__field--phone {
-  background: $white url("../../img/icon-phone.svg") no-repeat right 5px center;
+  background: $white url("../img/icon-phone.svg") no-repeat right 5px center;
 }
 
 .form__field--email {
-  background: $white url("../../img/icon-mail.svg") no-repeat right 5px center;
+  background: $white url("../img/icon-mail.svg") no-repeat right 5px center;
 }
 
 .order__note {
@@ -62,4 +114,20 @@
   line-height: 16px;
   font-weight: normal;
   color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    order: 1;
+  }
+}
+
+.order__submit {
+  width: 100%;
+
+  @media (min-width: $width-tablet) {
+    width: auto;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-left: 175px;
+  }
 }

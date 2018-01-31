@@ -1,8 +1,40 @@
-@import "variables.scss";
+@import "../mixins.scss";
+@import "../variables.scss";
 
 .promo-goods__wrapper {
   padding: 30px;
   background-color: $white;
+
+  @media (min-width: $width-tablet) {
+    padding: 30px 50px 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: relative;
+    padding: 88px 100px 73px 275px;
+  }
+}
+
+.promo-goods__header {
+  display: flex;
+  flex-direction: column;
+  //@include outline-block;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: absolute;
+    top: 89px;
+    left: 138px;
+    order: 1;
+    margin: 50px 0 0 0;
+  }
 }
 
 .promo-goods__title {
@@ -13,20 +45,74 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $turquoise;
+
+  @media (min-width: 768px) {
+    width: 90px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 17px;
+    margin: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    order: -1;
+    margin-right: 44px;
+  }
 }
 
 .promo-goods__item {
+  order: -1;
   display: block;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
+
+  @media (min-width: 768px) {
+    @include header-tablet;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $width-desktop) {
+    @include header-desktop;
+  }
+}
+
+.promo-goods__content {
+  //@include outline-block;
+  @media (min-width: $width-tablet) {
+    width: 100%;
+    height: 404px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 100%;
+    height: 632px;
+  }
 }
 
 .promo-goods__description {
   font-size: 15px;
   line-height: 24px;
   color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    width: 50%;
+    padding-right: 44px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 40%;
+    margin-top: 160px;
+  }
 }
 
 .promo-goods__properties {
@@ -34,21 +120,51 @@
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
+  //@include outline-item;
 }
 
 .promo-goods__image {
   display: block;
   margin-top: 28px;
+
+  @media (min-width: $width-tablet) {
+    order: 1;
+    flex-basis: 100%;
+    width: 50%;
+    margin: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 60%;
+    align-self: flex-end;
+  }
 }
 
 .promo-goods__price {
   display: block;
-  margin-top: 22px;
+  margin: 22px auto 0;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
   color: $gray-dark;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    margin: 0;
+    align-self: center;
+  }
 }
 
 .promo-goods__button {
   margin-top: 22px;
+
+  @media (min-width: $width-tablet) {
+    width: 292px;
+    margin: 0;
+  }
+}
+
+//для себя: не забыть про этот блок!
+.promo-goods__buy {
+  display: none;
 }

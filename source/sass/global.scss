@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/opensans.woff") format("woff");
@@ -21,7 +23,12 @@ html {
 
 body {
   margin: 0;
-  //отличающийся от фона документа
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  //отличающийся от фона документа, убрать в конце
   background-color: #d0d0d0;
-  font-family: "Open Sans", "Times New Roman", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

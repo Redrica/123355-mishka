@@ -3,37 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка</title>
 </head>
 <body>
 
 <header class="page-header">
-  <div class="page-header__wrapper wrapper">
-    <div class="page-header__top">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-      </a>
-    </div>
+  <div class="page-header__wrapper wrapper wrapper-catalog">
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <!--<div class="main-nav__wrapper">-->
+      <div class="main-nav__logo">
+        <a class="main-nav__logo-link" href="index.html">
+          <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          <!--Временный вариант, не знаю, как по-другому сделать-->
+          <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+        </a>
+      </div>
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <span class="main-nav__link">Каталог товаров</span>
+        <li class="main-nav__item main-nav__item--catalog">
+          <a class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <li class="main-nav__item main-nav__item--order">
+          <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--search">
           <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
+        <li class="main-nav__item main-nav__item--novelty">
+          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item--sale">
+          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
+        </li>
       </ul>
-      <!--</div>-->
     </nav>
-    <h1 class="page-header__title">Каталог товаров</h1>
+    <div class="page-header__body page-header__body--catalog">
+      <span class="page-header__delivery-info">Бесплатная доставка по России</span>
+      <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
+    </div>
   </div>
 </header>
 
@@ -41,9 +51,13 @@
   <section class="goods">
     <div class="goods__wrapper wrapper">
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
+        <a class="goods__link" href="item-page.html">
+          <img class="goods__picture" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+        </a>
         <div class="goods__info">
-          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Зайчик-попрыгайчик</h3></a>
+          <a class="goods__link" href="item-page.html">
+            <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+          </a>
           <p class="goods__description">Рост 30 см, вес 200 г</p>
           <div class="goods__buy">
             <b class="goods__price">1 200 руб.</b>
@@ -52,9 +66,13 @@
         </div>
       </div>
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"></a>
+        <a class="goods__link" href="item-page.html">
+          <img class="goods__picture" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+        </a>
         <div class="goods__info">
-          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Корзинка для белья</h3></a>
+          <a class="goods__link" href="item-page.html">
+            <h3 class="goods__title">Корзинка для белья</h3>
+          </a>
           <p class="goods__description">Диаметр 15 см, высота 10 см</p>
           <div class="goods__buy">
             <b class="goods__price">690 руб.</b>
@@ -63,9 +81,13 @@
         </div>
       </div>
       <div class="goods__item">
-        <a class="goods__link" href="item-page.html"><img class="goods__picture" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек"></a>
+        <a class="goods__link" href="item-page.html">
+          <img class="goods__picture" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+        </a>
         <div class="goods__info">
-          <a class="goods__link" href="item-page.html"><h3 class="goods__title">Большая корзинка для игрушек</h3></a>
+          <a class="goods__link" href="item-page.html">
+            <h3 class="goods__title">Большая корзинка для игрушек</h3>
+          </a>
           <p class="goods__description">Диаметр 30 см, высота 30 см</p>
           <div class="goods__buy">
             <b class="goods__price">1 500 руб.</b>
@@ -73,9 +95,10 @@
           </div>
         </div>
       </div>
-      <div class="buy">
+
+      <aside class="buy">
         <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__size">Выберите размер</p>
+        <p class="buy__subtitle">Выберите размер</p>
         <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
           <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
           <label class="buy__radio-display" for="size-s">S</label>
@@ -85,26 +108,31 @@
           <label class="buy__radio-display" for="size-l">L</label>
           <input class="buy__submit button button--turq" type="submit" value="Добавить">
         </form>
-      </div>
+      </aside>
     </div>
   </section>
 
   <section class="promo">
     <div class="promo__wrapper wrapper">
-      <h2 class="promo__title">Процесс производства</h2>
-      <video class="promo__video" width="260" height="150" poster="img/video-mobile@1x.jpg">
-        <source src="#" type="video/mp4">
-        <source src="#" type="video/ogg">
-        <source src="#" type="video/webm">
-      </video>
-      <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="promo__write button" href="form.html">Сделать заказ</a>
+      <div class="promo__item">
+        <h2 class="promo__title">Процесс производства</h2>
+        <video class="promo__video" width="682" height="455" poster="img/video-desktop_made.jpg">
+          <source src="#" type="video/mp4">
+          <source src="#" type="video/ogg">
+          <source src="#" type="video/webm">
+        </video>
+        <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео <span class="promo__intro--no-wrap">о том,</span> как появляются наши товары.</p>
+        <a class="promo__write button" href="form.html">Сделать заказ</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Мишка">
+    </a>
     <div class="page-footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">
@@ -120,7 +148,7 @@
         </li>
       </ul>
     </div>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
   </div>
 </footer>
 </body>

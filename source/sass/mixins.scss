@@ -1,0 +1,24 @@
+@import "variables.scss";
+
+@mixin max-width {
+  max-width: 1250px;
+}
+
+@mixin header-tablet {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin header-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
+// себе: вспомогательные, в конце - убрать!
+@mixin outline-block {
+  outline: 10px solid #7e1f1e;
+}
+
+@mixin outline-item {
+  outline: 5px solid #2d7071;
+}

@@ -1,5 +1,30 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
 .wrapper {
+  @include max-width;
   width: 320px;
   margin: 0 auto;
-  outline: 2px solid red;
+  font-size: 0;
+  //outline: 1px solid red;
+
+  @media (min-width: $width-tablet) {
+    width: 768px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 1250px;
+  }
 }
+
+//.wrapper-catalog {
+//  @media (min-width: $width-desktop) {
+//    width: 1150px;
+//  }
+//}
+//
+//.wrapper-form {
+//  @media (min-width: $width-desktop) {
+//    width: 1150px;
+//  }
+//}

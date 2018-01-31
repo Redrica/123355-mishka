@@ -1,10 +1,10 @@
-@import "variables.scss";
+@import "../variables.scss";
 
 .button {
   font-family: "Open Sans", "Tahoma", sans-serif;
   display: block;
-  width: 100%;
-  padding: 15px 10px;
+  width: auto;
+  padding: 12px 10px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
