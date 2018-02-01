@@ -5,11 +5,11 @@
   padding: 30px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
-    padding: 30px 50px 50px;
+  @include tablet {
+    padding: 45px 50px 50px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     position: relative;
     padding: 88px 100px 73px 275px;
   }
@@ -23,22 +23,20 @@
   @media (min-width: $width-tablet) {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
+    margin-bottom: 56px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   @media (min-width: $width-desktop) {
-    position: absolute;
-    top: 89px;
-    left: 138px;
-    order: 1;
-    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 10;
+    margin: 35px 0 -109px -174px;
   }
 }
 
 .promo-goods__title {
-  margin: 5px 0 0 0;
+  margin: 0 0 21px;
   padding: 0;
   font-size: 17px;
   line-height: 24px;
@@ -47,15 +45,15 @@
   color: $turquoise;
 
   @media (min-width: 768px) {
-    width: 90px;
+    flex-shrink: 1;
+    margin: 12px 0 0;
+    padding: 0 8px;
     text-align: center;
-    vertical-align: top;
+    vertical-align: bottom;
     line-height: 17px;
-    margin: 0;
   }
 
   @media (min-width: $width-desktop) {
-    order: -1;
     margin-right: 44px;
   }
 }
@@ -63,74 +61,107 @@
 .promo-goods__item {
   order: -1;
   display: block;
+  margin-bottom: 3px;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
 
   @media (min-width: 768px) {
+    margin: 0;
     @include header-tablet;
+    flex-basis: 100%;
     flex-grow: 1;
   }
 
   @media (min-width: $width-desktop) {
     @include header-desktop;
+    order: 0;
   }
 }
 
 .promo-goods__content {
   //@include outline-block;
-  @media (min-width: $width-tablet) {
+  @include tablet {
+    position: relative;
     width: 100%;
-    height: 404px;
+    min-height: 404px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    padding-right: 378px;
     justify-content: space-between;
-    align-content: stretch;
     align-items: flex-start;
   }
 
   @media (min-width: $width-desktop) {
     width: 100%;
-    height: 632px;
+    padding-right: 583px;
+    min-height: 636px;
   }
 }
 
 .promo-goods__description {
+  margin: 0 0 18px;
   font-size: 15px;
   line-height: 24px;
   color: $gray-dark;
 
   @media (min-width: $width-tablet) {
-    width: 50%;
-    padding-right: 44px;
+    margin: -7px 0 0 0;
     font-size: 17px;
     line-height: 30px;
+    vertical-align: top;
   }
 
   @media (min-width: $width-desktop) {
-    width: 40%;
+    width: 100%;
     margin-top: 160px;
   }
 }
 
 .promo-goods__properties {
   border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 24px;
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
   //@include outline-item;
+
+  @include tablet {
+    margin-top: 3px;
+  }
+}
+
+.promo-goods__property-title {
+  padding: 9px 15px 10px 0;
+  border-bottom: 1px solid $gray-lighter;
+
+  @include tablet {
+    padding-right: 1px;
+  }
+}
+
+.promo-goods__property-value {
+  padding: 9px 0 10px;
+  border-bottom: 1px solid $gray-lighter;
+
+  @include tablet {
+    padding-right: 1px;
+  }
 }
 
 .promo-goods__image {
+  margin-bottom: 26px;
   display: block;
-  margin-top: 28px;
 
   @media (min-width: $width-tablet) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     order: 1;
-    flex-basis: 100%;
     width: 50%;
+    height: auto;
     margin: 0;
   }
 
@@ -142,7 +173,7 @@
 
 .promo-goods__price {
   display: block;
-  margin: 22px auto 0;
+  margin: 0 auto 26px;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
@@ -156,15 +187,8 @@
 }
 
 .promo-goods__button {
-  margin-top: 22px;
 
   @media (min-width: $width-tablet) {
-    width: 292px;
     margin: 0;
   }
-}
-
-//для себя: не забыть про этот блок!
-.promo-goods__buy {
-  display: block;
 }
