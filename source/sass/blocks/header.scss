@@ -1,20 +1,6 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.page-header__top {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  padding: 19px 0;
-
-  @media (min-width: $width-tablet) {
-    width: 370px;
-    padding: 21px 0;
-    justify-content: flex-start;
-  }
-}
-
 .page-header__body {
   display: flex;
   flex-direction: column;

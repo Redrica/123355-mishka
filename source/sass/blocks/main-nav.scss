@@ -3,124 +3,93 @@
 
 .main-nav {
   position: relative;
-
-  @media (min-width: $width-tablet) {
-    display: flex;
-  }
-
-  @media (min-width: $width-desktop) {
-    flex-direction: column;
-    align-items: center;
-  }
+  // на случай, если есть встроенные по умолчанию. Если нет – убрать.
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 2px;
+  top: 1px;
   right: 0;
-  width: 82px;
-  height: 72px;
+  width: 81px;
+  height: 78px;
+  padding: 0;
   font-size: 0;
   background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
   border: none;
   outline: none;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: none;
   }
-}
 
-.main-nav__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 79px;
-  background-color: $white;
-  border-top: 1px solid $gray-lighter;
-  border-bottom: 1px solid $gray-lighter;
-
-  @media (min-width: $width-tablet) {
-    position: relative;
-    z-index: 10;
-    justify-content: flex-start;
-    flex-basis: 370px;
-    flex-shrink: 0;
-    padding-left: 48px;
-    height: 89px;
-    border-top: none;
-    border-right: 1px solid $gray-lighter;
-  }
-
-  @media (min-width: $width-desktop) {
-    align-items: center;
-    justify-content: flex-start;
-    align-self: flex-start;
-    flex-basis: 89px;
-    width: 289px;
-    margin-left: 511px;
-    border-right: none;
-  }
-}
-
-.main-nav__logo-link {
-  position: relative;
-  z-index: 100;
+  //@media (min-width: $width-tablet) {
+  //  display: none;
+  //}
 }
 
 // себе: смена логотипов мобильная -> планшет
-.main-nav__logo-image--tablet {
-  display: none;
-}
-
-@media (min-width: $width-tablet) {
-  .main-nav__logo-image--mobile {
+.main-nav__logo-image {
+  &--tablet {
     display: none;
   }
 
-  .main-nav__logo-image--tablet {
-    display: block;
+  @include tablet {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
   }
 }
 
-//Отключение МЕНЮ
+//себе: отключение МЕНЮ - будут отключаться ПУНКТЫ, а не само меню!
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  border-bottom: 1px solid $gray-lighter;
 
-  @media (min-width: $width-tablet) {
-    position: relative;
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    margin-left: -370px;
-  }
-
-  @media (min-width: $width-desktop) {
-    margin-top: -89px;
-    margin-left: 0;
-    width: 100%;
+    border: none;
   }
 }
 
 .main-nav__item {
-  padding: 0 30px;
-  border-bottom: 1px solid $gray-lighter;
+  border-top: 1px solid $gray-lighter;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
-    border-left: 1px solid $gray-lighter;
-    padding: 0;
+  //@media (min-width: $width-tablet) {
+  //}
+
+  &--logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 0 22px;
+
+    @media (min-width: $width-tablet) {
+      padding: 22px 0 20px;
+    }
   }
 
-  &:nth-child(3) {
-    @media (min-width: $width-tablet) {
-      padding-left: 370px;
-    }
+  &--novelty,
+  &--sale {
+    display: none;
 
-    @media (min-width: $width-desktop) {
-      padding-left: 0;
+    @media (min-width: $width-tablet) {
+      &--logo {
+        display: block;
+        padding-top: 16px;
+        padding-right: 28px;
+        background-color: transparent;
+        border: none;
+      }
     }
   }
 }
@@ -130,40 +99,21 @@
 //}
 
 .main-nav__link {
-  display: inline-block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 26px 0 28px 46px;
+  display: block;
+  width: auto;
+  padding: 26px 0 28px 76px;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
   text-decoration: none;
-  vertical-align: top;
   color: $black;
+
+  &--logo-link {
+    display: block;
+  }
 
   @media (min-width: $width-tablet) {
     padding: 30px 0 28px 0;
-  }
-}
-
-.main-nav__item--catalog,
-.main-nav__item--order {
-  @media (min-width: $width-tablet) {
-    background-color: transparent;
-    border: none;
-  }
-
-  @media (min-width: $width-desktop) {
-    order: -3;
-    background-color: $white;
-    border-bottom: 1px solid $gray-lighter;
-    border-right: 1px solid $gray-lighter;
-  }
-}
-
-.main-nav__item--catalog {
-  @media (min-width: $width-desktop) {
-    border-bottom: none;
   }
 }
 
@@ -171,7 +121,6 @@
   @media (min-width: $width-tablet) {
     padding-top: 17px;
     font-size: 15px;
-    margin-left: 48px;
   }
 
   @media (min-width: $width-desktop) {
@@ -222,11 +171,11 @@
   &::before {
     display: inline-block;
     position: relative;
-    top: 5px;
+    top: 4px;
     left: -44px;
     width: 18px;
     height: 18px;
-    margin-right: -19px;
+    margin-right: -18px;
     content: url("../../img/icon-search.svg");
 
     @media (min-width: $width-tablet) {
@@ -254,7 +203,6 @@
   }
 
   @media (min-width: $width-desktop) {
-    flex-grow: 1;
     padding: 30px 100px 33px 84px;
   }
 
@@ -270,22 +218,8 @@
 
     @media (min-width: $width-tablet) {
       left: -54px;
+      margin-right: -32px;
     }
-  }
-}
-
-.main-nav__item--novelty {
-  display: none;
-
-  @media (min-width: $width-desktop) {
-    display: block;
-    margin-left: 50px;
-    margin-top: -1px;
-    padding-top: 16px;
-    padding-right: 28px;
-    border: none;
-    background-color: transparent;
-    border-top: 1px solid $gray-lighter;
   }
 }
 
@@ -297,21 +231,8 @@
   line-height: 24px;
 }
 
-.main-nav__item--sale {
-  display: none;
-
-  @media (min-width: $width-desktop) {
-    display: block;
-    padding-top: 16px;
-    border: none;
-    background-color: transparent;
-  }
-}
-
 .main-nav__link--sale {
   display: inline;
-  margin-left: 36px;
-  padding: 0;
   font-size: 15px;
   line-height: 24px;
 }

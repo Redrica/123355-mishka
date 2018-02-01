@@ -1,5 +1,17 @@
 @import "variables.scss";
 
+@mixin tablet {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
 @mixin max-width {
   max-width: 1250px;
 }
