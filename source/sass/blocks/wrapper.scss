@@ -8,23 +8,23 @@
   font-size: 0;
   //outline: 1px solid red;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 768px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop{
     width: 1250px;
   }
 }
 
-//.wrapper-catalog {
-//  @media (min-width: $width-desktop) {
-//    width: 1150px;
-//  }
-//}
-//
-//.wrapper-form {
-//  @media (min-width: $width-desktop) {
-//    width: 1150px;
-//  }
-//}
+.wrapper-catalog {
+  @include tablet {
+    width: 1150px;
+  }
+}
+
+.wrapper-form {
+  @include desktop {
+    width: 1150px;
+  }
+}

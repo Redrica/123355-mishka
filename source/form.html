@@ -9,12 +9,12 @@
 <body>
 
 <header class="page-header">
-  <div class="page-header__wrapper wrapper wrapper-form">
+  <div class="page-header__wrapper wrapper wrapper--form">
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--logo">
-          <a class="main-nav__logo-link" href="index.html">
+          <a class="main-nav__link main-nav__link--logo" href="index.html">
             <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
             <!--Временный вариант, не знаю, как по-другому сделать-->
             <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
@@ -32,15 +32,11 @@
         <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
-        <li class="main-nav__item main-nav__item--novelty">
-          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--sale">
-          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
-        </li>
       </ul>
     </nav>
     <div class="page-header__body page-header__body--form">
+      <a class="page-header__current page-header__current--novelty" href="#">Новые поступления</a>
+      <a class="page-header__current page-header__current--sale" href="#">Распродажа</a>
       <span class="page-header__delivery-info">Бесплатная доставка по России</span>
       <h1 class="page-header__title page-header__title--form">Вязание на заказ</h1>
     </div>

@@ -13,7 +13,7 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--logo">
-          <a class="main-nav__logo-link">
+          <a class="main-nav__link main-nav__link--logo">
             <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
             <!--Временный вариант, не знаю, как по-другому сделать-->
             <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
@@ -31,20 +31,16 @@
         <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
-        <li class="main-nav__item main-nav__item--novelty">
-          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--sale">
-          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
-        </li>
       </ul>
     </nav>
     <div class="page-header__body page-header__body--main">
-      <span class="page-header__delivery-info">Бесплатная доставка по России</span>
+      <a class="page-header__current page-header__current--novelty" href="#">Новые поступления</a>
+      <a class="page-header__current page-header__current--sale" href="#">Распродажа</a>
+      <strong class="page-header__delivery-info">Бесплатная доставка по России</strong>
       <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
       <div class="page-header__link-wrapper">
-        <a class="page-header__link page-header__link--look-1" href="#">Предметы интерьера</a>
-        <a class="page-header__link page-header__link--look-2" href="#">Детские игрушки</a>
+        <a class="page-header__link page-header__link--look-1" href="#">Предметы<br> интерьера</a>
+        <a class="page-header__link page-header__link--look-2" href="#">Детские<br> игрушки</a>
       </div>
     </div>
   </div>
@@ -143,17 +139,17 @@
   </section>
 
   <aside class="modal">
-      <b class="modal__title">Добавить в корзину</b>
-      <p class="modal__subtitle">Выберите размер:</p>
-      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
-        <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-        <label class="modal__radio-display" for="size-s">S</label>
-        <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
-        <label class="modal__radio-display" for="size-m">M</label>
-        <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
-        <label class="modal__radio-display" for="size-l">L</label>
-        <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
-      </form>
+    <b class="modal__title">Добавить в корзину</b>
+    <p class="modal__subtitle">Выберите размер:</p>
+    <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+      <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+      <label class="modal__radio-display" for="size-s">S</label>
+      <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
+      <label class="modal__radio-display" for="size-m">M</label>
+      <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
+      <label class="modal__radio-display" for="size-l">L</label>
+      <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
+    </form>
   </aside>
 </main>
 
