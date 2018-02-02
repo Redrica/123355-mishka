@@ -6,12 +6,39 @@
   background-color: $white;
 
   @include tablet {
-    padding: 45px 50px 50px;
+    position: relative;
+    z-index: 5;
+    padding: 57px 50px 50px 50px;
   }
 
   @include desktop {
-    position: relative;
     padding: 88px 100px 73px 275px;
+  }
+}
+
+.promo-goods .promo-goods__wrapper {
+  @include tablet {
+    margin: -13px auto 0 0;
+  }
+
+  @include desktop {
+    margin: -17px auto 0;
+  }
+}
+
+.promo-goods__container {
+  @include tablet {
+    position: relative;
+    min-height: 473px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    min-height: 636px;
   }
 }
 
@@ -20,18 +47,19 @@
   flex-direction: column;
   //@include outline-block;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: row;
-    margin-bottom: 56px;
+    width: 100%;
+    margin: 0 0 55px 0;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  @media (min-width: $width-desktop) {
-    position: relative;
-    z-index: 10;
-    margin: 35px 0 -109px -174px;
+  @include desktop {
+    margin: 53px 0 48px -155px;
   }
 }
 
@@ -54,7 +82,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin-right: 44px;
+    margin: 14px 25px 0 0;
   }
 }
 
@@ -68,7 +96,8 @@
   color: $black;
 
   @media (min-width: 768px) {
-    margin: 0;
+    margin: 0 0 0 -2px;
+
     @include header-tablet;
     flex-basis: 100%;
     flex-grow: 1;
@@ -80,56 +109,42 @@
   }
 }
 
-.promo-goods__content {
-  //@include outline-block;
-  @include tablet {
-    position: relative;
-    width: 100%;
-    min-height: 404px;
-    display: flex;
-    flex-direction: column;
-    padding-right: 378px;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  @media (min-width: $width-desktop) {
-    width: 100%;
-    padding-right: 583px;
-    min-height: 636px;
-  }
-}
-
 .promo-goods__description {
   margin: 0 0 18px;
   font-size: 15px;
   line-height: 24px;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
-    margin: -7px 0 0 0;
+  @include tablet {
+    margin: -7px 378px 35px 0;
     font-size: 17px;
     line-height: 30px;
     vertical-align: top;
   }
 
-  @media (min-width: $width-desktop) {
-    width: 100%;
-    margin-top: 160px;
+  @include desktop {
+    width: auto;
+    margin: 0 583px 49px 0;
   }
 }
 
 .promo-goods__properties {
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
   //@include outline-item;
 
   @include tablet {
-    margin-top: 3px;
+    width: auto;
+    margin: 3px 378px 55px 0;
+  }
+
+  @include desktop {
+    width: auto;
+    margin: 0 583px 109px 0;
   }
 }
 
@@ -138,7 +153,11 @@
   border-bottom: 1px solid $gray-lighter;
 
   @include tablet {
-    padding-right: 1px;
+    padding-right: 28px;
+  }
+
+  @include desktop {
+    padding: 8px 30px 11px 0;
   }
 }
 
@@ -147,7 +166,11 @@
   border-bottom: 1px solid $gray-lighter;
 
   @include tablet {
-    padding-right: 1px;
+    padding-right: 58px;
+  }
+
+  @include desktop {
+    padding: 8px 58px 11px 0;
   }
 }
 
@@ -166,8 +189,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    top: 0;
     width: 60%;
-    align-self: flex-end;
   }
 }
 
@@ -179,16 +202,27 @@
   text-align: center;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     font-size: 20px;
-    margin: 0;
+    margin: 0 378px 34px 0;
     align-self: center;
+  }
+
+  @include desktop {
+    margin: 0 583px 34px 73px;
+    align-self: flex-start;
   }
 }
 
 .promo-goods__button {
+  @include tablet {
+    width: auto;
+    margin: 0 378px 0 0;
+    padding: 14px 98px;
+  }
 
-  @media (min-width: $width-tablet) {
-    margin: 0;
+  @include desktop {
+    margin: 0 583px 0 0;
+    padding: 14px 99px;
   }
 }
