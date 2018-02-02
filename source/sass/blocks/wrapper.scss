@@ -12,18 +12,22 @@
     width: 768px;
   }
 
-  @include desktop{
+  @include desktop {
     width: 1250px;
   }
 }
 
-.wrapper-catalog {
+.page-header .wrapper--catalog,
+.goods .wrapper--catalog,
+.promo .wrapper--catalog,
+.page-footer .wrapper--catalog,
+.page-header .wrapper--form,
+.order .wrapper--form,
+.page-footer .wrapper--form {
   @include tablet {
     width: 1150px;
   }
-}
 
-.wrapper-form {
   @include desktop {
     width: 1150px;
   }

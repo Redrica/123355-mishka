@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding: 50px;
+    padding: 57px 50px 104px;
   }
 }
 
@@ -18,47 +18,77 @@
   padding: 0 33px 32px;
   border: 1px solid $gray-lighter;
 
-  @media (min-width: $width-desktop) {
+  @include tablet {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    padding: 0 0 45px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: relative;
     justify-content: space-between;
-    align-content: stretch;
-    width: 1150px;
-    height: 455px;
-    padding: 0 33px;
+    align-content: flex-start;
+    padding: 0 0 0 760px;
   }
 }
 
 .promo__title {
+  position: relative;
   display: block;
-  margin: 0;
-  padding: 25px 0 25px 60px;
+  margin: 0 0 25px 0;
+  padding: 23px 0 0 56px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  background: url("../img/icon-video.svg") no-repeat 3px center;
   color: $black;
 
-  @media (min-width: $width-desktop) {
-    padding: 95px 0 0 0;
+  @include tablet {
+    margin: 0 33px 32px 33px;
+    padding: 39px 0 0 71px;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    padding: 95px 50px 0 0;
+    margin: 0 0 34px 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    content: url("../img/icon-video.svg");
+    display: block;
+    width: 32px;
+    height: 22px;
+
+    @include tablet {
+      top: 33px;
+      left: 8px;
+    }
+
+    @include desktop {
+      top: 42px;
+      left: 2px;
+    }
   }
 }
 
 .promo__intro {
-  margin-bottom: 28px;
+  margin: 0 0 25px 0;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
   color: $gray-dark;
 
   @media (min-width: $width-tablet) {
+    margin: 0 33px 35px 39px;
     font-size: 15px;
     line-height: 30px;
   }
 
   @media (min-width: $width-desktop) {
-    width: 230px;
+    margin: 0 33px 46px 0;
   }
 
   &--no-wrap {
@@ -69,19 +99,22 @@
 .promo__video {
   width: 260px;
   height: 150px;
-  margin-left: -34px;
+  margin: 0 0 26px -34px;
   //себе: чтобы видеть, где placeholder расположился
   background-color: red;
 
-  @media (min-width: $width-tablet) {
-    width: 668px;
-    height: 455px;
+  @include tablet{
+    width: 100%;
+    height: auto;
+    margin: 0;
     order: -1;
   }
 
   @media (min-width: $width-desktop) {
-    width: 682px;
-    height: 455px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
   }
 }
 
@@ -93,6 +126,6 @@
 
   @media (min-width: $width-desktop) {
     width: 230px;
-    margin: 0 0 59px 0;
+    margin: 0 0 59px;
   }
 }

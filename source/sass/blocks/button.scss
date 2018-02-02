@@ -15,6 +15,15 @@
   outline: none;
   border: 2px solid $gray-dark;
   color: $gray-dark;
+
+  &:hover {
+    background-color: $gray-dark;
+    color: $white;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
 }
 
 .button--turquoise {

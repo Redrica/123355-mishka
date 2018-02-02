@@ -6,11 +6,13 @@
   background-color: $white;
 
   @media (min-width: $width-tablet) {
+    position: relative;
+    z-index: 5;
     padding: 91px 50px 0;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 145px 50px 0;
+    padding: 147px 50px 0;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -18,16 +20,26 @@
   }
 }
 
+.goods .goods__wrapper {
+  @include tablet {
+    margin-top: -10px;
+  }
+
+  @include desktop {
+    margin-top: -26px;
+  }
+}
+
 .goods__item {
   margin-bottom: 30px;
   font-size: 0;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     width: 100%;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     flex-direction: column;
     justify-content: space-between;
     width: 30%;
@@ -56,6 +68,11 @@
   @media (min-width: $width-tablet) {
     width: 100%;
   }
+}
+
+.goods__picture {
+  width: 100%;
+  height: auto;
 }
 
 .goods__info {

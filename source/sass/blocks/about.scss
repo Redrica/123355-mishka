@@ -2,21 +2,34 @@
 @import "../variables.scss";
 
 .about__wrapper {
-  padding: 40px 30px 15px;
+  padding: 33px 30px 35px;
   background-color: $white;
 
   @media (min-width: $width-tablet) {
-    padding: 65px 50px 50px;
+    position: relative;
+    z-index: 10;
+    padding: 67px 50px 55px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 65px 100px 50px;
+    padding: 83px 100px 61px;
+  }
+}
+
+.about .about__wrapper {
+  margin-top: -6px;
+
+  @include tablet {
+    margin-top: -10px;
+  }
+
+  @include desktop {
+    margin-top: -25px;
   }
 }
 
 .about__title {
-  margin: 0;
-  margin-bottom: 26px;
+  margin: 0 0 3px -2px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
@@ -25,13 +38,13 @@
 
   @media (min-width: $width-tablet) {
     @include header-tablet;
-    margin-bottom: 40px;
+    margin: 0 0 20px -2px;
   }
 
   @media (min-width: $width-desktop) {
     @include header-desktop;
     margin-left: 175px;
-    margin-bottom: 51px;
+    margin-bottom: 19px;
   }
 }
 
@@ -42,10 +55,8 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 430px;
   }
 
   @media (min-width: $width-desktop) {
@@ -54,49 +65,72 @@
 }
 
 .about__item {
-  margin-bottom: 27px;
-  padding-top: 52px;
+  position: relative;
+  padding-top: 83px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
   color: $black;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 50%;
+    margin-bottom: 28px;
     font-size: 20px;
     line-height: 22px;
-    padding-right: 40px;
+  }
+
+  &--eco {
+    background: url("../img/icon-feature-flower.svg") no-repeat 8px 29px;
+
+    @include tablet {
+      order: 1;
+    }
+  }
+
+  &--style {
+    background: url("../img/icon-feature-money.svg") no-repeat 0 30px;
+
+    @include tablet {
+      order: 3;
+    }
+  }
+
+  &--like {
+    background: url("../img/icon-feature-heart.svg") no-repeat 8px 35px;
+
+    @include tablet {
+      order: 5;
+    }
+  }
+
+  &--knit {
+    background: url("../img/icon-feature-ball.svg") no-repeat 4px 32px;
+
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &--support {
+    @include tablet {
+      order: 4;
+    }
+
+    &::before {
+      position: absolute;
+      top: 33px;
+      left: -6px;
+      display: block;
+      content: url("../img/icon-feature-rocket.svg");
+    }
+  }
+
+  &--gift {
+    background: url("../img/icon-feature-gift.svg") no-repeat 3px 31px;
+
+    @include tablet {
+      order: 6;
+    }
   }
 }
 
-.about__item:last-child {
-  margin-bottom: 0;
-
-  @media (min-width: $width-tablet) {
-    margin-bottom: 27px;
-  }
-}
-
-.about__item--eco {
-  background: url("../img/icon-feature-flower.svg") no-repeat 20px 0;
-}
-
-.about__item--style {
-  background: url("../img/icon-feature-money.svg") no-repeat 0 0;
-}
-
-.about__item--like {
-  background: url("../img/icon-feature-heart.svg") no-repeat 0 0;
-}
-
-.about__item--knit {
-  background: url("../img/icon-feature-ball.svg") no-repeat 0 0;
-}
-
-.about__item--support {
-  background: url("../img/icon-feature-rocket.svg") no-repeat 0 0;
-}
-
-.about__item--gift {
-  background: url("../img/icon-feature-gift.svg") no-repeat 0 0;
-}

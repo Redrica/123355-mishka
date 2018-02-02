@@ -7,16 +7,20 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
-    height: 143px;
-    padding: 0 50px;
+    padding: 33px 50px 25px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 0 100px;
+    padding: 33px 100px 25px;
   }
+}
+
+.wrapper--catalog.page-footer__wrapper,
+.wrapper--form.page-footer__wrapper {
+  padding: 33px 50px 29px;
 }
 
 .page-footer__logo {
@@ -43,6 +47,6 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 29px;
-    //  себе: для PP можно еще margin-top: 1px;
+    margin-top: 1px;
   }
 }

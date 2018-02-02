@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .reviews__wrapper {
-  padding: 30px 30px 40px;
+  padding: 20px 30px 40px;
   background-color: $white;
 
   @media (min-width: $width-tablet) {
@@ -11,18 +11,18 @@
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 77px 50px 115px;
+    padding: 77px 50px 142px;
     background: $white url("../img/review@1x.jpg") no-repeat 0 0;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 77px 100px 115px 275px;
+    padding: 72px 100px 200px 275px;
     background: $white url("../img/review@1x.jpg") no-repeat 100px 0;
   }
 }
 
 .reviews__title {
-  margin: 0 0 24px;
+  margin: 0 0 23px -2px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
@@ -46,6 +46,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 47px;
+  }
+
+  @include desktop {
     padding-top: 45px;
   }
 }
@@ -80,6 +84,7 @@
 
   @media (min-width: $width-desktop) {
     padding-right: 80px;
+    margin-bottom: 40px;
   }
 
   &--no-wrap {
@@ -118,16 +123,18 @@
 
 .reviews__transition {
   display: flex;
+  margin-bottom: 38px;
 
   @media (min-width: $width-tablet) {
     width: 176px;
+    margin-bottom: 0;
   }
 }
 
 .reviews__switch {
   padding: 0;
   width: 50%;
-  height: 50px;
+  height: 52px;
   background-color: $white;
   border: 1px solid $gray-lightest;
   font-size: 0;
@@ -139,20 +146,38 @@
 
 .reviews__switch--prev {
   background: url("../img/icon-left-arrow.svg") no-repeat center center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .reviews__switch--next {
   background: url("../img/icon-right-arrow.svg") no-repeat center center;
   border-left: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .reviews__write {
-  margin-top: 39px;
-
   @media (min-width: $width-tablet) {
     order: -1;
     flex-basis: 175px;
     flex-shrink: 0;
     margin: 0;
+  }
+
+  @include desktop {
+    margin-top: 8px;
   }
 }
