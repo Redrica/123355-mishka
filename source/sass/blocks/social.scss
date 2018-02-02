@@ -10,10 +10,10 @@
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 25px 0;
+  padding: 25px 62px 25px 57px;
   list-style: none;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -25,11 +25,6 @@
 
 .social__item {
   display: inline-block;
-  margin-right: 40px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .social__link {

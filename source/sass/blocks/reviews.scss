@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .reviews__wrapper {
-  padding: 30px 30px 40px;
+  padding: 20px 30px 40px;
   background-color: $white;
 
   @media (min-width: $width-tablet) {
@@ -22,7 +22,7 @@
 }
 
 .reviews__title {
-  margin: 0 0 24px;
+  margin: 0 0 23px -2px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
@@ -118,6 +118,7 @@
 
 .reviews__transition {
   display: flex;
+  margin-bottom: 38px;
 
   @media (min-width: $width-tablet) {
     width: 176px;
@@ -127,7 +128,7 @@
 .reviews__switch {
   padding: 0;
   width: 50%;
-  height: 50px;
+  height: 52px;
   background-color: $white;
   border: 1px solid $gray-lightest;
   font-size: 0;
@@ -147,8 +148,6 @@
 }
 
 .reviews__write {
-  margin-top: 39px;
-
   @media (min-width: $width-tablet) {
     order: -1;
     flex-basis: 175px;
