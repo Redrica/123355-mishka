@@ -25,7 +25,7 @@
 .order .wrapper--form,
 .page-footer .wrapper--form {
   @include tablet {
-    width: 1150px;
+    width: 768px;
   }
 
   @include desktop {

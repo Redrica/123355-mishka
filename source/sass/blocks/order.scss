@@ -1,22 +1,31 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.order-wrapper {
+.order__wrapper {
   padding: 23px 30px 55px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     padding: 88px 0 0;
   }
 
-  //@media (min-width: $width-desktop) {
-  //  padding: 142px 100px 0;
-  //}
+  @include desktop {
+    padding: 142px 0 0;
+  }
+}
+
+.order .order__wrapper {
+  @include tablet {
+    margin-top: -10px;
+  }
+
+  @include desktop {
+    margin-top: -26px;
+  }
 }
 
 .order__intro {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 23px;
   padding: 0;
   font-size: 13px;
   line-height: 24px;

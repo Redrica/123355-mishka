@@ -4,14 +4,14 @@
 .form__item {
   margin-bottom: 30px;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
     padding: 50px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     padding: 50px 180px 50px 50px;
   }
 }
@@ -29,22 +29,22 @@
   text-transform: uppercase;
   color: $turquoise;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 168px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop  {
     width: 175px;
     text-align: center;
   }
 }
 
 .form__content {
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 500px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     width: 700px;
   }
 }
@@ -123,11 +123,11 @@
 .order__submit {
   width: 100%;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: auto;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     margin-left: 175px;
   }
 }

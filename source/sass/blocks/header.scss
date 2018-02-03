@@ -109,6 +109,10 @@
     margin: 0 auto;
 
     @include tablet {
+      margin: 78px auto 0;
+    }
+
+    @include desktop {
       margin: 53px auto 0;
     }
   }
