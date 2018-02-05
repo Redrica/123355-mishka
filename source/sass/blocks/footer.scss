@@ -7,7 +7,7 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
-    padding: 33px 50px 25px;
+    padding: 33px 50px 28px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@
 .wrapper--catalog.page-footer__wrapper,
 .wrapper--form.page-footer__wrapper {
   @include desktop {
-    padding: 0 50px;
+    padding: 30px 50px;
   }
 }
 
@@ -49,6 +49,6 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 29px;
-    margin-top: 1px;
+    margin-top: 3px;
   }
 }

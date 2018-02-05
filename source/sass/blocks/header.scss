@@ -30,8 +30,7 @@
     }
   }
 
-  &--catalog,
-  &--form {
+  &--catalog {
     padding: 70px 0 76px 0;
     background: $gray-lightest;
 
@@ -40,8 +39,20 @@
     }
 
     @include desktop {
-      padding: 17px 50px 112px;
-      background-color: red;
+      padding: 17px 50px 128px;
+    }
+  }
+
+  &--form {
+    padding: 70px 0 76px 0;
+    background: $gray-lightest;
+
+    @include tablet {
+      padding: 17px 50px 80px;
+    }
+
+    @include desktop {
+      padding: 17px 50px 128px;
     }
   }
 }
@@ -103,8 +114,7 @@
     margin: 113px 0 359px;
   }
 
-  &--catalog,
-  &--form {
+  &--catalog {
     text-align: center;
     margin: 0 auto;
 
@@ -116,12 +126,23 @@
       margin: 53px auto 0;
     }
   }
+
+  &--form {
+    text-align: center;
+    margin: 0 auto;
+
+    @include tablet {
+      margin: 76px auto 0;
+    }
+
+    @include desktop {
+      margin: 53px auto 0;
+    }
+  }
 }
 
 .page-header__link-wrapper {
   position: relative;
-  //display: flex;
-  //flex-direction: column-reverse;
 
   @include tablet {
     display: block;
