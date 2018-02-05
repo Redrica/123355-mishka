@@ -223,7 +223,7 @@
       left: 34px;
       width: 18px;
       height: 18px;
-      content: url("../../img/icon-search.svg");
+      content: url("../img/icon-search.svg");
 
       @include tablet {
         left: 50%;
@@ -259,7 +259,7 @@
       left: 32px;
       width: 24px;
       height: 24px;
-      content: url("../../img/icon-cart.svg");
+      content: url("../img/icon-cart.svg");
 
       @media (min-width: $width-tablet) {
         top: 34px;

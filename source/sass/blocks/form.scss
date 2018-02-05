@@ -336,7 +336,7 @@
   }
 
   &:checked + .form__description::before {
-    background: url("../../img/icon-tick.svg") no-repeat 6px 11px;
+    background: url("../img/icon-tick.svg") no-repeat 6px 11px;
     background-size: 65%;
 
     @include tablet {
@@ -364,6 +364,7 @@
   line-height: 18px;
   font-weight: normal;
   background-color: transparent;
+  border-radius: 0;
   border: none;
   border-bottom: 2px solid $black;
 
@@ -430,6 +431,7 @@
 
 .order__submit {
   width: 100%;
+  border-radius: 0;
 
   @include tablet {
     width: auto;

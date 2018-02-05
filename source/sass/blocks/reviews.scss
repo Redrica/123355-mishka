@@ -51,6 +51,8 @@
 
   @include desktop {
     padding-top: 45px;
+    // для IE
+    width: 100%;
   }
 }
 
@@ -170,7 +172,7 @@
 }
 
 .reviews__write {
-  @media (min-width: $width-tablet) {
+  @include tablet {
     order: -1;
     flex-basis: 175px;
     flex-shrink: 0;

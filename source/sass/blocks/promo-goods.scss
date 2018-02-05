@@ -116,15 +116,18 @@
   color: $gray-dark;
 
   @include tablet {
-    margin: -7px 378px 35px 0;
+    width: 50%;
+    margin: -7px 0 35px;
+    padding-right: 43px;
     font-size: 17px;
     line-height: 30px;
     vertical-align: top;
   }
 
   @include desktop {
-    width: auto;
-    margin: 0 583px 49px 0;
+    width: 40%;
+    margin: 0 0 49px;
+    padding-right: 58px;
   }
 }
 
@@ -143,7 +146,7 @@
   }
 
   @include desktop {
-    width: auto;
+    //width: auto;
     margin: 0 583px 109px 0;
   }
 }
@@ -204,12 +207,7 @@
 
   @include tablet {
     font-size: 20px;
-    margin: 0 378px 34px 0;
-    align-self: center;
-  }
-
-  @include desktop {
-    margin: 0 583px 34px 73px;
+    margin: 0 0 34px 72px;
     align-self: flex-start;
   }
 }

@@ -16,7 +16,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 656px;
+    // IE некорректно отображает флекс-элементы при задании минимальной высоты
+    //min-height: 656px;
+    height: 656px;
     padding: 94px 100px 105px 275px;
   }
 }
@@ -49,7 +51,7 @@
 
   @include desktop {
     @include header-desktop;
-    flex-basis: 40%;
+    width: 40%;
     margin: 70px 0 48px -4px;
   }
 
@@ -90,6 +92,7 @@
     order: 2;
     flex-basis: 40%;
     margin: 0;
+    //margin-top: 48px;
   }
 }
 
@@ -154,7 +157,7 @@
   }
 }
 
-.contacts__map {
+.contacts__map-container {
   position: relative;
   width: 100%;
   margin-bottom: 39px;
@@ -168,29 +171,38 @@
     top: 93px;
     right: 100px;
     order: 1;
-    flex-basis: 60%;
+    //flex-basis: 60%;
     align-self: flex-end;
     flex-shrink: 0;
-    width: 525px;
+    width: 42%;
     margin: 0;
     background-image: url("../img/map-desktop@1x.png");
   }
 }
 
-.contacts__marker {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -25px;
-  background: url("../img/icon-map-pin.svg") no-repeat center center;
-}
-
-.contacts__image {
+.contacts__map {
   width: 100%;
 }
+
+.contacts__marker {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 64px;
+  height: 104px;
+  //margin-top: -30px;
+  //margin-left: -25px;
+  background: url("../img/icon-map-pin.svg") no-repeat center center;
+
+  @include tablet {
+    top: 30%;
+    left: 42%;
+  }
+}
+
+//.contacts__image {
+//  width: 100%;
+//}
 
 .contacts__write {
   width: auto;
@@ -206,8 +218,9 @@
 
   @media (min-width: $width-desktop) {
     order: 3;
-    flex-basis: 40%;
-    margin: auto 0 0;
+    margin: auto 0 0 0;
+    flex-grow: 0;
+    // IE не принимает автоматический маргин при неявной высоте, требуется бОльший, чем 55px
     //margin: 55px 0 0;
   }
 }
