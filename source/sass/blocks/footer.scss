@@ -20,21 +20,23 @@
 
 .wrapper--catalog.page-footer__wrapper,
 .wrapper--form.page-footer__wrapper {
-  padding: 33px 50px 29px;
+  @include desktop {
+    padding: 0 50px;
+  }
 }
 
 .page-footer__logo {
   display: none;
 
   @media (min-width: $width-tablet) {
-    display: inline;
+    display: block;
     margin-right: 78px;
   }
 }
 
 .page-footer__copyright-link {
   display: block;
-  padding: 22px 0;
+  padding: 21px 0 22px;
   text-align: center;
   font-size: 19px;
   line-height: 18px;

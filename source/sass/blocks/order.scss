@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .order__wrapper {
-  padding: 23px 30px 55px;
+  padding: 22px 30px 55px;
   background-color: $white;
 
   @include tablet {
@@ -25,7 +25,7 @@
 }
 
 .order__intro {
-  margin: 0 0 23px;
+  margin: 0 0 24px;
   padding: 0;
   font-size: 13px;
   line-height: 24px;

@@ -50,75 +50,75 @@
         свяжемся с вами, чтобы
         уточнить детали.</p>
       <form class="order__form form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form__item">
-          <div class="form__title">Тип</div>
-          <div class="form__content">
-            <div class="form__element">
+        <section class="form__item form__item--type">
+          <h2 class="form__title form__title--type">Тип</h2>
+          <div class="form__content form__content--type">
+            <div class="form__element form__element--type">
               <input class="form__radio-input" id="accessory" type="radio" name="type-of-goods" value="accessory" checked>
               <label class="form__description" for="accessory">Аксессуар для интерьера</label>
             </div>
-            <div class="form__element">
+            <div class="form__element form__element--type">
               <input class="form__radio-input" id="toy" type="radio" name="type-of-goods" value="toy">
               <label class="form__description" for="toy">Детская игрушка</label>
             </div>
           </div>
-        </div>
-        <div class="form__item form__item--color">
-          <div class="form__title">Цвет</div>
-          <div class="form__content">
-            <div class="form__element">
-              <input class="form__option" id="white" type="checkbox" name="white" checked>
+        </section>
+        <section class="form__item form__item--color">
+          <h2 class="form__title form__title--color">Цвет</h2>
+          <div class="form__content form__content--color">
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="white" type="checkbox" name="white" checked>
               <label class="form__description" for="white">Белый</label>
             </div>
-            <div class="form__element">
-              <input class="form__option" id="grey" type="checkbox" name="grey" checked>
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="grey" type="checkbox" name="grey" checked>
               <label class="form__description" for="grey">Серый</label>
             </div>
-            <div class="form__element">
-              <input class="form__option" id="tiffani" type="checkbox" name="tiffani">
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="tiffani" type="checkbox" name="tiffani">
               <label class="form__description" for="tiffani">&laquo;Тиффани&raquo;</label>
             </div>
-            <div class="form__element">
-              <input class="form__option" id="black" type="checkbox" name="black">
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="black" type="checkbox" name="black">
               <label class="form__description" for="black">Черный</label>
             </div>
-            <div class="form__element">
-              <input class="form__option" id="pink" type="checkbox" name="pink">
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="pink" type="checkbox" name="pink">
               <label class="form__description" for="pink">Розовый</label>
             </div>
-            <div class="form__element">
-              <input class="form__option" id="orange" type="checkbox" name="orange">
+            <div class="form__element form__element--color">
+              <input class="form__checkbox" id="orange" type="checkbox" name="orange">
               <label class="form__description" for="orange">Оранжевый</label>
             </div>
           </div>
-        </div>
-        <div class="form__item">
-          <div class="form__title">фио</div>
-          <div class="form__content">
-            <div class="form__element">
+        </section>
+        <section class="form__item form__item--name">
+          <h2 class="form__title form__title--name">фио</h2>
+          <div class="form__content form__content--name">
+            <div class="form__element form__element--name">
               <label class="form__description" for="first-name">Имя:</label>
               <input class="form__field" id="first-name" type="text" name="first-name" required autocomplete="on" placeholder="Введите ваше имя*">
             </div>
-            <div class="form__element">
-              <label class="form__description" for="last-name">Фамлия:</label>
+            <div class="form__element form__element--name">
+              <label class="form__description" for="last-name">Фамилия:</label>
               <input class="form__field" id="last-name" type="text" name="last-name" required autocomplete="on" placeholder="Укажите фамилию*">
             </div>
-            <div class="form__element">
+            <div class="form__element form__element--name">
               <label class="form__description" for="patronymic">Отчество:</label>
               <input class="form__field" id="patronymic" type="text" name="patronymic" autocomplete="on" placeholder="Отчество, если желаете">
             </div>
           </div>
-        </div>
+        </section>
+        <section class="form__item form__item--contacts">
+          <h2 class="form__title form__title--phone"><label for="phone-number">тел</label></h2>
+          <div class="form__content form__content--phone"><input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*"></div>
+          <h2 class="form__title form__title--email"><label for="email">e-mail</label></h2>
+          <div class="form__content form__content--email"><input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*"></div>
+        </section>
         <div class="form__item">
-          <div class="form__title"><label for="phone-number">тел</label></div>
-          <div class="form__content"><input class="form__field form__field--phone" id="phone-number" type="tel" name="phone-number" required autocomplete="on" placeholder="+7 XXX XX XX*"></div>
-          <div class="form__title"><label for="email">e-mail</label></div>
-          <div class="form__content"><input class="form__field form__field--email" id="email" type="email" name="email" required autocomplete="on" placeholder="Ваш Email*"></div>
-        </div>
-        <div class="form__item">
-          <div class="form__title"><label for="addition">доп</label></div>
-          <div class="form__content">
-            <textarea class="form__field form__field--addition" id="addition" name="addition" rows="7">Опишите все ваши пожелания к заказу</textarea>
+          <h2 class="form__title form__title--addition"><label for="addition">доп</label></h2>
+          <div class="form__content form__content--addition">
+            <textarea class="form__field form__field--addition" id="addition" name="addition" rows="6">Опишите все ваши пожелания к заказу</textarea>
           </div>
           <strong class="order__note">*Поля обязательны для заполнения</strong>
           <input class="order__submit button" type="submit" value="Отправить заказ">
