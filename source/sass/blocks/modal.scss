@@ -13,8 +13,7 @@
   text-align: center;
   background-color: $white;
   border: 1px solid $gray;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25),
-      0 10px 0 2500px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 0 2500px rgba(255, 255, 255, 0.9);
 
   @media (min-width: $width-tablet) {
     width: 568px;
@@ -80,7 +79,6 @@
 
   @media (min-width: $width-tablet) {
     width: 112px;
-
   }
 
   &:last-of-type {
@@ -93,7 +91,6 @@
   margin: 30px auto 0;
   line-height: 16px;
   padding: 16px 0 14px;
-
 }
 
 .modal__input-radio:hover + .modal__radio-display {

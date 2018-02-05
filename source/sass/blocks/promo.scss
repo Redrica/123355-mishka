@@ -103,7 +103,7 @@
   //себе: чтобы видеть, где placeholder расположился
   background-color: red;
 
-  @include tablet{
+  @include tablet {
     width: 100%;
     height: auto;
     margin: 0;
