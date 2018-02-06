@@ -20,16 +20,6 @@
   }
 }
 
-.goods .goods__wrapper {
-  @include tablet {
-    margin-top: -10px;
-  }
-
-  @include desktop {
-    margin-top: -26px;
-  }
-}
-
 .goods__item {
   margin-bottom: 30px;
   font-size: 0;

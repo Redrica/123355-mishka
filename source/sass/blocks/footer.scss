@@ -12,17 +12,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  @media (min-width: $width-desktop) {
-    padding: 33px 100px 25px;
-  }
-}
-
-.wrapper--catalog.page-footer__wrapper,
-.wrapper--form.page-footer__wrapper {
-  @include desktop {
-    padding: 30px 50px;
-  }
 }
 
 .page-footer__logo {

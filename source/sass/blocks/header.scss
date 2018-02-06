@@ -3,56 +3,26 @@
 
 .page-header__body {
   background-color: $gray-lightest;
-  padding: 70px 0 0;
+  padding: 70px 0 75px;
 
   @include tablet {
-    // смещение, чтоб залезть под меню
-    margin-top: -41px;
-    padding: 17px 50px 0;
+    padding: 17px 50px 78px;
   }
 
   @include desktop {
-    margin-top: -1px;
-    padding: 17px 100px 0;
+    padding-bottom: 100px;
   }
 
   &--main {
-    background: $white url("../img/hero-mobile@1x.jpg") no-repeat center -18px;
+    background: $white-almost url("../img/hero-mobile@1x.jpg") no-repeat center -18px;
+    padding-bottom: 0;
 
     @include tablet {
-      padding: 17px 50px 0;
       background: url("../img/hero-tablet@1x_made.jpg") no-repeat center 0;
     }
 
     @include desktop {
-      padding: 17px 100px 0;
-      background: #f9f9f9 url("../img/hero-desktop@1x_made.jpg") no-repeat center 0;
-    }
-  }
-
-  &--catalog {
-    padding: 70px 0 76px 0;
-    background: $gray-lightest;
-
-    @include tablet {
-      padding: 17px 50px 78px;
-    }
-
-    @include desktop {
-      padding: 17px 50px 128px;
-    }
-  }
-
-  &--form {
-    padding: 70px 0 76px 0;
-    background: $gray-lightest;
-
-    @include tablet {
-      padding: 17px 50px 80px;
-    }
-
-    @include desktop {
-      padding: 17px 50px 128px;
+      background: url("../img/hero-desktop@1x_made.jpg") no-repeat center 0;
     }
   }
 }
@@ -76,7 +46,6 @@
 
   @include desktop {
     display: inline;
-    padding-top: 16px;
     padding-right: 62px;
     font-size: 15px;
     line-height: 24px;
@@ -96,47 +65,32 @@
 
 .page-header__title {
   font-weight: bold;
-  margin: 0 0 123px;
+  margin: 0;
   padding: 0 30px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-  border: none;
 
   @include tablet {
     @include header-tablet;
-    margin: 136px 0 373px;
-    padding: 0 50px;
+    margin: 78px auto 0;
+    padding: 0;
   }
 
   @include desktop {
     @include header-desktop;
-    margin: 113px 0 359px;
+    margin-top: 53px;
   }
 
-  &--catalog {
-    text-align: center;
-    margin: 0 auto;
+  &--main {
+    margin-bottom: 123px;
 
     @include tablet {
-      margin: 78px auto 0;
+      margin: 136px 0 373px;
     }
 
     @include desktop {
-      margin: 53px auto 0;
-    }
-  }
-
-  &--form {
-    text-align: center;
-    margin: 0 auto;
-
-    @include tablet {
-      margin: 76px auto 0;
-    }
-
-    @include desktop {
-      margin: 53px auto 0;
+      margin: 113px 0 359px;
     }
   }
 }

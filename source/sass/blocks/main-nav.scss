@@ -3,9 +3,15 @@
 
 .main-nav {
   position: relative;
-  // на случай, если есть встроенные по умолчанию. Если нет – убрать.
-  margin: 0;
-  padding: 0;
+
+  @include tablet {
+    // чтобы под него залез блок с заголовком
+    margin-bottom: -41px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .main-nav__toggle {
@@ -58,16 +64,6 @@
     flex-wrap: wrap;
     border: none;
   }
-
-  @include desktop {
-    padding: 0 50px;
-    background-color: $white;
-  }
-}
-
-.wrapper--catalog .main-nav__list,
-.wrapper--form .main-nav__list {
-  padding: 0;
 }
 
 .main-nav__item {
