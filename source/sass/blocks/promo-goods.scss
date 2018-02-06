@@ -7,7 +7,7 @@
   &::before {
     @include tablet {
       position: absolute;
-      top: -14px;
+      top: -16px;
       left: 0;
       z-index: 50;
       content: "";
@@ -17,7 +17,7 @@
     }
 
     @include desktop {
-      top: -21px;
+      top: -19px;
       left: 0;
     }
   }
@@ -29,18 +29,18 @@
 
   @include tablet {
     position: relative;
-    z-index: 5;
-    padding: 57px 50px 60px 50px;
+    padding: 41px 50px 53px 50px;
   }
 
   @include desktop {
-    padding: 88px 100px 98px 275px;
+    padding: 67px 50px 73px;
   }
 }
 
 .promo-goods__container {
   @include tablet {
     position: relative;
+    width: 100%;
     min-height: 473px;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@
   @include desktop {
     justify-content: flex-start;
     min-height: 636px;
+    padding-left: 175px;
   }
 }
 
@@ -65,13 +66,13 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0 0 55px 0;
+    margin: 0 0 49px 0;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
 
   @include desktop {
-    margin: 53px 0 48px -155px;
+    margin: 52px 0 49px -175px;
   }
 }
 
@@ -86,15 +87,17 @@
 
   @include tablet {
     flex-shrink: 1;
-    margin: 12px 0 0;
+    margin: 0;
     padding: 0 8px;
     text-align: center;
-    vertical-align: bottom;
     line-height: 17px;
   }
 
   @include desktop {
-    margin: 14px 25px 0 0;
+    flex-shrink: 0;
+    width: 20%;
+    padding: 6px 25px 0 17px
+    //margin: 14px 25px 0 0;
   }
 }
 
@@ -116,7 +119,9 @@
 
   @include desktop {
     @include header-desktop;
-    margin: 0;
+    //flex-basis: 75%;
+    flex-grow: 0;
+    margin-left: -4px;
     order: 0;
   }
 }
@@ -129,7 +134,7 @@
 
   @include tablet {
     width: 50%;
-    margin: -7px 0 35px;
+    margin: 0 0 36px;
     padding-right: 43px;
     font-size: 17px;
     line-height: 30px;
@@ -139,7 +144,7 @@
   @include desktop {
     width: 40%;
     margin: 0 0 49px;
-    padding-right: 58px;
+    padding-right: 50px;
   }
 }
 
@@ -154,12 +159,12 @@
 
   @include tablet {
     width: auto;
-    margin: 3px 378px 55px 0;
+    margin-bottom: 55px;
   }
 
   @include desktop {
     //width: auto;
-    margin: 0 583px 109px 0;
+    margin: 0 0 109px 0;
   }
 }
 
@@ -205,7 +210,6 @@
 
   @media (min-width: $width-desktop) {
     top: 0;
-    width: 60%;
   }
 }
 
@@ -219,20 +223,22 @@
 
   @include tablet {
     font-size: 20px;
-    margin: 0 0 34px 72px;
-    align-self: flex-start;
+    margin: 0 0 35px 72px;
+  }
+
+  @include desktop {
+    margin-left: 74px;
   }
 }
 
 .promo-goods__button {
   @include tablet {
     width: auto;
-    margin: 0 378px 0 0;
-    padding: 14px 98px;
-  }
-
-  @include desktop {
-    margin: 0 583px 0 0;
+    margin: 0;
     padding: 14px 99px;
   }
+
+  //@include desktop {
+  //  padding: 14px 99px;
+  //}
 }

@@ -5,26 +5,12 @@
   padding: 33px 30px 35px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
-    position: relative;
-    z-index: 10;
-    padding: 67px 50px 55px;
-  }
-
-  @media (min-width: $width-desktop) {
-    padding: 83px 100px 61px;
-  }
-}
-
-.about .about__wrapper {
-  margin-top: -6px;
-
   @include tablet {
-    margin-top: -10px;
+    padding: 66px 50px 55px;
   }
 
   @include desktop {
-    margin-top: -25px;
+    padding: 81px 225px 61px;
   }
 }
 
@@ -36,15 +22,13 @@
   font-weight: bold;
   color: $black;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     @include header-tablet;
-    margin: 0 0 20px -2px;
+    margin: 0 0 20px -4px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     @include header-desktop;
-    margin-left: 175px;
-    margin-bottom: 19px;
   }
 }
 
@@ -53,14 +37,10 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-
-  @media (min-width: $width-desktop) {
-    margin: 0 175px;
   }
 }
 

@@ -5,19 +5,19 @@
   padding: 20px 30px 40px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 77px 50px 142px;
+    padding: 77px 50px 110px;
     background: $white url("../img/review@1x.jpg") no-repeat 0 0;
   }
 
-  @media (min-width: $width-desktop) {
-    padding: 72px 100px 200px 275px;
-    background: $white url("../img/review@1x.jpg") no-repeat 100px 0;
+  @include desktop {
+    padding: 72px 50px 161px 225px;
+    background-position: 50px 0;
   }
 }
 

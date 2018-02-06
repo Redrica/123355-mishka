@@ -125,7 +125,7 @@
   }
 
   &--look-1 {
-    background: $turquoise url("../img/icon-interior.svg") no-repeat right 37px center;
+    background: $turquoise-light url("../img/icon-interior.svg") no-repeat right 37px center;
 
     &:hover {
       margin-top: -5px;
@@ -137,7 +137,7 @@
         top: -5px;
         margin-top: 0;
         padding: 23px 110px 40px 37px;
-        background-color: #59d5bc;
+        background-color: $turquoise;
       }
     }
 
@@ -165,7 +165,7 @@
         top: -5px;
         margin-top: 0;
         padding: 23px 110px 40px 37px;
-        background-color: #46c1ae;
+        background-color: $turquoise-dark;
       }
     }
 
