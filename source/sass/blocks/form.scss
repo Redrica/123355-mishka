@@ -109,8 +109,11 @@
   }
 
   &--color {
-    width: (100%/6);
     padding-right: 18px;
+
+    @include desktop {
+      width: (100%/6);
+    }
   }
 
   &--name {
