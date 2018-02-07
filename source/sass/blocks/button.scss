@@ -27,7 +27,17 @@
 }
 
 .button--turquoise {
-  background-color: $turquoise;
-  border-color: $turquoise;
+  background-color: $turquoise-light;
+  border-color: $turquoise-light;
   color: $white;
+
+  &:hover {
+    background-color: $turquoise-darker;
+    border-color: $turquoise-darker;
+    color: $white;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
 }

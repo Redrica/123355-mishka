@@ -142,17 +142,20 @@
   </section>
 
   <aside class="modal">
-    <b class="modal__title">Добавить в корзину</b>
-    <p class="modal__subtitle">Выберите размер:</p>
-    <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
-      <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-      <label class="modal__radio-display" for="size-s">S</label>
-      <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
-      <label class="modal__radio-display" for="size-m">M</label>
-      <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
-      <label class="modal__radio-display" for="size-l">L</label>
-      <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
-    </form>
+    <div class="modal__overlay"></div>
+    <div class="modal__item">
+      <b class="modal__title">Добавить в корзину</b>
+      <p class="modal__subtitle">Выберите размер:</p>
+      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+        <label class="modal__radio-display" for="size-s">S</label>
+        <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
+        <label class="modal__radio-display" for="size-m">M</label>
+        <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
+        <label class="modal__radio-display" for="size-l">L</label>
+        <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
+      </form>
+    </div>
   </aside>
 </main>
 
