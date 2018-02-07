@@ -28,7 +28,7 @@
   //min-height: 656px;
 
   @include tablet {
-  align-items: stretch;
+    align-items: stretch;
   }
 
   &::before {
@@ -36,11 +36,10 @@
 
     @include tablet {
       position: absolute;
-      display: block;
-      content: url("../../img/icon-flag.svg");
-      position: absolute;
       top: -17px;
       right: 53px;
+      display: block;
+      content: url("../../img/icon-flag.svg");
       width: 47px;
       height: 81px;
     }
@@ -89,8 +88,7 @@
     display: table;
     order: 2;
     flex-basis: 40%;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 0 0 50px;
   }
 }
 
