@@ -5,13 +5,12 @@
   padding: 52px 0 40px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     padding: 82px 0 58px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     position: relative;
-    z-index: 20;
     padding: 94px 50px 105px 225px;
     min-height: 656px;
   }
@@ -24,11 +23,19 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  // IE некорректно отображает флекс-элементы при задании минимальной высоты
-  //min-height: 656px;
 
   @include tablet {
     align-items: stretch;
+  }
+
+  @include desktop {
+    display: block;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
   &::before {
@@ -67,6 +74,8 @@
   }
 
   @include desktop {
+    float: left;
+
     @include header-desktop;
     width: 40%;
     margin: 70px 0 48px -4px;
@@ -78,16 +87,16 @@
   width: auto;
   margin: 0 30px 7px 29px;
 
-  //@include outline-block;
   @media (min-width: $width-tablet) {
     display: flex;
     margin: 0 50px 26px;
   }
 
   @media (min-width: $width-desktop) {
+    float: left;
     display: table;
     order: 2;
-    flex-basis: 40%;
+    width: 40%;
     margin: 0 0 50px;
   }
 }
@@ -103,6 +112,7 @@
   @media (min-width: $width-desktop) {
     display: table-row;
     width: auto;
+    padding-right: 50px;
   }
 }
 
@@ -124,16 +134,24 @@
   }
 
   &:first-child {
-    width: 30%;
+    width: auto;
+    white-space: nowrap;
 
     @include tablet {
-      width: auto;
       margin-right: 24px;
+    }
+  }
+
+  &:last-child {
+    padding-left: 30px;
+
+    @include tablet {
+      padding-left: 0;
     }
 
     @include desktop {
-      width: 26%;
-      margin-right: 0;
+      padding-left: 20px;
+      padding-right: 35px;
     }
   }
 }
@@ -154,6 +172,7 @@
 }
 
 .contacts__map-container {
+  order: 1;
   position: relative;
   width: 100%;
   margin-bottom: 39px;
@@ -163,9 +182,7 @@
   }
 
   @include desktop {
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
     width: 60%;
     margin: 0;
     background-image: url("../img/map-desktop@1x.png");
@@ -197,6 +214,7 @@
 //}
 
 .contacts__write {
+  order: 2;
   width: auto;
   margin: 0 auto;
   padding: 14px 53px;
@@ -210,7 +228,8 @@
   }
 
   @media (min-width: $width-desktop) {
-    order: 3;
+    float: left;
+    clear: left;
     margin: 0;
   }
 }
