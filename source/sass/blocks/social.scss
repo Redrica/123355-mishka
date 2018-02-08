@@ -15,7 +15,7 @@
   text-align: center;
   border-bottom: 1px solid $gray-light;
 
-  @include tablet{
+  @include tablet {
     border-bottom: none;
     padding: 25px 0;
   }

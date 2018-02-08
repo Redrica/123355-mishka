@@ -1,0 +1,65 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.input-radio {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    min-height: 52px;
+  }
+}
+
+.input-radio__input {
+  display: none;
+
+  & + .input-radio__description {
+    position: relative;
+    display: block;
+    padding-left: 63px;
+
+    @include tablet {
+      padding-left: 80px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 12px;
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 9px $white, 0 0 0 11px $gray-dark;
+
+      @include tablet {
+        top: 0;
+        left: 15px;
+        width: 22px;
+        height: 22px;
+        box-shadow: 0 0 0 13px $white, 0 0 0 15px $gray-dark;
+      }
+    }
+  }
+
+  &:checked + .input-radio__description::before {
+    background-color: $turquoise;
+  }
+}
+
+.input-radio__description {
+  display: block;
+  margin: 0;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $black;
+
+  @include tablet {
+    font-size: 19px;
+    margin-right: 25px;
+  }
+}

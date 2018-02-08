@@ -104,7 +104,6 @@
 
   @include desktop {
     width: (100% * 4 / 5);
-    //justify-content: flex-start;
   }
 }
 
@@ -141,7 +140,7 @@
   margin-bottom: 22px;
 }
 
-.form__text-item-only {
+.form__field-only {
   padding: 7px 0 32px;
 
   @include tablet {
@@ -160,7 +159,7 @@
   }
 }
 
-.form__text-item-textarea {
+.form__textarea {
   padding: 25px 0 16px;
 
   @include tablet {

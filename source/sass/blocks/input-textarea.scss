@@ -1,0 +1,23 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.input-textarea__field {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid $gray-dark;
+  box-shadow: none;
+  color: transparentize($gray-dark, 0.6);
+
+  @include tablet {
+    padding: 16px;
+    font-size: 19px;
+  }
+}
