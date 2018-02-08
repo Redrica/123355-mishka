@@ -9,17 +9,17 @@
 <body>
 
 <header class="page-header">
-  <div class="page-header__wrapper wrapper wrapper-catalog">
+  <div class="page-header__wrapper">
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__logo">
-        <a class="main-nav__logo-link" href="index.html">
-          <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-          <!--Временный вариант, не знаю, как по-другому сделать-->
-          <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
-        </a>
-      </div>
       <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--logo">
+          <a class="main-nav__link main-nav__link--logo" href="index.html">
+            <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            <!--Временный вариант, не знаю, как по-другому сделать-->
+            <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+          </a>
+        </li>
         <li class="main-nav__item main-nav__item--catalog">
           <a class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
         </li>
@@ -32,24 +32,20 @@
         <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
-        <li class="main-nav__item main-nav__item--novelty">
-          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--sale">
-          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
-        </li>
       </ul>
     </nav>
-    <div class="page-header__body page-header__body--catalog">
+    <div class="page-header__body">
+      <a class="page-header__current page-header__current--novelty" href="#">Новые поступления</a>
+      <a class="page-header__current page-header__current--sale" href="#">Распродажа</a>
       <span class="page-header__delivery-info">Бесплатная доставка по России</span>
-      <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
+      <h1 class="page-header__title">Каталог товаров</h1>
     </div>
   </div>
 </header>
 
 <main class="page-main">
   <section class="goods">
-    <div class="goods__wrapper wrapper">
+    <div class="goods__wrapper">
       <div class="goods__item">
         <a class="goods__link" href="item-page.html">
           <img class="goods__picture" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
@@ -95,41 +91,43 @@
           </div>
         </div>
       </div>
-
-      <aside class="buy">
-        <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__subtitle">Выберите размер</p>
-        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-          <label class="buy__radio-display" for="size-s">S</label>
-          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
-          <label class="buy__radio-display" for="size-m">M</label>
-          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
-          <label class="buy__radio-display" for="size-l">L</label>
-          <input class="buy__submit button button--turq" type="submit" value="Добавить">
-        </form>
-      </aside>
     </div>
   </section>
 
   <section class="promo">
-    <div class="promo__wrapper wrapper">
+    <div class="promo__wrapper">
       <div class="promo__item">
-        <h2 class="promo__title">Процесс производства</h2>
         <video class="promo__video" width="682" height="455" poster="img/video-desktop_made.jpg">
           <source src="#" type="video/mp4">
           <source src="#" type="video/ogg">
           <source src="#" type="video/webm">
         </video>
+        <h2 class="promo__title">Процесс производства</h2>
         <p class="promo__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео <span class="promo__intro--no-wrap">о том,</span> как появляются наши товары.</p>
         <a class="promo__write button" href="form.html">Сделать заказ</a>
       </div>
     </div>
   </section>
-</main>
 
+  <aside class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__item">
+      <b class="modal__title">Добавить в корзину</b>
+      <p class="modal__subtitle">Выберите размер:</p>
+      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+        <label class="modal__radio-display" for="size-s">S</label>
+        <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
+        <label class="modal__radio-display" for="size-m">M</label>
+        <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
+        <label class="modal__radio-display" for="size-l">L</label>
+        <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
+      </form>
+    </div>
+  </aside>
+</main>
 <footer class="page-footer">
-  <div class="page-footer__wrapper wrapper">
+  <div class="page-footer__wrapper">
     <a class="page-footer__logo">
       <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Мишка">
     </a>

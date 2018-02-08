@@ -1,34 +1,37 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-//.page-footer__social {
-//}
-
 .social__title {
   display: none;
 }
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 25px 0;
+  padding: 25px 62px 25px 57px;
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $gray-light;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     border-bottom: none;
+    padding: 25px 0;
   }
 }
 
 .social__item {
-  display: inline-block;
-  margin-right: 40px;
+  display: block;
+
+  @include tablet {
+    margin-right: 37px;
+  }
 
   &:last-child {
-    margin-right: 0;
+    @include tablet {
+      margin-right: 0;
+    }
   }
 }
 

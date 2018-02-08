@@ -1,0 +1,67 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.input-text {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.input-text__description {
+  display: block;
+  margin: 0;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $black;
+
+  @include tablet {
+    font-size: 19px;
+    margin-right: 25px;
+  }
+}
+
+.input-text__field {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 16px 0;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid $black;
+
+  @include tablet {
+    padding: 13px 16px;
+    font-size: 19px;
+  }
+
+  &--phone {
+    background: url("../img/icon-phone.svg") no-repeat right 8px top 11px;
+
+    @include tablet {
+      background-position: right 26px top 11px;
+    }
+
+    @include desktop {
+      background-position: right 8px top 11px;
+    }
+  }
+
+  &--email {
+    background: url("../img/icon-mail.svg") no-repeat right 4px top 11px;
+
+    @include tablet {
+      background-position: right 22px top 13px;
+    }
+
+    @include desktop {
+      background-position: right 3px top 11px;
+    }
+  }
+}

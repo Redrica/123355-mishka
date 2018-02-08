@@ -8,17 +8,17 @@
 </head>
 <body>
 <header class="page-header">
-  <div class="page-header__wrapper wrapper">
+  <div class="page-header__wrapper">
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__logo">
-        <a class="main-nav__logo-link">
-          <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-          <!--Временный вариант, не знаю, как по-другому сделать-->
-          <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
-        </a>
-      </div>
       <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--logo">
+          <a class="main-nav__link main-nav__link--logo">
+            <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            <!--Временный вариант, не знаю, как по-другому сделать-->
+            <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+          </a>
+        </li>
         <li class="main-nav__item main-nav__item--catalog">
           <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
         </li>
@@ -31,20 +31,16 @@
         <li class="main-nav__item main-nav__item--cart">
           <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
         </li>
-        <li class="main-nav__item main-nav__item--novelty">
-          <a class="main-nav__link main-nav__link--novelty" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--sale">
-          <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
-        </li>
       </ul>
     </nav>
     <div class="page-header__body page-header__body--main">
-      <span class="page-header__delivery-info">Бесплатная доставка по России</span>
-      <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
+      <a class="page-header__current page-header__current--novelty" href="#">Новые поступления</a>
+      <a class="page-header__current page-header__current--sale" href="#">Распродажа</a>
+      <strong class="page-header__delivery-info">Бесплатная доставка по России</strong>
+      <h1 class="page-header__title page-header__title--main">Милые штуки ручной<br> работы для дома</h1>
       <div class="page-header__link-wrapper">
-        <a class="page-header__link page-header__link--look-1" href="#">Предметы интерьера</a>
-        <a class="page-header__link page-header__link--look-2" href="#">Детские игрушки</a>
+        <a class="page-header__link page-header__link--look-1" href="#">Предметы<br> интерьера</a>
+        <a class="page-header__link page-header__link--look-2" href="#">Детские<br> игрушки</a>
       </div>
     </div>
   </div>
@@ -52,12 +48,12 @@
 
 <main class="page-main">
   <section class="promo-goods">
-    <div class="promo-goods__wrapper wrapper">
-      <div class="promo-goods__header">
-        <h2 class="promo-goods__title">Товар недели</h2>
-        <b class="promo-goods__item">Вязаные корзинки</b>
-      </div>
-      <div class="promo-goods__content">
+    <div class="promo-goods__wrapper">
+      <div class="promo-goods__container">
+        <div class="promo-goods__header">
+          <h2 class="promo-goods__title">Товар недели</h2>
+          <b class="promo-goods__item">Вязаные корзинки</b>
+        </div>
         <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
           размерах.</p>
         <table class="promo-goods__properties">
@@ -70,47 +66,33 @@
             <td class="promo-goods__property-value">25 cм</td>
           </tr>
           <tr>
-            <td class="promo-goods__property-title">Высота</td>
+            <td class="promo-goods__property-title">Высота:</td>
             <td class="promo-goods__property-value">15 см</td>
           </tr>
         </table>
         <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
         <b class="promo-goods__price">Цена: 990 руб.</b>
         <a class="promo-goods__button button" href="#">Заказать</a>
-        <!-- В каталоге будет такая же форма заказа, поэтому делаю как отдельный блок -->
-      </div>
-      <div class="promo-goods__buy buy">
-        <b class="buy__title">Добавить в корзину</b>
-        <p class="buy__subtitle">Выберите размер</p>
-        <form class="buy__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="buy__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
-          <label class="buy__radio-display" for="size-s">S</label>
-          <input class="buy__input-radio" id="size-m" type="radio" name="item-size" value="m">
-          <label class="buy__radio-display" for="size-m">M</label>
-          <input class="buy__input-radio" id="size-l" type="radio" name="item-size" value="l">
-          <label class="buy__radio-display" for="size-l">L</label>
-          <input class="buy__submit button button--turq" type="submit" value="Добавить">
-        </form>
       </div>
     </div>
   </section>
 
   <aside class="about">
-    <div class="about__wrapper  wrapper">
+    <div class="about__wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item about__item--eco">Экологически чистые материалы</li>
-        <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-        <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
-        <li class="about__item about__item--knit">Связано вручную с любовью и умилением</li>
-        <li class="about__item about__item--support">Поддержка отечественного производителя</li>
-        <li class="about__item about__item--gift">Поставляется в подарочной упаковке</li>
+        <li class="about__item about__item--eco">Экологически<br> чистые материалы</li>
+        <li class="about__item about__item--style">Скандинавский стиль<br> по российской цене</li>
+        <li class="about__item about__item--like">Увеличивает лайки<br> на фотографиях</li>
+        <li class="about__item about__item--knit">Связано вручную с<br> любовью и умилением</li>
+        <li class="about__item about__item--support">Поддержка отечественного<br> производителя</li>
+        <li class="about__item about__item--gift">Поставляется в<br> подарочной упаковке</li>
       </ul>
     </div>
   </aside>
 
   <section class="reviews">
-    <div class="reviews__wrapper wrapper slider">
+    <div class="reviews__wrapper slider">
       <h2 class="reviews__title">Отзывы</h2>
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
@@ -132,32 +114,53 @@
   </section>
 
   <section class="contacts">
-    <div class="contacts__wrapper wrapper">
-      <h3 class="contacts__title">Контакты</h3>
-      <div class="contacts__table">
-        <div class="contacts__row">
-          <div class="contacts__data">e-mail:</div>
-          <div class="contacts__data"><a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+    <div class="contacts__wrapper">
+      <div class="contacts__container">
+        <div class="contacts__map-container">
+          <div class="contacts__marker"></div>
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A953a34204dadd2fba9051581c4f53fac1fe1474d0921904dd06f3c92ac16d1a7&amp;source=constructor" width="768" height="457" frameborder="0"></iframe>
+          <!--<img class="contacts__image" src="img/map-tablet@1x.jpg" width="768" height="457">-->
+        </div>
+        <h3 class="contacts__title">Контакты</h3>
+        <div class="contacts__table">
+          <div class="contacts__row">
+            <div class="contacts__data">e-mail:</div>
+            <div class="contacts__data"><a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </div>
+          </div>
+          <div class="contacts__row">
+            <div class="contacts__data">адрес:</div>
+            <div class="contacts__data">г. Санкт-Петербург,<br>
+              ул. Большая Конюшенная,<br>
+              д. 19/8, офис 101
+            </div>
           </div>
         </div>
-        <div class="contacts__row">
-          <div class="contacts__data">адрес:</div>
-          <div class="contacts__data">г. Санкт-Петербург,<br>
-            ул. Большая Конюшенная,<br>
-            д. 19/8, офис 101
-          </div>
-        </div>
+        <a class="contacts__write button" href="feedback.html">Напишите нам</a>
       </div>
-      <div class="contacts__map">
-        <div class="contacts__marker"></div>
-      </div>
-      <a class="contacts__write button" href="form.html">Напишите нам</a>
     </div>
   </section>
+
+  <aside class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__item">
+      <b class="modal__title">Добавить в корзину</b>
+      <p class="modal__subtitle">Выберите размер:</p>
+      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <input class="modal__input-radio" id="size-s" type="radio" name="item-size" value="s" checked>
+        <label class="modal__radio-display" for="size-s">S</label>
+        <input class="modal__input-radio" id="size-m" type="radio" name="item-size" value="m">
+        <label class="modal__radio-display" for="size-m">M</label>
+        <input class="modal__input-radio" id="size-l" type="radio" name="item-size" value="l">
+        <label class="modal__radio-display" for="size-l">L</label>
+        <input class="modal__submit button button--turquoise" type="submit" value="Добавить">
+      </form>
+    </div>
+  </aside>
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper wrapper">
+  <div class="page-footer__wrapper">
     <a class="page-footer__logo">
       <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Мишка">
     </a>

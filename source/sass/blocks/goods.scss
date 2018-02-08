@@ -2,17 +2,21 @@
 @import "../variables.scss";
 
 .goods__wrapper {
+  @include viewport-center;
   padding: 30px 30px 0 30px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
+    position: relative;
+    z-index: 5;
     padding: 91px 50px 0;
   }
 
-  @media (min-width: $width-desktop) {
-    padding: 145px 50px 0;
+  @include desktop {
+    padding: 100px 50px 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
   }
@@ -22,16 +26,16 @@
   margin-bottom: 30px;
   font-size: 0;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     width: 100%;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     flex-direction: column;
     justify-content: space-between;
     width: 30%;
-    margin: 0;
+    margin: 30px 0 0;
   }
 
   &:last-of-type {
@@ -58,18 +62,23 @@
   }
 }
 
+.goods__picture {
+  width: 100%;
+  height: auto;
+}
+
 .goods__info {
   padding: 26px 27px;
   border: 1px solid $gray-lighter;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 25px 32px 27px 33px;
+    padding: 25px 31px 27px 27px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     width: 100%;
     flex-grow: 1;
   }
@@ -82,7 +91,7 @@
   font-weight: bold;
   color: $black;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
   }
@@ -95,8 +104,12 @@
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     font-size: 15px;
+  }
+
+  @include desktop {
+    margin-bottom: 14px;
   }
 }
 
@@ -108,7 +121,7 @@
   padding-top: 21px;
   border-top: 1px solid $gray-lighter;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     margin-top: auto;
   }
 }
@@ -118,14 +131,18 @@
   line-height: 24px;
   font-weight: bold;
   color: $black;
+
+  @include tablet {
+    font-size: 17px;
+  }
 }
 
 .goods__cart {
   display: block;
-  width: 20px;
-  height: 19px;
+  width: 25px;
+  height: 25px;
   font-size: 0;
-  background: url("../img/icon-cart.svg") no-repeat center center;
+  background: url("../img/icon-cart.svg") no-repeat 6px 1px;
 }
 
 //.goods__title:hover {

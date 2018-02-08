@@ -1,35 +1,35 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.order-wrapper {
-  padding: 23px 30px 55px;
+.order__wrapper {
+  @include viewport-center;
+  padding: 22px 30px 55px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
-    padding: 88px 0 0;
+  @include tablet {
+    padding: 74px 0 53px;
   }
 
-  //@media (min-width: $width-desktop) {
-  //  padding: 142px 100px 0;
-  //}
+  @include desktop {
+    padding: 124px 0 48px;
+  }
 }
 
 .order__intro {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 24px;
   padding: 0;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
-    margin: 0 50px;
+  @include tablet {
+    margin: 0 50px 6px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  @media (min-width: $width-desktop) {
-    margin: 0 225px;
+  @include desktop {
+    margin: 0 225px 5px 225px;
   }
 }

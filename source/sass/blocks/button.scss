@@ -3,8 +3,8 @@
 .button {
   font-family: "Open Sans", "Tahoma", sans-serif;
   display: block;
-  width: auto;
-  padding: 12px 10px;
+  width: 100%;
+  padding: 14px 0;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
@@ -15,10 +15,29 @@
   outline: none;
   border: 2px solid $gray-dark;
   color: $gray-dark;
+
+  &:hover {
+    background-color: $gray-dark;
+    color: $white;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
 }
 
-.button--turq {
-  line-height: 16px;
-  background-color: $turquoise;
+.button--turquoise {
+  background-color: $turquoise-light;
+  border-color: $turquoise-light;
   color: $white;
+
+  &:hover {
+    background-color: $turquoise-darker;
+    border-color: $turquoise-darker;
+    color: $white;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
 }

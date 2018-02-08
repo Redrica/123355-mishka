@@ -2,20 +2,16 @@
 @import "../variables.scss";
 
 .page-footer__wrapper {
+  @include viewport-center;
   background-color: $gray-lightest;
   padding: 0 30px;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
-    height: 143px;
-    padding: 0 50px;
+    padding: 33px 50px 28px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: $width-desktop) {
-    padding: 0 100px;
   }
 }
 
@@ -23,14 +19,14 @@
   display: none;
 
   @media (min-width: $width-tablet) {
-    display: inline;
+    display: block;
     margin-right: 78px;
   }
 }
 
 .page-footer__copyright-link {
-  display: inline-block;
-  padding: 22px 0;
+  display: block;
+  padding: 21px 0 22px;
   text-align: center;
   font-size: 19px;
   line-height: 18px;
@@ -43,6 +39,6 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 29px;
-    //  себе: для PP можно еще margin-top: 1px;
+    margin-top: 3px;
   }
 }

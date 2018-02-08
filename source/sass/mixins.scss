@@ -1,7 +1,15 @@
 @import "variables.scss";
 
-@mixin max-width {
-  max-width: 1250px;
+@mixin tablet {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
 }
 
 @mixin header-tablet {
@@ -21,4 +29,19 @@
 
 @mixin outline-item {
   outline: 5px solid #2d7071;
+}
+
+@mixin viewport-center {
+  max-width: 1250px;
+  width: 320px;
+  margin: 0 auto;
+  font-size: 0;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1150px;
+  }
 }
