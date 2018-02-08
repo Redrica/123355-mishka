@@ -163,7 +163,7 @@
   border-bottom: 1px solid $turquoise;
 
   &:hover {
-    color: #46c1ae;
+    color: $turquoise-dark;
   }
 
   &:active {
@@ -199,8 +199,6 @@
   left: 30%;
   width: 64px;
   height: 104px;
-  //margin-top: -30px;
-  //margin-left: -25px;
   background: url("../img/icon-map-pin.svg") no-repeat center center;
 
   @include tablet {
@@ -208,10 +206,6 @@
     left: 42%;
   }
 }
-
-//.contacts__image {
-//  width: 100%;
-//}
 
 .contacts__write {
   order: 2;

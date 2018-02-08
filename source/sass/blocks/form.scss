@@ -56,13 +56,13 @@
 
   @include tablet {
     flex-shrink: 0;
-    width: (100%/4);
+    width: (100% / 4);
     padding-left: 1px;
   }
 
   @include desktop {
     padding-left: 62px;
-    width: (100%/5);
+    width: (100% / 5);
   }
 }
 
@@ -71,13 +71,13 @@
   margin-bottom: -11px;
 
   @include tablet {
-    width: (100%*3/4);
+    width: (100% * 3 / 4);
     padding: 0;
     margin-bottom: -23px;
   }
 
   @include desktop {
-    width: (100%*4/5);
+    width: (100% * 4 / 5);
   }
 }
 
@@ -97,13 +97,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: (100%*3/4);
+    width: (100% * 3 / 4);
     margin-bottom: -24px;
     padding: 0;
   }
 
   @include desktop {
-    width: (100%*4/5);
+    width: (100% * 4 / 5);
     //justify-content: flex-start;
   }
 }
@@ -112,13 +112,13 @@
   margin-bottom: 22px;
 
   @include tablet {
-    width: (100%/2);
+    width: (100% / 2);
     margin-bottom: 24px;
     margin-right: -11px;
   }
 
   @include desktop {
-    width: (100%/3);
+    width: (100% / 3);
     margin-right: -58px;
   }
 }
@@ -128,12 +128,12 @@
   margin-bottom: -22px;
 
   @include tablet {
-    width: (100%*3/4);
+    width: (100% * 3 / 4);
     padding: 0;
   }
 
   @include desktop {
-    width: (100%*4/5);
+    width: (100% * 4 / 5);
   }
 }
 
@@ -146,7 +146,7 @@
 
   @include tablet {
     flex-shrink: 0;
-    width: (100%*3/4);
+    width: (100% * 3 / 4);
     padding: 0;
     margin-bottom: 20px;
 
@@ -156,7 +156,7 @@
   }
 
   @include desktop {
-    width: (100%*4/5);
+    width: (100% * 4 / 5);
   }
 }
 
@@ -164,12 +164,12 @@
   padding: 25px 0 16px;
 
   @include tablet {
-    width: (100%*3/4);
+    width: (100% * 3 / 4);
     padding: 0;
   }
 
   @include desktop {
-    width: (100%*4/5);
+    width: (100% * 4 / 5);
   }
 }
 

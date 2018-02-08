@@ -13,9 +13,9 @@
   padding: 25px 62px 25px 57px;
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $gray-light;
 
-  @media (min-width: $width-tablet) {
+  @include tablet{
     border-bottom: none;
     padding: 25px 0;
   }
