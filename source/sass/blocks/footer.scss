@@ -2,10 +2,11 @@
 @import "../variables.scss";
 
 .page-footer__wrapper {
+  @include viewport-center;
   background-color: $gray-lightest;
   padding: 0 30px;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     padding: 33px 50px 28px;
     flex-direction: row;

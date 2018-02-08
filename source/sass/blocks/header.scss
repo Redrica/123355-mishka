@@ -1,6 +1,10 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.page-header__wrapper {
+  @include viewport-center;
+}
+
 .page-header__body {
   background-color: $gray-lightest;
   padding: 70px 0 75px;

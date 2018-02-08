@@ -2,6 +2,7 @@
 @import "../variables.scss";
 
 .reviews__wrapper {
+  @include viewport-center;
   padding: 20px 30px 40px;
   background-color: $white;
 

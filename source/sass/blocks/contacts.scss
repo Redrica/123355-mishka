@@ -2,6 +2,7 @@
 @import "../variables.scss";
 
 .contacts__wrapper {
+  @include viewport-center;
   padding: 52px 0 40px;
   background-color: $white;
 

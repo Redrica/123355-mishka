@@ -2,6 +2,7 @@
 @import "../variables.scss";
 
 .promo__wrapper {
+  @include viewport-center;
   padding: 31px 30px 58px 30px;
   background-color: $white;
 
