@@ -15,25 +15,30 @@
 }
 
 .promo__item {
+  display: flex;
+  flex-direction: column;
   padding: 0 33px 32px;
   border: 1px solid $gray-lighter;
 
   @include tablet {
-    display: flex;
-    flex-direction: column;
     padding: 0 0 45px 0;
   }
 
   @media (min-width: $width-desktop) {
-    position: relative;
-    justify-content: space-between;
-    align-content: flex-start;
-    padding: 0 0 0 760px;
+    display: block;
+    padding: 0;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }
 
 .promo__title {
   position: relative;
+  order: -1;
   display: block;
   margin: 0 0 25px 0;
   padding: 23px 0 0 56px;
@@ -49,8 +54,10 @@
   }
 
   @include desktop {
-    padding: 95px 50px 0 0;
-    margin: 0 0 34px 0;
+    float: right;
+    width: (100%*2/6);
+    padding: 95px 50px 0 60px;
+    margin: 0 0 33px 0;
   }
 
   &::before {
@@ -69,7 +76,7 @@
 
     @include desktop {
       top: 42px;
-      left: 2px;
+      left: 63px;
     }
   }
 }
@@ -81,14 +88,17 @@
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     margin: 0 33px 35px 39px;
     font-size: 15px;
     line-height: 30px;
   }
 
-  @media (min-width: $width-desktop) {
-    margin: 0 33px 46px 0;
+  @include desktop {
+    float: right;
+    width: (100%*2/6);
+    margin: 0 0 46px 0;
+    padding: 0 50px 0 60px;
   }
 
   &--no-wrap {
@@ -111,9 +121,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    position: absolute;
-    top: 0;
-    left: 0;
+    float: left;
     width: 65%;
   }
 }
@@ -125,7 +133,9 @@
   }
 
   @media (min-width: $width-desktop) {
+    float: right;
+    clear: right;
     width: 230px;
-    margin: 0 0 59px;
+    margin: 0 57px 59px 0;
   }
 }
