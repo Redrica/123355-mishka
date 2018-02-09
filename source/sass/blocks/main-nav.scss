@@ -22,33 +22,12 @@
   height: 78px;
   padding: 0;
   font-size: 0;
-  background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
+  background: $white url("../img/icon-menu-close.svg") no-repeat center center;
   border: none;
   outline: none;
 
   @include tablet {
     display: none;
-  }
-
-  //@media (min-width: $width-tablet) {
-  //  display: none;
-  //}
-}
-
-// себе: смена логотипов мобильная -> планшет
-.main-nav__logo-image {
-  &--tablet {
-    display: none;
-  }
-
-  @include tablet {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
   }
 }
 

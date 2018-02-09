@@ -16,6 +16,7 @@
 }
 
 .promo__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 33px 32px;
@@ -34,6 +35,19 @@
       display: table;
       clear: both;
     }
+  }
+  // "кнопка" проигрывания видео
+  //&::before {
+  //  position: absolute;
+  //  content: url("");
+  //}
+
+  &:hover {
+    box-shadow: 0 6px 10px transparentize($black, 0.9);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px transparentize($black, 0.9);
   }
 }
 
