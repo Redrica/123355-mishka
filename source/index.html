@@ -14,9 +14,11 @@
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--logo">
           <a class="main-nav__link main-nav__link--logo">
-            <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-            <!--Временный вариант, не знаю, как по-другому сделать-->
-            <img class="main-nav__logo-image--tablet" src="img/mishka-logo-tablet.png" width="113" height="46" alt="Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img class="main-nav__logo-image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            </picture>
           </a>
         </li>
         <li class="main-nav__item main-nav__item--catalog">

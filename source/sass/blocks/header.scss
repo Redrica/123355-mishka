@@ -22,11 +22,21 @@
     padding-bottom: 0;
 
     @include tablet {
-      background: url("../img/hero-tablet@1x_made.jpg") no-repeat center 0;
+      background: url("../img/TEST.jpg") no-repeat center 0;
+
+      @include retina-resolution {
+        background-image: url("../img/TEST-2x.jpg");
+        background-size: auto;
+      }
     }
 
     @include desktop {
       background: url("../img/hero-desktop@1x_made.jpg") no-repeat center 0;
+
+      //@include retina-resolution {
+      //  background-image: url("../img/TEST.jpg");
+      //  background-size: cover;
+      //}
     }
   }
 }
