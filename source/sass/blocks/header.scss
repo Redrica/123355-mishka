@@ -1,6 +1,12 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.page-header--main {
+  @include desktop {
+    background-color: $white-almost;
+  }
+}
+
 .page-header__wrapper {
   @include viewport-center;
 }
@@ -21,22 +27,27 @@
     background: $white-almost url("../img/hero-mobile@1x.jpg") no-repeat center -18px;
     padding-bottom: 0;
 
+    @include retina-resolution {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
+
     @include tablet {
-      background: url("../img/TEST.jpg") no-repeat center 0;
+      background: $white-almost url("../img/hero-tablet@1x.jpg") no-repeat center 0;
 
       @include retina-resolution {
-        background-image: url("../img/TEST-2x.jpg");
-        background-size: auto;
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: 1150px auto;
       }
     }
 
     @include desktop {
-      background: url("../img/hero-desktop@1x_made.jpg") no-repeat center 0;
+      background: $white-almost url("../img/hero-desktop@1x.jpg") no-repeat center 0;
 
-      //@include retina-resolution {
-      //  background-image: url("../img/TEST.jpg");
-      //  background-size: cover;
-      //}
+      @include retina-resolution {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: cover;
+      }
     }
   }
 }
@@ -144,7 +155,6 @@
     &:hover {
       margin-top: -5px;
       padding: 19px 120px 40px 28px;
-      //  еще надо сделать, чтобы картинка сдвигалась на 5px
 
       @include tablet {
         position: relative;
@@ -172,7 +182,6 @@
     &:hover {
       margin-top: -5px;
       padding: 19px 120px 40px 28px;
-      //  еще надо сделать, чтобы картинка сдвигалась на 5px
 
       @include tablet {
         position: relative;

@@ -61,13 +61,12 @@
       flex-grow: 1;
       order: -3;
       // 48px - потому что кривой макет, лого вылезает на 2px за общую напрвляющую
-      padding: 22px 0 20px 48px;
+      padding: 8px 0 0 48px;
     }
 
     @include desktop {
       width: 25%;
-      justify-content: center;
-      padding-left: 0;
+      padding-left: 75px;
     }
   }
 
@@ -171,7 +170,7 @@
 
     @media (min-width: $width-desktop) {
       font-size: 17px;
-      padding: 30px 0 33px 35px;
+      padding: 31px 0 33px 35px;
     }
 
     &:hover {
@@ -251,5 +250,16 @@
     &:active {
       color: transparentize($black, 0.7);
     }
+  }
+}
+
+.main-nav__logo {
+  @include tablet {
+    width: 113px;
+    height: auto;
+  }
+
+  @include desktop {
+    width: 149px;
   }
 }

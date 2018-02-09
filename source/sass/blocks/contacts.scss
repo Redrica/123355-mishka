@@ -2,6 +2,8 @@
 @import "../variables.scss";
 
 .contacts__wrapper {
+  position: relative;
+
   @include viewport-center;
   padding: 52px 0 40px;
   background-color: $white;
@@ -14,6 +16,33 @@
     position: relative;
     padding: 94px 50px 105px 225px;
     min-height: 656px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px 7px;
+    background-position: 8px 0;
+
+    @include tablet {
+      height: 17px;
+      background-position: 19px 0;
+      background-size: 768px 17px;
+    }
+
+    @include desktop {
+      left: 50px;
+      width: 1050px;
+      height: 23px;
+      background-position: 28px 0;
+      background-size: 1050px 23px;
+    }
   }
 }
 
@@ -186,24 +215,27 @@
     float: right;
     width: 60%;
     margin: 0;
-    background-image: url("../img/map-desktop@1x.png");
   }
 }
 
-.contacts__map {
+.contacts__image {
   width: 100%;
 }
 
 .contacts__marker {
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 35%;
   width: 64px;
   height: 104px;
   background: url("../img/icon-map-pin.svg") no-repeat center center;
 
   @include tablet {
-    top: 30%;
+    top: 33%;
+    left: 45%;
+  }
+
+  @include desktop {
     left: 42%;
   }
 }
@@ -214,7 +246,7 @@
   margin: 0 auto;
   padding: 14px 53px;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 230px;
     margin: 0 auto;
     padding: 12px 0;
@@ -222,7 +254,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     float: left;
     clear: left;
     margin: 0;
