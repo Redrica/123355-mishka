@@ -17,7 +17,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img  class="main-nav__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров для дома «Мишка»">
+              <img class="main-nav__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров для дома «Мишка»">
             </picture>
           </a>
         </li>
@@ -51,36 +51,33 @@
 <main class="page-main">
   <section class="promo-goods">
     <div class="promo-goods__wrapper">
-      <div class="promo-goods__container">
-        <div class="promo-goods__header">
-          <h2 class="promo-goods__title">Товар недели</h2>
-          <b class="promo-goods__item">Вязаные корзинки</b>
-        </div>
-        <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-          размерах.</p>
-        <table class="promo-goods__properties">
-          <tr>
-            <td class="promo-goods__property-title">Цвет:</td>
-            <td class="promo-goods__property-value">&laquo;Тиффани&raquo;/серый</td>
-          </tr>
-          <tr>
-            <td class="promo-goods__property-title">Диаметр:</td>
-            <td class="promo-goods__property-value">25 cм</td>
-          </tr>
-          <tr>
-            <td class="promo-goods__property-title">Высота:</td>
-            <td class="promo-goods__property-value">15 см</td>
-          </tr>
-        </table>
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-          <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
-        </picture>
-
-        <b class="promo-goods__price">Цена: 990 руб.</b>
-        <a class="promo-goods__button button" href="#">Заказать</a>
+      <div class="promo-goods__header">
+        <h2 class="promo-goods__title">Товар недели</h2>
+        <b class="promo-goods__item">Вязаные корзинки</b>
       </div>
+      <picture class="promo-goods__image-container">
+        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <img class="promo-goods__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязанные корзинки" title="Вы уже хотите такую, правда?">
+      </picture>
+      <p class="promo-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+        размерах.</p>
+      <table class="promo-goods__properties">
+        <tr>
+          <td class="promo-goods__property-title">Цвет:</td>
+          <td class="promo-goods__property-value">&laquo;Тиффани&raquo;/серый</td>
+        </tr>
+        <tr>
+          <td class="promo-goods__property-title">Диаметр:</td>
+          <td class="promo-goods__property-value">25 cм</td>
+        </tr>
+        <tr>
+          <td class="promo-goods__property-title">Высота:</td>
+          <td class="promo-goods__property-value">15 см</td>
+        </tr>
+      </table>
+      <b class="promo-goods__price">Цена: 990 руб.</b>
+      <a class="promo-goods__button button" href="#">Заказать</a>
     </div>
   </section>
 
