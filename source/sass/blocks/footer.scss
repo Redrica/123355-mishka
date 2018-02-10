@@ -1,14 +1,18 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.page-footer {
+  background-color: $gray-lightest;
+}
+
 .page-footer__wrapper {
   @include viewport-center;
-  background-color: $gray-lightest;
+  //background-color: $gray-lightest;
   padding: 0 30px;
 
   @include tablet {
     display: flex;
-    padding: 33px 50px 28px;
+    padding: 53px 50px 51px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -18,14 +22,15 @@
 .page-footer__logo {
   display: none;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: block;
-    margin-right: 78px;
+    margin: -12px 78px 0 0;
   }
 }
 
 .page-footer__copyright-link {
   display: block;
+  min-height: 27px;
   padding: 21px 0 22px;
   text-align: center;
   font-size: 19px;
@@ -33,6 +38,10 @@
   font-weight: bold;
   text-decoration: none;
   color: $black;
+
+  @include tablet {
+    padding: 0;
+  }
 
   &::after {
     content: url("../img/logo-htmlacademy.svg");
