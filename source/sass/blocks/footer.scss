@@ -50,4 +50,8 @@
     margin-left: 29px;
     margin-top: 3px;
   }
+
+  &:active {
+    color: transparentize($black, 0.7);
+  }
 }

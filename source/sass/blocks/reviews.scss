@@ -140,6 +140,7 @@
   background-color: $white;
   border: 1px solid $gray-lightest;
   font-size: 0;
+  outline: none;
 
   @include tablet {
     border: none;
@@ -154,7 +155,7 @@
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
@@ -167,7 +168,7 @@
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 

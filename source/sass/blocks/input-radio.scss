@@ -45,6 +45,22 @@
     }
   }
 
+  &:hover + .input-radio__description::before {
+    box-shadow: 0 0 0 9px $white, 0 0 0 11px $turquoise-light;
+
+    @include tablet {
+      box-shadow: 0 0 0 13px $white, 0 0 0 15px $turquoise-light;
+    }
+  }
+
+  &:active + .input-radio__description::before {
+    box-shadow: 0 0 0 9px $white, 0 0 0 11px transparentize($gray-dark, 0.7);
+
+    @include tablet {
+      box-shadow: 0 0 0 13px $white, 0 0 0 15px transparentize($gray-dark, 0.7);
+    }
+  }
+
   &:checked + .input-radio__description::before {
     background-color: $turquoise;
   }

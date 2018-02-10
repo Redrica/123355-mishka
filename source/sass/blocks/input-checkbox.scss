@@ -42,6 +42,14 @@
     }
   }
 
+  &:hover + .input-checkbox__description::before {
+    border-color: $turquoise-light;
+  }
+
+  &:active + .input-checkbox__description::before {
+    border-color: transparentize($gray-dark, 0.7);
+  }
+
   &:checked + .input-checkbox__description::before {
     background: url("../img/icon-tick.svg") no-repeat 6px 11px;
     background-size: 65%;

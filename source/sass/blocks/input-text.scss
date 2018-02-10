@@ -35,6 +35,7 @@
   border-radius: 0;
   border: none;
   border-bottom: 2px solid $black;
+  color: $gray-dark;
 
   @include tablet {
     padding: 13px 16px;
@@ -63,5 +64,15 @@
     @include desktop {
       background-position: right 3px top 11px;
     }
+  }
+
+  &::placeholder {
+    color: transparentize($gray-dark, 0.7);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $turquoise-light;
+    outline: none;
   }
 }

@@ -41,6 +41,7 @@
   @include tablet {
     display: block;
     padding: 41px 50px 53px 50px;
+
     &::after {
       content: "";
       display: table;
@@ -206,7 +207,7 @@
   @include desktop {
     width: (100% * 3 / 5);
     margin-top: -158px;
-  };
+  }
 }
 
 .promo-goods__image {
@@ -247,6 +248,7 @@
 
 .promo-goods__button {
   order: 3;
+
   @include tablet {
     float: left;
     clear: left;
