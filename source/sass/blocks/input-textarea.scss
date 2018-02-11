@@ -14,10 +14,20 @@
   border-radius: 0;
   border: 2px solid $gray-dark;
   box-shadow: none;
-  color: transparentize($gray-dark, 0.6);
+  color: $gray-dark;
 
   @include tablet {
     padding: 16px;
     font-size: 19px;
+  }
+
+  &::placeholder {
+    color: transparentize($gray-dark, 0.7);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $turquoise-light;
+    outline: none;
   }
 }

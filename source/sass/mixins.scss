@@ -22,13 +22,10 @@
   line-height: 57px;
 }
 
-// себе: вспомогательные, в конце - убрать!
-@mixin outline-block {
-  outline: 10px solid #7e1f1e;
-}
-
-@mixin outline-item {
-  outline: 5px solid #2d7071;
+@mixin retina-resolution {
+  @media (min-resolution: #{$retina-dpi}), (min-resolution: #{$retina-dppx}) {
+    @content;
+  }
 }
 
 @mixin viewport-center {
@@ -44,4 +41,13 @@
   @include desktop {
     width: 1150px;
   }
+}
+
+// себе: вспомогательные, в конце - убрать!
+@mixin outline-block {
+  outline: 10px solid #7e1f1e;
+}
+
+@mixin outline-item {
+  outline: 5px solid #2d7071;
 }

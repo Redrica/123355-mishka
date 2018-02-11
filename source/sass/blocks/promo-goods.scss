@@ -9,50 +9,48 @@
       position: absolute;
       top: -16px;
       left: 0;
-      z-index: 50;
+      right: 0;
+      z-index: 5;
       content: "";
+      display: block;
       width: 100%;
-      height: 34px;
-      background: url("../img/zigzag-fill-desktop_made.svg") repeat-x center 0;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: 0 0;
+      background-repeat: repeat-x;
+      background-size: 770px 24px;
     }
 
     @include desktop {
-      top: -19px;
+      top: -22px;
       left: 0;
+      height: 34px;
+      background-size: 1250px 37px;
+      background-position: center 0;
     }
   }
 }
 
 .promo-goods__wrapper {
   @include viewport-center;
+  display: flex;
+  flex-direction: column;
   padding: 28px 30px 42px;
   background-color: $white;
 
   @include tablet {
-    position: relative;
+    display: block;
     padding: 41px 50px 53px 50px;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
   @include desktop {
-    padding: 67px 50px 73px;
-  }
-}
-
-.promo-goods__container {
-  @include tablet {
-    position: relative;
-    width: 100%;
-    min-height: 473px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-
-  @include desktop {
-    justify-content: flex-start;
-    min-height: 636px;
-    padding-left: 175px;
+    padding: 67px 50px 73px 225px;
   }
 }
 
@@ -134,8 +132,9 @@
   color: $gray-dark;
 
   @include tablet {
+    float: left;
     width: 50%;
-    margin: 0 0 36px;
+    margin: -7px 0 36px;
     padding-right: 43px;
     font-size: 17px;
     line-height: 30px;
@@ -143,7 +142,7 @@
   }
 
   @include desktop {
-    width: 40%;
+    width: (100% * 2 / 5);
     margin: 0 0 49px;
     padding-right: 50px;
   }
@@ -159,6 +158,8 @@
   //@include outline-item;
 
   @include tablet {
+    float: left;
+    clear: left;
     width: auto;
     margin-bottom: 55px;
   }
@@ -195,26 +196,37 @@
   }
 }
 
+.promo-goods__image-container {
+  order: 1;
+
+  @include tablet {
+    float: right;
+    width: (100% / 2);
+  }
+
+  @include desktop {
+    width: (100% * 3 / 5);
+    margin-top: -158px;
+  }
+}
+
 .promo-goods__image {
   margin-bottom: 25px;
   display: block;
 
-  @media (min-width: $width-tablet) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    order: 1;
-    width: 50%;
+  @include tablet {
+    width: 100%;
     height: auto;
     margin: 0;
   }
 
-  @media (min-width: $width-desktop) {
-    top: 0;
-  }
+  //@media (min-width: $width-desktop) {
+  //  top: 0;
+  //}
 }
 
 .promo-goods__price {
+  order: 2;
   display: block;
   margin: 0 auto 25px;
   font-size: 17px;
@@ -223,6 +235,8 @@
   color: $gray-dark;
 
   @include tablet {
+    float: left;
+    clear: left;
     font-size: 20px;
     margin: 0 0 35px 72px;
   }
@@ -233,7 +247,11 @@
 }
 
 .promo-goods__button {
+  order: 3;
+
   @include tablet {
+    float: left;
+    clear: left;
     width: auto;
     margin: 0;
     padding: 14px 99px;
