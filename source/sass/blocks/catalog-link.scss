@@ -1,0 +1,93 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.catalog-link {
+  position: relative;
+  display: block;
+  width: auto;
+  padding: 24px 30px 30px 28px;
+  text-decoration: none;
+  text-align: left;
+  color: $white;
+
+  @include tablet {
+    //display: inline-block;
+    width: 50%;
+    padding: 28px 110px 35px 37px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--look-1 {
+    background-color: $turquoise-light;
+
+    &:hover {
+      margin-top: -5px;
+      padding: 19px 120px 40px 28px;
+      background-color: $turquoise;
+
+      @include tablet {
+        position: relative;
+        top: -5px;
+        margin-top: 0;
+        padding: 23px 110px 40px 37px;
+      }
+    }
+  }
+
+  &--look-2 {
+    background-color: $turquoise-darker;
+
+    @include tablet {
+      position: relative;
+      right: 0;
+      background-position: right 33px center;
+    }
+
+    &:hover {
+      margin-top: -5px;
+      padding: 19px 120px 40px 28px;
+      background-color: $turquoise-dark;
+
+      @include tablet {
+        position: relative;
+        top: -5px;
+        margin-top: 0;
+        padding: 23px 110px 40px 37px;
+      }
+    }
+  }
+
+  &:hover .catalog-link__icon {
+    fill: transparentize($turcuoise-darkest, 0.3);
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+
+    & .catalog-link__icon {
+      fill: transparentize($turcuoise-darkest, 0.7);
+    }
+  }
+}
+
+.catalog-link__text {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.catalog-link__icon {
+  position: absolute;
+  fill: transparentize($turcuoise-darkest, 0.5);
+
+  &--look-1 {
+    top: 23px;
+    right: 36px;
+  }
+
+  &--look-2 {
+    top: 21px;
+    right: 27px;
+  }
+}
