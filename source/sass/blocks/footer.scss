@@ -29,17 +29,11 @@
   }
 
   &:hover .page-footer__logo-icon {
-    path {
-      fill: $turquoise-dark;
-    }
+    fill: $turquoise-dark;
   }
 
   &:active .page-footer__logo-icon {
     opacity: 0.3;
-
-    path {
-      fill: $turquoise-dark;
-    }
   }
 }
 

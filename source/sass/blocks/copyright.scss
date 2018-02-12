@@ -7,9 +7,7 @@
   align-items: center;
 
   &:hover .copyright__icon {
-    path {
       fill: $turquoise-dark;
-    }
   }
 
   &:active {
@@ -27,11 +25,5 @@
 }
 
 .copyright__icon {
-  width: 27px;
-  height: 34px;
-  transform: scale(1.5);
-
-  path {
-    fill: $turquoise-light;
-  }
+   fill: $turquoise-light;
 }
