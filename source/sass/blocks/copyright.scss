@@ -1,0 +1,37 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.copyright__link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  &:hover .copyright__icon {
+    path {
+      fill: $turquoise-dark;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+}
+
+.copyright__text {
+  margin-right: 30px;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $black;
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  transform: scale(1.5);
+
+  path {
+    fill: $turquoise-light;
+  }
+}

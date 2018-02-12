@@ -36,58 +36,10 @@
 
   &:active .page-footer__logo-icon {
     opacity: 0.3;
+
     path {
       fill: $turquoise-dark;
     }
   }
 }
 
-.page-footer__copyright-link {
-  position: relative;
-  display: block;
-  min-height: 27px;
-  padding: 21px 0 22px;
-  text-align: center;
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: $black;
-
-  @include tablet {
-    padding: 0;
-  }
-
-  //&::after {
-  //  content: url("../img/logo-htmlacademy.svg");
-  //  display: inline-block;
-  //  vertical-align: middle;
-  //  margin-left: 29px;
-  //  margin-top: 3px;
-  //}
-  &:hover .page-footer__copyright-link-icon {
-    path {
-      fill: $turquoise-dark;
-    }
-  }
-
-  &:active {
-    color: transparentize($black, 0.7);
-
-    & .page-footer__copyright-link-icon {
-      opacity: 0.3;
-    }
-  }
-}
-
-.page-footer__copyright-link-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 27px;
-  height: 34px;
-
-  path {
-    fill: $turquoise-light;
-  }
-}
