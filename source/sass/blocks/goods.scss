@@ -127,6 +127,7 @@
   @include tablet {
     font-size: 20px;
     line-height: 24px;
+    padding-right: 15px;
   }
 
   &:hover {
@@ -178,12 +179,17 @@
   }
 }
 
-.goods__cart {
-  display: block;
-  width: 25px;
-  height: 25px;
-  font-size: 0;
-  background: url("../img/icon-cart.svg") no-repeat 6px 1px;
+.goods__cart svg {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: $turquoise-light;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 //.goods__title:hover {

@@ -12,7 +12,7 @@
 
   @include tablet {
     display: flex;
-    padding: 56px 50px 51px;
+    padding: 50px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +23,9 @@
   display: none;
 
   @include tablet {
+    align-self: flex-start;
     display: block;
-    margin: -12px 78px 0 0;
+    margin: 0 78px 0 0;
     cursor: pointer;
   }
 
@@ -37,9 +38,20 @@
   }
 }
 
+.page-footer__social {
+  @include tablet {
+    margin-top: 4px;
+  }
+}
+
 .page-footer__copyright {
   display: flex;
   justify-content: center;
   padding: 22px 0;
-}
 
+  @include tablet {
+    align-self: flex-end;
+    margin-top: 3px;
+    padding: 0;
+  }
+}

@@ -74,6 +74,14 @@
       fill: $turquoise-light;
     }
   }
+
+  &:active {
+    color: transparentize($black, 0.7);
+
+    & .menu-item__icon {
+      opacity: 0.3;
+    }
+  }
 }
 
 .menu-item__icon {

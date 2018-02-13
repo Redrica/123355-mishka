@@ -7,13 +7,12 @@
   align-items: center;
 
   &:hover .copyright__icon {
-      fill: $turquoise-dark;
+    fill: $turquoise-dark;
   }
 
   &:active {
     opacity: 0.3;
   }
-
 }
 
 .copyright__text {
@@ -25,5 +24,6 @@
 }
 
 .copyright__icon {
-   fill: $turquoise-light;
+  margin-top: 5px;
+  fill: $turquoise-light;
 }

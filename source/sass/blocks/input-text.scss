@@ -2,6 +2,8 @@
 @import "../variables.scss";
 
 .input-text {
+  position: relative;
+
   @include tablet {
     display: flex;
     align-items: center;
@@ -43,7 +45,7 @@
   }
 
   &--phone {
-    background: url("../img/icon-phone.svg") no-repeat right 8px top 11px;
+    //background: url("../img/icon-phone.svg") no-repeat right 8px top 11px;
 
     @include tablet {
       background-position: right 26px top 11px;
@@ -55,7 +57,7 @@
   }
 
   &--email {
-    background: url("../img/icon-mail.svg") no-repeat right 4px top 11px;
+    //background: url("../img/icon-mail.svg") no-repeat right 4px top 11px;
 
     @include tablet {
       background-position: right 22px top 13px;
@@ -74,5 +76,43 @@
   &:focus {
     border-color: $turquoise-light;
     outline: none;
+
+    & + .input-text__icon {
+      opacity: 1;
+      fill: $turquoise-light;
+    }
+  }
+}
+
+.input-text__icon {
+  position: absolute;
+  opacity: 0.2;
+
+  &--phone {
+    top: 18px;
+    right: 8px;
+
+    @include tablet {
+      top: 13px;
+      right: 26px;
+    }
+
+    @include desktop {
+      right: 8px;
+    }
+  }
+
+  &--email {
+    top: 18px;
+    right: 4px;
+
+    @include tablet {
+      top: 13px;
+      right: 22px;
+    }
+
+    @include desktop {
+      right: 4px;
+    }
   }
 }

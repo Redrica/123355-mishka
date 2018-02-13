@@ -155,10 +155,6 @@
   }
 }
 
-//.main-nav__toggle:active + .main-nav__list{
-//  display: block;
-//}
-
 .main-nav__logo {
   @include tablet {
     width: 113px;
@@ -176,8 +172,4 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.main-nav__icon {
-  position: absolute;
 }

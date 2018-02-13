@@ -216,13 +216,33 @@
     width: 60%;
     margin: 0;
   }
+
+  &--nojs {
+    & .contacts__map {
+      display: none;
+    }
+
+    & .contacts__image {
+      display: block;
+    }
+
+    & .contacts__marker {
+      display: block;
+    }
+  }
+}
+
+.contacts__map {
+  width: 100%;
 }
 
 .contacts__image {
+  display: none;
   width: 100%;
 }
 
 .contacts__marker {
+  display: none;
   position: absolute;
   top: 30%;
   left: 35%;
@@ -236,7 +256,8 @@
   }
 
   @include desktop {
-    left: 42%;
+    top: 31%;
+    left: 46%;
   }
 }
 
