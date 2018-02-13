@@ -83,10 +83,19 @@
   &--look-1 {
     top: 23px;
     right: 36px;
+
+    @include tablet {
+      top: 30px;
+    }
   }
 
   &--look-2 {
     top: 21px;
     right: 27px;
+
+    @include tablet {
+      top: 31px;
+      right: 34px;
+    }
   }
 }
