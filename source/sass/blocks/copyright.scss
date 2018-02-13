@@ -1,0 +1,29 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.copyright__link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  &:hover .copyright__icon {
+    fill: $turquoise-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  margin-right: 30px;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $black;
+}
+
+.copyright__icon {
+  margin-top: 5px;
+  fill: $turquoise-light;
+}

@@ -12,7 +12,7 @@
 
   @include tablet {
     display: flex;
-    padding: 53px 50px 51px;
+    padding: 50px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -23,35 +23,35 @@
   display: none;
 
   @include tablet {
+    align-self: flex-start;
     display: block;
-    margin: -12px 78px 0 0;
+    margin: 0 78px 0 0;
+    cursor: pointer;
+  }
+
+  &:hover .page-footer__logo-icon {
+    fill: $turquoise-dark;
+  }
+
+  &:active .page-footer__logo-icon {
+    opacity: 0.3;
   }
 }
 
-.page-footer__copyright-link {
-  display: block;
-  min-height: 27px;
-  padding: 21px 0 22px;
-  text-align: center;
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: $black;
+.page-footer__social {
+  @include tablet {
+    margin-top: 4px;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  padding: 22px 0;
 
   @include tablet {
-    padding: 0;
-  }
-
-  &::after {
-    content: url("../img/logo-htmlacademy.svg");
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 29px;
+    align-self: flex-end;
     margin-top: 3px;
-  }
-
-  &:active {
-    color: transparentize($black, 0.7);
+    padding: 0;
   }
 }

@@ -2,25 +2,13 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensansbold.woff2") format("woff2");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensans.woff") format("woff");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensansbold.woff") format("woff");
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
   font-weight: bold;
 }
 
@@ -37,6 +25,20 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans", "Tahoma", sans-serif;
-  //отличающийся от фона документа, убрать в конце
-  //background-color: #625e5f;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

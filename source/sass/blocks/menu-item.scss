@@ -1,0 +1,109 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.menu-item__link {
+  position: relative;
+  display: block;
+  width: auto;
+  padding: 26px 0 28px 76px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black;
+
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 33px;
+  }
+
+  &--logo {
+    padding: 0;
+  }
+
+  &--catalog {
+    @include tablet {
+      padding: 0;
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding: 31px 36px 33px 50px;
+    }
+  }
+
+  &--order {
+    @include tablet {
+      padding: 0;
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding: 31px 0 33px 35px;
+    }
+  }
+
+  &--search {
+    position: relative;
+
+    @include tablet {
+      padding-left: 41px;
+      padding-right: 42px;
+      font-size: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &--cart {
+    @include tablet {
+      padding: 31px 50px 33px 83px;
+    }
+
+    @include desktop {
+      padding: 31px 50px 33px 83px;
+    }
+  }
+
+  &:hover {
+    color: transparentize($black, 0.4);
+
+    & .menu-item__icon {
+      opacity: 1;
+      fill: $turquoise-light;
+    }
+  }
+
+  &:active {
+    color: transparentize($black, 0.7);
+
+    & .menu-item__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.menu-item__icon {
+  position: absolute;
+  opacity: 0.2;
+
+  &--search {
+    top: 30px;
+    left: 34px;
+
+    @include tablet {
+      top: 36px;
+    }
+  }
+
+  &--cart {
+    top: 27px;
+    left: 32px;
+
+    @include tablet {
+      top: 35px;
+      left: 31px;
+    }
+  }
+}
