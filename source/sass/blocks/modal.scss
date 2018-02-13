@@ -3,8 +3,11 @@
 .modal {
   position: relative;
   z-index: 100;
-  // скрытие модального окна - ЗДЕСЬ :-)
-  display: none;
+  display: block;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .modal__overlay {

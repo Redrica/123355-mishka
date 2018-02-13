@@ -178,7 +178,11 @@
           <p class="goods__description">Диаметр 15 см, высота 10 см</p>
           <div class="goods__buy">
             <b class="goods__price">690 руб.</b>
-            <a class="goods__cart" href="#">Купить</a>
+            <a class="goods__cart" href="#"><span class="visually-hidden">Купить</span>
+              <svg width="21" height="18">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -197,7 +201,11 @@
           <p class="goods__description">Диаметр 30 см, высота 30 см</p>
           <div class="goods__buy">
             <b class="goods__price">1 500 руб.</b>
-            <a class="goods__cart" href="#">Купить</a>
+            <a class="goods__cart" href="#"><span class="visually-hidden">Купить</span>
+              <svg width="21" height="18">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -208,6 +216,7 @@
     <div class="promo__wrapper">
       <div class="promo__item">
         <div class="promo__video-container">
+          <img class="promo__play" width="101" height="77" src="img/icon-play.svg">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
@@ -221,7 +230,7 @@
     </div>
   </section>
 
-  <aside class="modal">
+  <aside class="modal modal--closed">
     <div class="modal__overlay"></div>
     <div class="modal__item">
       <b class="modal__title">Добавить в корзину</b>
@@ -286,6 +295,9 @@
 <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
+  var promoGoodsButton = document.querySelector('.promo-goods__button');
+  var modal = document.querySelector('.modal');
+  var modalOff = document.querySelector('.modal__overlay');
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -298,6 +310,14 @@
       navMain.classList.remove('main-nav--opened');
     }
   });
+
+  promoGoodsButton.addEventListener('click', function () {
+    modal.classList.remove('modal--closed');
+  });
+
+  modalOff.addEventListener('click', function () {
+    modal.classList.add('modal--closed');
+  })
 </script>
 </body>
 </html>
