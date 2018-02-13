@@ -25,7 +25,7 @@
   display: block;
 
   @include tablet {
-    margin-right: 37px;
+    margin-right: 40px;
   }
 
   &:last-child {
@@ -37,19 +37,13 @@
 
 .social__link {
   display: block;
-  width: 22px;
-  height: 28px;
   font-size: 0;
-}
 
-.social__link--instagram {
-  background: url("../img/icon-insta.svg") no-repeat center center;
-}
+  &:hover .social__icon {
+    fill: $turquoise-dark;
+  }
 
-.social__link--facebook {
-  background: url("../img/icon-fb.svg") no-repeat center center;
-}
-
-.social__link--twitter {
-  background: url("../img/icon-twitter.svg") no-repeat center center;
+  &:active .social__icon {
+    opacity: 0.3;
+  }
 }
