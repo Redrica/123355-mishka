@@ -1,10 +1,6 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.social__title {
-  display: none;
-}
-
 .social__list {
   display: flex;
   justify-content: space-between;
@@ -43,7 +39,14 @@
     fill: $turquoise-dark;
   }
 
-  &:active .social__icon {
-    opacity: 0.3;
-  }
+  //&:active .social__icon {
+  //  fill: $turquoise-dark;
+  //  opacity: 0.3;
+  //}
+}
+
+// проблема с IE
+.social__icon:active {
+  fill: $turquoise-dark;
+  opacity: 0.3;
 }
