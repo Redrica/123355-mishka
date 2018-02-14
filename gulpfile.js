@@ -10,6 +10,8 @@ var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -52,4 +54,22 @@ gulp.task("html", function () {
       include()
     ]))
     .pipe(gulp.dest("source"));
+});
+
+// минификация изображений
+gulp.task("image", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel:3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest('source/img'));
+});
+
+// webP
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('source/img'));
 });

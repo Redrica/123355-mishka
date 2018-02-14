@@ -6,11 +6,11 @@
   padding: 31px 30px 58px 30px;
   background-color: $white;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     padding: 53px 50px 63px;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     padding: 57px 50px 104px;
   }
 }
@@ -133,28 +133,24 @@
     float: left;
     width: 65%;
   }
+}
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: url("../../img/icon-play.svg");
-    display: block;
-    width: 101px;
-    height: 77px;
-    margin-top: -38px;
-    margin-left: -17px;
+.promo__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -38px;
+  margin-left: -16px;
 
-    @include tablet {
-      margin-left: -50px;
-    }
+  @include tablet {
+    margin-left: -50px;
   }
 
-  &:hover::before {
+  &:hover {
     transform: scale(1.2);
   }
 
-  &:active::before {
+  &:active {
     transform: scale(0.8);
     opacity: 0.3;
   }

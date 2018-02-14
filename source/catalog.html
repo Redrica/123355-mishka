@@ -143,8 +143,11 @@
       <div class="goods__item">
         <a class="goods__link" href="item-page.html">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
             <img class="goods__picture" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
           </picture>
         </a>
@@ -166,8 +169,11 @@
       <div class="goods__item">
         <a class="goods__link" href="item-page.html">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
             <img class="goods__picture" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
           </picture>
         </a>
@@ -178,15 +184,22 @@
           <p class="goods__description">Диаметр 15 см, высота 10 см</p>
           <div class="goods__buy">
             <b class="goods__price">690 руб.</b>
-            <a class="goods__cart" href="#">Купить</a>
+            <a class="goods__cart" href="#"><span class="visually-hidden">Купить</span>
+              <svg width="21" height="18">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
       <div class="goods__item">
         <a class="goods__link" href="item-page.html">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
             <img class="goods__picture" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек">
           </picture>
         </a>
@@ -197,7 +210,11 @@
           <p class="goods__description">Диаметр 30 см, высота 30 см</p>
           <div class="goods__buy">
             <b class="goods__price">1 500 руб.</b>
-            <a class="goods__cart" href="#">Купить</a>
+            <a class="goods__cart" href="#"><span class="visually-hidden">Купить</span>
+              <svg width="21" height="18">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -208,9 +225,13 @@
     <div class="promo__wrapper">
       <div class="promo__item">
         <div class="promo__video-container">
+          <img class="promo__play" width="101" height="77" src="img/icon-play.svg">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
             <img class="promo__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Большая корзинка для игрушек">
           </picture>
         </div>
@@ -221,7 +242,7 @@
     </div>
   </section>
 
-  <aside class="modal">
+  <aside class="modal modal--closed">
     <div class="modal__overlay"></div>
     <div class="modal__item">
       <b class="modal__title">Добавить в корзину</b>
@@ -286,6 +307,9 @@
 <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
+  var promoGoodsButton = document.querySelector('.promo-goods__button');
+  var modal = document.querySelector('.modal');
+  var modalOff = document.querySelector('.modal__overlay');
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -298,6 +322,14 @@
       navMain.classList.remove('main-nav--opened');
     }
   });
+
+  promoGoodsButton.addEventListener('click', function () {
+    modal.classList.remove('modal--closed');
+  });
+
+  modalOff.addEventListener('click', function () {
+    modal.classList.add('modal--closed');
+  })
 </script>
 </body>
 </html>
