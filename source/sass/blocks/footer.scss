@@ -33,9 +33,15 @@
     fill: $turquoise-dark;
   }
 
-  &:active .page-footer__logo-icon {
-    opacity: 0.3;
-  }
+  //&:active {
+  //  fill: $turquoise-dark;
+  //  opacity: 0.3;
+  //}
+}
+
+// проблема с IE
+.page-footer__logo-icon:active {
+  opacity: 0.3;
 }
 
 .page-footer__social {

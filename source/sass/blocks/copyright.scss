@@ -10,9 +10,13 @@
     fill: $turquoise-dark;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
+  //&:active {
+  //  opacity: 0.3;
+  //}
+}
+
+.copyright__link:active {
+  opacity: 0.3;
 }
 
 .copyright__text {

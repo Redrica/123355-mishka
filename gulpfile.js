@@ -39,12 +39,12 @@ gulp.task("serve", ["style"], function() {
 
 // сборка спрайта
 gulp.task("sprite", function () {
-  return gulp.src("source/img/*.svg")
+  return gulp.src("source/img/svg-sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("source/img/svg-sprite"));
 });
 
 // вставка спрайта
