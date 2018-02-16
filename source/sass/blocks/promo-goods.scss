@@ -118,7 +118,6 @@
 
   @include desktop {
     @include header-desktop;
-    //flex-basis: 75%;
     flex-grow: 0;
     margin-left: -4px;
     order: 0;

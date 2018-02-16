@@ -9,6 +9,9 @@
   <link rel="preload" href="fonts/opensans.woff" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <script src="js/contacts.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
@@ -243,35 +246,35 @@
   </div>
 </footer>
 
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-  var contactsMap = document.querySelector('.contacts__map-container');
-  var promoGoodsButton = document.querySelector('.promo-goods__button');
-  var modal = document.querySelector('.modal');
-  var modalOff = document.querySelector('.modal__overlay');
+<!--<script>-->
+  <!--var navMain = document.querySelector('.main-nav');-->
+  <!--var navToggle = document.querySelector('.main-nav__toggle');-->
+  <!--var contactsMap = document.querySelector('.contacts__map-container');-->
+  <!--var promoGoodsButton = document.querySelector('.promo-goods__button');-->
+  <!--var modal = document.querySelector('.modal');-->
+  <!--var modalOff = document.querySelector('.modal__overlay');-->
 
-  navMain.classList.remove('main-nav--nojs');
-  contactsMap.classList.remove('contacts__map-container--nojs');
+  <!--navMain.classList.remove('main-nav&#45;&#45;nojs');-->
+  <!--contactsMap.classList.remove('contacts__map-container&#45;&#45;nojs');-->
 
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
+  <!--navToggle.addEventListener('click', function () {-->
+    <!--if (navMain.classList.contains('main-nav&#45;&#45;closed')) {-->
+      <!--navMain.classList.remove('main-nav&#45;&#45;closed');-->
+      <!--navMain.classList.add('main-nav&#45;&#45;opened');-->
+    <!--} else {-->
+      <!--navMain.classList.add('main-nav&#45;&#45;closed');-->
+      <!--navMain.classList.remove('main-nav&#45;&#45;opened');-->
+    <!--}-->
+  <!--});-->
 
-  promoGoodsButton.addEventListener('click', function () {
-    modal.classList.remove('modal--closed');
-  });
+  <!--promoGoodsButton.addEventListener('click', function () {-->
+    <!--modal.classList.remove('modal&#45;&#45;closed');-->
+  <!--});-->
 
-  modalOff.addEventListener('click', function () {
-    modal.classList.add('modal--closed');
-  })
-</script>
+  <!--modalOff.addEventListener('click', function () {-->
+    <!--modal.classList.add('modal&#45;&#45;closed');-->
+  <!--})-->
+<!--</script>-->
 
 </body>
 </html>

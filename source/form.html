@@ -5,6 +5,7 @@
   <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин товаров для дома «Мишка»</title>
+  <script src="js/menu.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
@@ -200,22 +201,22 @@
   </div>
 </footer>
 
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
+<!--<script>-->
+  <!--var navMain = document.querySelector('.main-nav');-->
+  <!--var navToggle = document.querySelector('.main-nav__toggle');-->
 
-  navMain.classList.remove('main-nav--nojs');
+  <!--navMain.classList.remove('main-nav&#45;&#45;nojs');-->
 
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+  <!--navToggle.addEventListener('click', function() {-->
+    <!--if (navMain.classList.contains('main-nav&#45;&#45;closed')) {-->
+      <!--navMain.classList.remove('main-nav&#45;&#45;closed');-->
+      <!--navMain.classList.add('main-nav&#45;&#45;opened');-->
+    <!--} else {-->
+      <!--navMain.classList.add('main-nav&#45;&#45;closed');-->
+      <!--navMain.classList.remove('main-nav&#45;&#45;opened');-->
+    <!--}-->
+  <!--});-->
+<!--</script>-->
 
 </body>
 </html>
