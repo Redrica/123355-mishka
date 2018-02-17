@@ -28,12 +28,12 @@
     cursor: pointer;
   }
 
-  &:hover .page-footer__logo-icon {
+  &[href]:hover .page-footer__logo-icon {
     fill: $turquoise-dark;
   }
 }
 
-.page-footer__logo-icon:active {
+.page-footer__logo[href] .page-footer__logo-icon:active {
   opacity: 0.3;
 }
 

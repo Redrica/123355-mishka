@@ -19,6 +19,16 @@
 
   &--logo {
     padding: 0;
+    font-size: 0;
+    line-height: 0;
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
   }
 
   &--catalog {
@@ -64,22 +74,33 @@
       padding: 31px 50px 33px 83px;
     }
   }
+}
 
-  &:hover {
-    color: transparentize($black, 0.4);
+.menu-item__link[href]:hover {
+  color: transparentize($black, 0.4);
+}
 
-    & .menu-item__icon {
-      opacity: 1;
-      fill: $turquoise-light;
-    }
+.menu-item__link[href]:hover .menu-item__icon {
+  opacity: 1;
+  fill: $turquoise-light;
+}
+
+.menu-item__link[href]:active {
+  color: transparentize($black, 0.7);
+}
+
+.menu-item__link[href]:active .menu-item__icon {
+  opacity: 0.3;
+}
+
+.menu-item__logo {
+  @include tablet {
+    width: 113px;
+    height: auto;
   }
 
-  &:active {
-    color: transparentize($black, 0.7);
-
-    & .menu-item__icon {
-      opacity: 0.3;
-    }
+  @include desktop {
+    width: 149px;
   }
 }
 

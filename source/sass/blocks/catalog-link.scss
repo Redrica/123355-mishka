@@ -56,19 +56,20 @@
       }
     }
   }
-
-  &:hover .catalog-link__icon {
-    fill: transparentize($turcuoise-darkest, 0.3);
-  }
-
-  &:active {
-    color: transparentize($white, 0.7);
-
-    & .catalog-link__icon {
-      fill: transparentize($turcuoise-darkest, 0.7);
-    }
-  }
 }
+
+.catalog-link:hover .catalog-link__icon {
+  fill: transparentize($turcuoise-darkest, 0.3);
+}
+
+.catalog-link:active {
+  color: transparentize($white, 0.7);
+}
+
+.catalog-link:active .catalog-link__icon {
+  fill: transparentize($turcuoise-darkest, 0.7);
+}
+
 
 .catalog-link__text {
   font-size: 19px;

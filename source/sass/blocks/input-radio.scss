@@ -13,57 +13,57 @@
 
 .input-radio__input {
   display: none;
+}
 
-  & + .input-radio__description {
-    position: relative;
-    display: block;
-    padding-left: 63px;
+.input-radio__input + .input-radio__description {
+  position: relative;
+  display: block;
+  padding-left: 63px;
 
-    @include tablet {
-      padding-left: 80px;
-    }
-
-    &::before {
-      position: absolute;
-      top: 3px;
-      left: 12px;
-      display: block;
-      content: "";
-      width: 16px;
-      height: 16px;
-      background-color: $white;
-      border-radius: 50%;
-      box-shadow: 0 0 0 9px $white, 0 0 0 11px $gray-dark;
-
-      @include tablet {
-        top: 0;
-        left: 15px;
-        width: 22px;
-        height: 22px;
-        box-shadow: 0 0 0 13px $white, 0 0 0 15px $gray-dark;
-      }
-    }
+  @include tablet {
+    padding-left: 80px;
   }
+}
 
-  &:hover + .input-radio__description::before {
-    box-shadow: 0 0 0 9px $white, 0 0 0 11px $turquoise-light;
+.input-radio__input + .input-radio__description::before {
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 9px $white, 0 0 0 11px $gray-dark;
 
-    @include tablet {
-      box-shadow: 0 0 0 13px $white, 0 0 0 15px $turquoise-light;
-    }
+  @include tablet {
+    top: 0;
+    left: 15px;
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 0 0 13px $white, 0 0 0 15px $gray-dark;
   }
+}
 
-  &:active + .input-radio__description::before {
-    box-shadow: 0 0 0 9px $white, 0 0 0 11px transparentize($gray-dark, 0.7);
+.input-radio__input:hover + .input-radio__description::before {
+  box-shadow: 0 0 0 9px $white, 0 0 0 11px $turquoise-light;
 
-    @include tablet {
-      box-shadow: 0 0 0 13px $white, 0 0 0 15px transparentize($gray-dark, 0.7);
-    }
+  @include tablet {
+    box-shadow: 0 0 0 13px $white, 0 0 0 15px $turquoise-light;
   }
+}
 
-  &:checked + .input-radio__description::before {
-    background-color: $turquoise;
+.input-radio__input:active + .input-radio__description::before {
+  box-shadow: 0 0 0 9px $white, 0 0 0 11px transparentize($gray-dark, 0.7);
+
+  @include tablet {
+    box-shadow: 0 0 0 13px $white, 0 0 0 15px transparentize($gray-dark, 0.7);
   }
+}
+
+.input-radio__input:checked + .input-radio__description::before {
+  background-color: $turquoise;
 }
 
 .input-radio__description {

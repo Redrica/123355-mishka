@@ -18,7 +18,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-position: 0 0;
       background-repeat: repeat-x;
-      background-size: 770px 24px;
+      background-size: 768px 24px;
     }
 
     @include desktop {
@@ -154,7 +154,6 @@
   font-size: 15px;
   line-height: 20px;
   color: $gray-dark;
-  //@include outline-item;
 
   @include tablet {
     float: left;
@@ -250,8 +249,4 @@
     margin: 0;
     padding: 14px 99px;
   }
-
-  //@include desktop {
-  //  padding: 14px 99px;
-  //}
 }

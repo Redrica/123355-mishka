@@ -48,12 +48,3 @@
     width: 1150px;
   }
 }
-
-// себе: вспомогательные, в конце - убрать!
-@mixin outline-block {
-  outline: 10px solid #7e1f1e;
-}
-
-@mixin outline-item {
-  outline: 5px solid #2d7071;
-}

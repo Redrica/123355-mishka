@@ -98,7 +98,7 @@
 
   @include tablet {
     @include header-tablet;
-    width: 100%;
+    width: auto;
     position: relative;
     margin: 0 50px 49px 46px;
   }
