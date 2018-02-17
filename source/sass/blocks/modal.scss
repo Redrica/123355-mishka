@@ -52,7 +52,7 @@
   text-transform: uppercase;
   color: $black;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     margin-bottom: 14px;
     padding: 0;
     font-size: 30px;
@@ -67,7 +67,7 @@
   font-weight: normal;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     padding: 0;
     font-size: 17px;
     line-height: 30px;
@@ -97,7 +97,7 @@
   border: 2px solid $gray-lighter;
   color: $gray-dark;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 112px;
   }
 

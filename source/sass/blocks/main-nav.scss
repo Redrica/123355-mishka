@@ -4,44 +4,7 @@
 .main-nav {
   position: relative;
 
-  @include mobile-only {
-    &--opened {
-      & .main-nav__toggle {
-        background: $white url("../img/icon-menu-close.svg") no-repeat center center;
-      }
-
-      & .main-nav__item {
-        display: block;
-      }
-    }
-
-    &--closed {
-      & .main-nav__toggle {
-        background: $white url("../../img/icon-menu-open.svg") no-repeat center center;
-      }
-
-      & .main-nav__item {
-        display: none;
-
-        &--logo {
-          display: block;
-        }
-      }
-    }
-
-    &--nojs {
-      & .main-nav__toggle {
-        display: none;
-      }
-
-      & .main-nav__item {
-        display: block;
-      }
-    }
-  }
-
   @include tablet {
-    // чтобы под него залез блок с заголовком
     margin-bottom: -41px;
   }
 
@@ -50,10 +13,53 @@
   }
 }
 
+.main-nav--opened .main-nav__toggle {
+  @include mobile-only {
+    background: $white url("../img/icon-menu-close.svg") no-repeat center center;
+  }
+}
+
+.main-nav--opened .main-nav__item {
+  @include mobile-only {
+    display: block;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  @include mobile-only {
+    background: $white url("../img/icon-menu-open.svg") no-repeat center center;
+  }
+}
+
+.main-nav--closed .main-nav__item {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__item--logo {
+  @include mobile-only {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__item {
+  @include mobile-only {
+    display: block;
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 50;
   width: 82px;
   height: 78px;
   padding: 0;
@@ -67,7 +73,6 @@
   }
 }
 
-//себе: отключение МЕНЮ - будут отключаться ПУНКТЫ, а не само меню!
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -96,7 +101,6 @@
       justify-content: flex-start;
       flex-grow: 1;
       order: -3;
-      // 48px - потому что кривой макет, лого вылезает на 2px за общую напрвляющую
       padding: 0 0 0 48px;
     }
 
@@ -152,24 +156,5 @@
       order: -1;
       border-left: 1px solid $gray-lighter;
     }
-  }
-}
-
-.main-nav__logo {
-  @include tablet {
-    width: 113px;
-    height: auto;
-  }
-
-  @include desktop {
-    width: 149px;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }

@@ -1,0 +1,129 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.page-header--main {
+  @include desktop {
+    background-color: $white-almost;
+  }
+}
+
+.page-header__wrapper {
+  @include viewport-center;
+}
+
+.page-header__body {
+  background-color: $gray-lightest;
+  padding: 70px 0 75px;
+
+  @include tablet {
+    padding: 17px 50px 78px;
+  }
+
+  @include desktop {
+    padding-bottom: 100px;
+  }
+
+  &--main {
+    background: $white-almost url("../img/hero-mobile@1x.jpg") no-repeat center -18px;
+    padding-bottom: 0;
+
+    @include retina-resolution {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
+
+    @include tablet {
+      background: $white-almost url("../img/hero-tablet@1x.jpg") no-repeat center 0;
+
+      @include retina-resolution {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: 1150px auto;
+      }
+    }
+
+    @include desktop {
+      background: $white-almost url("../img/hero-desktop@1x.jpg") no-repeat center 0;
+
+      @include retina-resolution {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.page-header__delivery-info {
+  display: none;
+
+  @include tablet {
+    display: block;
+    float: right;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $gray-dark;
+  }
+}
+
+.page-header__current--novelty,
+.page-header__current--sale {
+  display: none;
+
+  @include desktop {
+    display: inline;
+    padding-right: 62px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &:hover {
+    color: transparentize($black, 0.4);
+  }
+
+  &:active {
+    color: transparentize($black, 0.7);
+  }
+}
+
+.page-header__title {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 30px;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+
+  @include tablet {
+    @include header-tablet;
+    margin: 78px auto 0;
+    padding: 0;
+  }
+
+  @include desktop {
+    @include header-desktop;
+    margin-top: 53px;
+  }
+
+  &--main {
+    margin-bottom: 123px;
+
+    @include tablet {
+      margin: 136px 0 373px;
+    }
+
+    @include desktop {
+      margin: 113px 0 359px;
+    }
+  }
+}
+
+.page-header__link-wrapper {
+  position: relative;
+
+  @include tablet {
+    display: flex;
+  }
+}

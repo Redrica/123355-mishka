@@ -206,17 +206,3 @@
     opacity: 0.3;
   }
 }
-
-//.goods__title:hover {
-//  color: transparentize($black, 0.4);
-//}
-
-//себе: то работает, то нет. Почему – хз.
-//.goods__title:active {
-//  color: transparentize($black, 0.7);
-//}
-
-////а вот тут не совсем по БЭМ о_О
-//.goods__link:active .goods__title {
-//  color: transparentize($black, 0.7);
-//}
