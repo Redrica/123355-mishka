@@ -96,32 +96,24 @@
   }
 
   &--eco {
-    background: url("../img/icon-feature-flower.svg") no-repeat 8px 29px;
-
     @include tablet {
       order: 1;
     }
   }
 
   &--style {
-    background: url("../img/icon-feature-money.svg") no-repeat 0 30px;
-
     @include tablet {
       order: 3;
     }
   }
 
   &--like {
-    background: url("../img/icon-feature-heart.svg") no-repeat 8px 35px;
-
     @include tablet {
       order: 5;
     }
   }
 
   &--knit {
-    background: url("../img/icon-feature-ball.svg") no-repeat 4px 32px;
-
     @include tablet {
       order: 2;
     }
@@ -131,21 +123,45 @@
     @include tablet {
       order: 4;
     }
-
-    &::before {
-      position: absolute;
-      top: 33px;
-      left: -6px;
-      display: block;
-      content: url("../img/icon-feature-rocket.svg");
-    }
   }
 
   &--gift {
-    background: url("../img/icon-feature-gift.svg") no-repeat 3px 31px;
-
     @include tablet {
       order: 6;
     }
+  }
+}
+
+.about__icon {
+  position: absolute;
+
+  &--eco {
+    top: 29px;
+    left: 8px;
+  }
+
+  &--style {
+    top: 30px;
+    left: 0;
+  }
+
+  &--like {
+    top: 35px;
+    left: 7px;
+  }
+
+  &--knit {
+    top: 32px;
+    left: 3px;
+  }
+
+  &--support {
+    top: 33px;
+    left: -6px;
+  }
+
+  &--gift {
+    top: 31px;
+    left: 3px;
   }
 }
