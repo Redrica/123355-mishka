@@ -18,7 +18,7 @@
 .promo__item {
   display: flex;
   flex-direction: column;
-  padding: 0 33px 32px;
+  padding: 0 0 32px;
   border: 1px solid $gray-lighter;
 
   @include tablet {
@@ -49,8 +49,8 @@
   position: relative;
   order: -1;
   display: block;
-  margin: 0 0 25px 0;
-  padding: 23px 0 0 56px;
+  margin: 0;
+  padding: 24px 0 24px 88px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -59,7 +59,7 @@
   @include tablet {
     order: 0;
     margin: 0 33px 32px 33px;
-    padding: 39px 0 0 71px;
+    padding: 38px 0 0 71px;
     font-size: 20px;
   }
 
@@ -73,7 +73,7 @@
   &::before {
     position: absolute;
     top: 29px;
-    left: 0;
+    left: 33px;
     content: url("../img/icon-video.svg");
     display: block;
     width: 32px;
@@ -92,7 +92,7 @@
 }
 
 .promo__intro {
-  margin: 0 0 25px 0;
+  margin: 0 33px 25px;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
@@ -120,18 +120,20 @@
   position: relative;
   display: block;
   width: 100%;
-  margin: 0 0 26px -34px;
+  margin: 0 0 28px 0;
 
   @include tablet {
     width: 100%;
     height: auto;
     margin: 0;
     order: -1;
+    border-bottom: 1px solid $gray-lighter;
   }
 
   @include desktop {
     float: left;
     width: 65%;
+    border-bottom: none;
   }
 }
 
@@ -140,7 +142,7 @@
   top: 50%;
   left: 50%;
   margin-top: -38px;
-  margin-left: -16px;
+  margin-left: -50px;
 
   @include tablet {
     margin-left: -50px;
@@ -157,6 +159,8 @@
 }
 
 .promo__video {
+  width: 260px;
+
   @include tablet {
     width: 100%;
     height: auto;
@@ -164,12 +168,15 @@
 }
 
 .promo__write {
-  @media (min-width: $width-tablet) {
+  width: auto;
+  margin: 0 33px;
+
+  @include tablet {
     width: 584px;
     margin: 0 auto;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     float: right;
     clear: right;
     width: 230px;

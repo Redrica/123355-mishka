@@ -7,7 +7,6 @@
 
 .page-footer__wrapper {
   @include viewport-center;
-  //background-color: $gray-lightest;
   padding: 0 30px;
 
   @include tablet {
@@ -32,14 +31,8 @@
   &:hover .page-footer__logo-icon {
     fill: $turquoise-dark;
   }
-
-  //&:active {
-  //  fill: $turquoise-dark;
-  //  opacity: 0.3;
-  //}
 }
 
-// проблема с IE
 .page-footer__logo-icon:active {
   opacity: 0.3;
 }
@@ -53,11 +46,15 @@
 .page-footer__copyright {
   display: flex;
   justify-content: center;
-  padding: 22px 0;
+  padding: 17px 0 22px;
 
   @include tablet {
     align-self: flex-end;
     margin-top: 3px;
     padding: 0;
+  }
+
+  @include desktop {
+    margin-top: 0;
   }
 }

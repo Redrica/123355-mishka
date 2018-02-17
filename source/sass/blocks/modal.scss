@@ -1,8 +1,9 @@
+@import "../mixins.scss";
 @import "../variables.scss";
 
 .modal {
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   display: block;
 
   &--closed {
@@ -34,7 +35,7 @@
   background-color: $white;
   border: 1px solid $gray;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     width: 568px;
     padding: 33px 106px 46px;
     margin-left: -284px;

@@ -4,15 +4,15 @@
 .about__wrapper {
   @include viewport-center;
   position: relative;
-  padding: 33px 30px 35px;
+  padding: 34px 30px 35px;
   background-color: $white;
 
   @include tablet {
-    padding: 66px 50px 55px;
+    padding: 65px 50px 55px;
   }
 
   @include desktop {
-    padding: 81px 225px 61px;
+    padding: 82px 225px 61px;
   }
 
   &::before {
@@ -64,6 +64,7 @@
 
   @include desktop {
     @include header-desktop;
+    margin-left: -2px;
   }
 }
 

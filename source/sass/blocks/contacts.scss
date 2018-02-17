@@ -5,11 +5,11 @@
   position: relative;
 
   @include viewport-center;
-  padding: 52px 0 40px;
+  padding: 42px 0 40px;
   background-color: $white;
 
   @include tablet {
-    padding: 82px 0 58px;
+    padding: 78px 0 58px;
   }
 
   @include desktop {
@@ -73,7 +73,7 @@
 
     @include tablet {
       position: absolute;
-      top: -17px;
+      top: -15px;
       right: 53px;
       display: block;
       content: url("../../img/icon-flag.svg");
@@ -82,8 +82,8 @@
     }
 
     @include desktop {
-      top: 60px;
-      left: -112px;
+      top: 61px;
+      left: -111px;
     }
   }
 }
@@ -100,7 +100,7 @@
     @include header-tablet;
     width: 100%;
     position: relative;
-    margin: 0 50px 48px 46px;
+    margin: 0 50px 49px 46px;
   }
 
   @include desktop {
@@ -234,6 +234,7 @@
 
 .contacts__map {
   width: 100%;
+  border: none;
 }
 
 .contacts__image {

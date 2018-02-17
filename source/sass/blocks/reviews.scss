@@ -3,7 +3,7 @@
 
 .reviews__wrapper {
   @include viewport-center;
-  padding: 20px 30px 40px;
+  padding: 20px 30px 44px;
   background-color: $white;
 
   @include tablet {
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 77px 50px 110px;
+    padding: 77px 50px 114px;
     background: $white url("../img/review@1x.jpg") no-repeat 0 0;
 
     @include retina-resolution {
@@ -22,32 +22,32 @@
   }
 
   @include desktop {
-    padding: 72px 50px 161px 225px;
+    padding: 70px 50px 161px 225px;
     background-position: 50px 0;
   }
 }
 
 .reviews__title {
-  margin: 0 0 23px -2px;
+  margin: 0 0 24px -2px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
   color: $black;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     @include header-tablet;
     order: -2;
     margin-bottom: 0;
   }
 
-  @media (min-width: $width-desktop) {
+  @include desktop {
     @include header-desktop;
   }
 }
 
 .reviews__list {
-  @media (min-width: $width-tablet) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -145,10 +145,6 @@
   @include tablet {
     border: none;
   }
-}
-
-.reviews__switch--prev {
-  background: url("../img/icon-left-arrow.svg") no-repeat center center;
 
   &:hover {
     opacity: 0.6;
@@ -157,19 +153,19 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus {
+    outline: auto;
+  }
+}
+
+.reviews__switch--prev {
+  background: url("../img/icon-left-arrow.svg") no-repeat center center;
 }
 
 .reviews__switch--next {
   background: url("../img/icon-right-arrow.svg") no-repeat center center;
   border-left: none;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .reviews__write {
@@ -181,6 +177,6 @@
   }
 
   @include desktop {
-    margin-top: 8px;
+    margin-top: 9px;
   }
 }

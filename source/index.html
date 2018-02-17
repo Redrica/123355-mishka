@@ -2,9 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин товаров для дома «Мишка»</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
@@ -53,13 +57,13 @@
       <strong class="page-header__delivery-info">Бесплатная доставка по России</strong>
       <h1 class="page-header__title page-header__title--main">Милые штуки ручной<br> работы для дома</h1>
       <div class="page-header__link-wrapper">
-        <a class="page-header__link catalog-link catalog-link--look-1" href="#">
+        <a class="page-header__link catalog-link catalog-link--look-1" href="interior.html">
           <span class="catalog-link__text">Предметы<br> интерьера</span>
           <svg class="catalog-link__icon catalog-link__icon--look-1" width="40" height="62">
             <use xlink:href="img/svg-sprite/sprite.svg#icon-interior"></use>
           </svg>
         </a>
-        <a class="page-header__link catalog-link catalog-link--look-2" href="#">
+        <a class="page-header__link catalog-link catalog-link--look-2" href="toys.html">
           <span class="catalog-link__text">Детские<br> игрушки</span>
           <svg class="catalog-link__icon catalog-link__icon--look-2" width="60" height="60">
             <use xlink:href="img/svg-sprite/sprite.svg#icon-toy"></use>
@@ -75,7 +79,7 @@
     <div class="promo-goods__wrapper">
       <div class="promo-goods__header">
         <h2 class="promo-goods__title">Товар недели</h2>
-        <b class="promo-goods__item">Вязаные корзинки</b>
+        <h3 class="promo-goods__item">Вязаные корзинки</h3>
       </div>
       <picture class="promo-goods__image-container">
         <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -102,7 +106,7 @@
         </tr>
       </table>
       <b class="promo-goods__price">Цена: 990 руб.</b>
-      <a class="promo-goods__button button" href="#">Заказать</a>
+      <a class="promo-goods__button button" href="buy.html">Заказать</a>
     </div>
   </section>
 
@@ -138,7 +142,7 @@
           <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
         </div>
       </div>
-      <a class="reviews__write button" href="#">Написать</a>
+      <a class="reviews__write button" href="feedbacks.html">Написать</a>
     </div>
   </section>
 
@@ -146,7 +150,7 @@
     <div class="contacts__wrapper">
       <div class="contacts__container">
         <div class="contacts__map-container contacts__map-container--nojs">
-          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A953a34204dadd2fba9051581c4f53fac1fe1474d0921904dd06f3c92ac16d1a7&amp;source=constructor" width="768" height="457" frameborder="0"></iframe>
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A953a34204dadd2fba9051581c4f53fac1fe1474d0921904dd06f3c92ac16d1a7&amp;source=constructor" width="768" height="457"></iframe>
           <div class="contacts__marker"></div>
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
@@ -172,7 +176,7 @@
             </div>
           </div>
         </div>
-        <a class="contacts__write button" href="feedback.html">Напишите нам</a>
+        <a class="contacts__write button" href="contacts.html">Напишите нам</a>
       </div>
     </div>
   </section>
@@ -206,21 +210,21 @@
       <b class="social__title visually-hidden">Давайте дружить!</b>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link " href="https://www.instagram.com/htmlacademy/">Мы в Инстаграме
+          <a class="social__link " href="https://www.instagram.com/htmlacademy/"><span class="visually-hidden">Мы в Инстаграме</span>
             <svg class="social__icon" width="22" height="21">
               <use xlink:href="img/svg-sprite/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы на Фейсбуке
+          <a class="social__link" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы на Фейсбуке</span>
             <svg class="social__icon" width="15" height="28">
               <use xlink:href="img/svg-sprite/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере
+          <a class="social__link" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Мы в Твиттере</span>
             <svg class="social__icon" width="23" height="20">
               <use xlink:href="img/svg-sprite/sprite.svg#icon-twitter"></use>
             </svg>
@@ -239,35 +243,9 @@
   </div>
 </footer>
 
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-  var contactsMap = document.querySelector('.contacts__map-container');
-  var promoGoodsButton = document.querySelector('.promo-goods__button');
-  var modal = document.querySelector('.modal');
-  var modalOff = document.querySelector('.modal__overlay');
-
-  navMain.classList.remove('main-nav--nojs');
-  contactsMap.classList.remove('contacts__map-container--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-
-  promoGoodsButton.addEventListener('click', function () {
-    modal.classList.remove('modal--closed');
-  });
-
-  modalOff.addEventListener('click', function () {
-    modal.classList.add('modal--closed');
-  })
-</script>
+<script src="js/contacts.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/modal.js"></script>
 
 </body>
 </html>

@@ -3,16 +3,16 @@
 
 .order__wrapper {
   @include viewport-center;
-  padding: 22px 30px 55px;
+  padding: 23px 30px 55px;
   background-color: $white;
 
   @include tablet {
     position: relative;
-    padding: 74px 0 53px;
+    padding: 74px 0 50px;
   }
 
   @include desktop {
-    padding: 124px 0 48px;
+    padding: 124px 0 50px;
   }
 
   &::before {

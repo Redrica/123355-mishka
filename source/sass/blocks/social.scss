@@ -33,19 +33,12 @@
 
 .social__link {
   display: block;
-  font-size: 0;
 
   &:hover .social__icon {
     fill: $turquoise-dark;
   }
-
-  //&:active .social__icon {
-  //  fill: $turquoise-dark;
-  //  opacity: 0.3;
-  //}
 }
 
-// проблема с IE
 .social__icon:active {
   fill: $turquoise-dark;
   opacity: 0.3;

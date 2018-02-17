@@ -35,7 +35,7 @@
   @include viewport-center;
   display: flex;
   flex-direction: column;
-  padding: 28px 30px 42px;
+  padding: 28px 30px 35px;
   background-color: $white;
 
   @include tablet {
@@ -50,14 +50,14 @@
   }
 
   @include desktop {
-    padding: 67px 50px 73px 225px;
+    padding: 67px 50px 74px 225px;
   }
 }
 
 .promo-goods__header {
   display: flex;
   flex-direction: column;
-  //@include outline-block;
+  margin-bottom: 21px;
 
   @include tablet {
     position: relative;
@@ -71,12 +71,12 @@
   }
 
   @include desktop {
-    margin: 52px 0 49px -175px;
+    margin: 52px 0 48px -175px;
   }
 }
 
 .promo-goods__title {
-  margin: 0 0 20px;
+  margin: 0;
   padding: 0;
   font-size: 17px;
   line-height: 24px;
@@ -95,15 +95,15 @@
   @include desktop {
     flex-shrink: 0;
     width: 20%;
-    padding: 6px 25px 0 17px
-    //margin: 14px 25px 0 0;
+    margin: 0;
+    padding: 6px 25px 0 17px;
   }
 }
 
 .promo-goods__item {
   order: -1;
   display: block;
-  margin-bottom: 3px;
+  margin: 0 0 3px 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -118,7 +118,6 @@
 
   @include desktop {
     @include header-desktop;
-    //flex-basis: 75%;
     flex-grow: 0;
     margin-left: -4px;
     order: 0;
@@ -237,7 +236,7 @@
   }
 
   @include desktop {
-    margin-left: 74px;
+    margin: 0 0 33px 74px;
   }
 }
 

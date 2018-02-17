@@ -46,7 +46,7 @@
     content: "";
     display: block;
     height: 1px;
-    margin-left: 20px;
+    margin-left: 21px;
     background-color: $turquoise-light;
 
     @include tablet {
@@ -199,10 +199,12 @@
   @include tablet {
     width: auto;
     margin-left: 50px;
+    margin-top: 3px;
     padding: 14px 30px;
   }
 
   @include desktop {
     margin-left: 225px;
+    margin-top: -2px;
   }
 }
